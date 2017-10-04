@@ -33,6 +33,14 @@ export default class Fighstyle extends React.Component {
 			fontSize:"18px",
 			lineHeight:"150%",
 			letterSpacing:"1px",
+
+			WebkitTransition: ".4s ease-out",
+			MozTransition: ".4s ease-out",
+			OTransition: ".4s ease-out",
+			transition:".4s ease-out",
+
+			right:this.props.fromright,
+			opacity: this.props.opac,
 		}
 		const divider = {
 			height:"100px",
@@ -40,7 +48,14 @@ export default class Fighstyle extends React.Component {
 		}
 
 		const image1style={
-			maxWidth:"750px",
+			maxWidth:"500px",
+			WebkitTransition: ".4s ease-out",
+			MozTransition: ".4s ease-out",
+			OTransition: ".4s ease-out",
+			transition:".4s ease-out",
+			marginLeft:this.props.fromright,
+			opacity: this.props.opac,
+			width:"100%",
 		}
 		const title={
 			fontSize:"40px",
@@ -54,9 +69,9 @@ export default class Fighstyle extends React.Component {
 			</DesktopBreakpoint>
 			<div className="row">
 
-
-			<img src={image2} style={image1style} className="col-md-3 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1 bannerimage"/>
-
+			<div className="col-md-3 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1 bannerimage" id="fightstyle">
+			<img src={image2} style={image1style}/>
+			</div>
 
 
 			<div style={stats} className="col-md-5 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">

@@ -1,5 +1,7 @@
 html, body{
   background-color: #000;
+  width:100vw;
+  overflow-x:hidden;
   }
 
   /*remove gutters on bootstrap grid*/

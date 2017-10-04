@@ -34,7 +34,6 @@ export default class Statistics extends React.Component {
 			fontSize:"18px",
 			lineHeight:"150%",
 			letterSpacing:"1px",
-
 		}
 		const divider = {
 			height:"100px",
@@ -52,10 +51,8 @@ export default class Statistics extends React.Component {
     return (
 			<div style={statscontainer}>
 			<div style={divider}></div>
-			<div className="row">
-			<div className="col-md-6">
-				<div className="col-md-6"></div>
-	      <div style={stats} className="col-md-6 col-md-offset-0 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
+			<div className="row" >
+	      <div style={stats} className="col-md-5 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1" id="stats">
 				<span style={title}><strong>Stats</strong></span>
 				<br/><br/><br/>
 				<strong>Location</strong> -	West Palm Beach, Florida<br/>
@@ -67,11 +64,7 @@ export default class Statistics extends React.Component {
 				<strong>Quads</strong> - 21.0”<br/>
 				<strong>Calves</strong> - 13.0“<br/>
 				<strong>Biceps</strong> - 11.0”<br/>
-
-	      </div>
-
-				<div className="row">
-				<div style={stats} className="col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
+				<br/>
 				<strong>Sponsoring Ashley Wildcat to Visit Your City</strong> - Ashley
 	LOVES to travel so she is more than happy to make a
 	special trip to see you, wherever you live, if you can help
@@ -85,9 +78,7 @@ export default class Statistics extends React.Component {
 	<strong>Custom Video Rates</strong> - The price for producing a custom video is based on the desired length of the video, the number of wrestlers/actors needed, and the type of action/story. If you are interested in requesting a custom video, please e-mail Ashley at ashleywildcat@outlook.com for more information.
 
 				</div>
-				</div>
 
-			</div>
 
 <TabletBreakpoint>
 <div style={divider}></div>
