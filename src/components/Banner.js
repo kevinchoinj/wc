@@ -24,10 +24,10 @@ export default class Banner extends React.Component {
 		const banner={
       opacity: this.state.opacity,
 
-      WebkitTransition: ".4s ease-in-out",
-      MozTransition: ".4s ease-in-out",
-      OTransition: ".4s ease-in-out",
-      transition:".4s ease-in-out",
+      WebkitTransition: ".4s ease-out",
+      MozTransition: ".4s ease-out",
+      OTransition: ".4s ease-out",
+      transition:".4s ease-out",
 
 			height:"100%",
 			//height:"calc(100vh - 270px)",

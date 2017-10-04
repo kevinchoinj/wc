@@ -76,7 +76,7 @@ togglemenu(){
   render(){
 const menubar={
 	width:"100%",
-	height:"54px",
+	height:"75px",
 	backgroundColor:"#000",
 	textAlign:"center",
 	color:"#fff",
@@ -89,7 +89,7 @@ const menubar={
 }
 const menubarphone={
 	width:"100%",
-	height:"45px",
+	height:"75px",
 	backgroundColor:"#000",
 	textAlign:"center",
 	color:"#fff",

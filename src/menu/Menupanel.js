@@ -85,8 +85,8 @@ export default class Menupanel extends React.Component{
 				<div style={select}><Link to='/sessions' style={desktoplink} onClick={this.props.toggler}><Menutext>SESSIONS</Menutext></Link></div>
 				<div style={select}><Link to='/' style={desktoplink} onClick={this.props.toggler}><Menutext>KITTENS</Menutext></Link></div>
 
-        <div style={select}><Link to='/' style={desktoplink} onClick={this.props.toggler}><Menutext>CONTACT</Menutext></Link></div>
         <div style={select}><Link to='/' style={desktoplink} onClick={this.props.toggler}><Menutext>GALLERY</Menutext></Link></div>
+        <div style={select}><Link to='/' style={desktoplink} onClick={this.props.toggler}><Menutext>CONTACT</Menutext></Link></div>
 
         <div style={select}><a href="https://ashley.knockoutcats.com/"style={desktoplink} onClick={this.props.toggler}><Menutext>MEMBERSHIPS &nbsp; <img src={outimg} style={outimgstyle}/></Menutext></a></div>
 				<div style={select}><a href="http://sessiongirls.com/component/comprofiler/userprofile/Ashley%20Wildcat" style={desktoplink} onClick={this.props.toggler}><Menutext>SCHEDULE &nbsp; <img src={outimg} style={outimgstyle}/></Menutext></a></div>
@@ -101,8 +101,8 @@ export default class Menupanel extends React.Component{
         <div style={select}><Link to='/sessions' style={desktoplink} onClick={this.props.toggler}><Menutext>SESSIONS</Menutext></Link></div>
         <div style={select}><Link to='/' style={desktoplink} onClick={this.props.toggler}><Menutext>KITTENS</Menutext></Link></div>
 
-        <div style={select}><Link to='/' style={desktoplink} onClick={this.props.toggler}><Menutext>CONTACT</Menutext></Link></div>
         <div style={select}><Link to='/' style={desktoplink} onClick={this.props.toggler}><Menutext>GALLERY</Menutext></Link></div>
+        <div style={select}><Link to='/' style={desktoplink} onClick={this.props.toggler}><Menutext>CONTACT</Menutext></Link></div>
 
         <div style={select}><a href="https://ashley.knockoutcats.com/"style={desktoplink} onClick={this.props.toggler}><Menutext>MEMBERSHIPS &nbsp; <img src={outimg} style={outimgstyle}/></Menutext></a></div>
         <div style={select}><a href="http://sessiongirls.com/component/comprofiler/userprofile/Ashley%20Wildcat" style={desktoplink} onClick={this.props.toggler}><Menutext>SCHEDULE &nbsp; <img src={outimg} style={outimgstyle}/></Menutext></a></div>
@@ -117,8 +117,8 @@ export default class Menupanel extends React.Component{
 				<div style={select}><Link to='/sessions' style={desktoplink} onClick={this.props.toggler}><Menutext>SESSIONS</Menutext></Link></div>
 				<div style={select}><Link to='/' style={desktoplink} onClick={this.props.toggler}><Menutext>KITTENS</Menutext></Link></div>
 
-        <div style={select}><Link to='/' style={desktoplink} onClick={this.props.toggler}><Menutext>CONTACT</Menutext></Link></div>
         <div style={select}><Link to='/' style={desktoplink} onClick={this.props.toggler}><Menutext>GALLERY</Menutext></Link></div>
+<div style={select}><Link to='/' style={desktoplink} onClick={this.props.toggler}><Menutext>CONTACT</Menutext></Link></div>
 
         <div style={select}><a href="https://ashley.knockoutcats.com/"style={desktoplink} onClick={this.props.toggler}><Menutext>MEMBERSHIPS &nbsp; <img src={outimg} style={outimgstyle}/></Menutext></a></div>
 				<div style={select}><a href="http://sessiongirls.com/component/comprofiler/userprofile/Ashley%20Wildcat" style={desktoplink} onClick={this.props.toggler}><Menutext>SCHEDULE &nbsp; <img src={outimg} style={outimgstyle}/></Menutext></a></div>

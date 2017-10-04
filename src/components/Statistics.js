@@ -1,6 +1,7 @@
 import React from 'react';
 
 import bgimage from '../images/vegas.jpeg';
+import image1 from '../images/1.jpg';
 
 export default class Banner extends React.Component {
   constructor(props) {
@@ -11,36 +12,48 @@ export default class Banner extends React.Component {
  }
   /*fades in the banner*/
   componentDidMount() {
-   setTimeout(function() { this.setState({opacity:"1"}); }.bind(this), 0);
+   setTimeout(function() { this.setState({opacity:"1"}); }.bind(this), 450);
   }
 
   render() {
+		const statscontainer={
+			opacity: this.state.opacity,
+			WebkitTransition: ".4s ease-out",
+			MozTransition: ".4s ease-out",
+			OTransition: ".4s ease-out",
+			transition:".4s ease-out",
+		}
 		const stats={
+			fontFamily:"Lato, Helvetica",
+			color:"#fff",
 
 		}
+		const divider = {
+			height:"100px",
+			width:"100%",
+		}
+
+		const image1style={
+			maxWidth:"750px",
+		}
+
     return (
-      <div style={stats}>
+			<div style={statscontainer}>
+			<div style={divider}></div>
+			<div className="row">
+      <div style={stats} className="col-md-6 col-md-offset-1">
 			Ashley Wildcat Statistics
-
-			Location:	West Palm
-			Beach, Florida
-
-			Age:	31
-
-			Height:	5’ 9”
-
-			Weight:	140 lbs.
-
-			Physique:	Athletic
-
-			Thighs: 27"
-
-			Quads: 21.0”
-
-			Calves: 13.0“
-			
-			Biceps: 11.0”
-
+			<br/><br/>
+			Location:	West Palm<br/>
+			Beach, Florida<br/>
+			Age:	31<br/>
+			Height:	5’ 9”<br/>
+			Weight:	140 lbs.<br/>
+			Physique:	Athletic<br/>
+			Thighs: 27"<br/>
+			Quads: 21.0”<br/>
+			Calves: 13.0“<br/>
+			Biceps: 11.0”<br/>
 			Sponsoring Ashley Wildcat to Visit Your City: Ashley
 			LOVES to travel so she is more than happy to make a
 			special trip to see you, wherever you live, if you can help
@@ -49,9 +62,17 @@ export default class Banner extends React.Component {
 			tions, and session fee. If you are interested in setting up
 			a session, please e-mail Ashley at
 			ashleywildcat@outlook.com for more information.
+			<br/><br/>
 
 			Custom Video Rates: The price for producing a custom video is based on the desired length of the video, the number of wrestlers/actors needed, and the type of action/story. If you are interested in requesting a custom video, please e-mail Ashley at ashleywildcat@outlook.com for more information.
       </div>
+
+			<img src={image1} style={image1style} className="col-md-3 col-md-offset-1 bannerimage"/>
+
+
+			</div>
+			<div style={divider}></div>
+			</div>
     );
   }
 }

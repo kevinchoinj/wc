@@ -1,6 +1,5 @@
 import React from 'react';
 
-import Background from './Background';
 
 export default class Home extends React.Component {
   constructor(props) {
@@ -16,7 +15,6 @@ export default class Home extends React.Component {
 
     return(
       <div>
-			<Background/>
     	Homepage
     </div>
     );
