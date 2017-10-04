@@ -4,6 +4,9 @@ import './App.css';
 
 import Home from './pages/Home';
 import Sessions from './pages/Sessions';
+import Kittens from './pages/Kittens';
+import Gallerypage from './pages/Gallery';
+import Contact from './pages/Contact';
 
 import Blackbg from './components/Blackbg';
 import Background from './components/Background';
@@ -82,9 +85,9 @@ class App extends Component {
       <Switch>
         <Route exact path="/" component={Home}/>
         <Route exact path="/sessions" component={Sessions}/>
-        <Route exact path="/kittens" component={Home}/>
-        <Route exact path="/gallery" component={Home}/>
-        <Route exact path="/contact" component={Home}/>
+        <Route exact path="/kittens" component={Kittens}/>
+        <Route exact path="/gallery" component={Gallerypage}/>
+        <Route exact path="/contact" component={Contact}/>
       </Switch>
       </div>
     );

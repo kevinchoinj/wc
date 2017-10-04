@@ -31,7 +31,7 @@ export default class Menubar extends React.Component {
 
   render(){
 		const menubar={
-			width:"100%",
+			width:"100vw",
 			height:"75px",
 			backgroundColor:"#000",
 			textAlign:"center",
@@ -51,7 +51,7 @@ export default class Menubar extends React.Component {
 			cursor:"default",
 		}
 		const menubarphone={
-			width:"100%",
+			width:"100vw",
 			height:"75px",
 			backgroundColor:"#000",
 			textAlign:"center",

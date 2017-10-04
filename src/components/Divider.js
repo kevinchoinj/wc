@@ -18,8 +18,8 @@ export default class Blackbg extends React.Component {
 			position:"absolute",
 			left: "50%",
 			transform: "translate(-50%, 0)",
-			width:"50%",
-			maxWidth:"700px",
+			width:"20%",
+			maxWidth:"400px",
 		}
 
 

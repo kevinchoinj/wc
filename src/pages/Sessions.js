@@ -39,6 +39,7 @@ export default class Sessions extends React.Component {
 		window.removeEventListener("resize", this.myFunction);
 	}
 
+
 	 myFunction() {
 		let supportPageOffset = window.pageXOffset !== undefined;
 		let isCSS1Compat = ((document.compatMode || '') === 'CSS1Compat');
@@ -48,7 +49,7 @@ export default class Sessions extends React.Component {
 		};
 
 		if (document.getElementById("statistics") != null){
-			if (scroll.y > document.getElementById("statistics").offsetTop - (window.innerHeight*.7)){
+			if (scroll.y > document.getElementById("statistics").offsetTop - (window.innerHeight*.8)){
 				this.setState({
 					statsfromleft: "0px",
 					statsopac: "1",
@@ -63,7 +64,7 @@ export default class Sessions extends React.Component {
 		}
 
 		if (document.getElementById("fightstyle") != null){
-			if (scroll.y > document.getElementById("fightstyle").offsetTop - (window.innerHeight*.7)){
+			if (scroll.y > document.getElementById("fightstyle").offsetTop - (window.innerHeight*.8)){
 				this.setState({
 					fightstylefromright: "0px",
 					fightstyleopac: "1"
@@ -78,7 +79,7 @@ export default class Sessions extends React.Component {
 		}
 
 		if (document.getElementById("sessiontypes") != null){
-			if (scroll.y > document.getElementById("sessiontypes").offsetTop -(window.innerHeight*.7)){
+			if (scroll.y > document.getElementById("sessiontypes").offsetTop -(window.innerHeight*.8)){
 				this.setState({
 					sessionfromleft: "0px",
 					sessionopac: "1"
@@ -93,7 +94,7 @@ export default class Sessions extends React.Component {
 		}
 
 		if (document.getElementById("specialevents") != null){
-			if (scroll.y > document.getElementById("specialevents").offsetTop -(window.innerHeight*.7)){
+			if (scroll.y > document.getElementById("specialevents").offsetTop -(window.innerHeight*.8)){
 				this.setState({
 					specialfromright: "0px",
 					specialopac: "1",

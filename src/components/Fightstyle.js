@@ -56,11 +56,15 @@ export default class Fighstyle extends React.Component {
 			marginLeft:this.props.fromright,
 			opacity: this.props.opac,
 			width:"100%",
+			float: "right",
 		}
 		const title={
 			fontSize:"40px",
 			color: "#af9759",
 		}
+
+
+
     return (
 			<div style={statscontainer}>
 			<div style={divider}></div>
@@ -69,7 +73,7 @@ export default class Fighstyle extends React.Component {
 			</DesktopBreakpoint>
 			<div className="row">
 
-			<div className="col-md-3 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1 bannerimage" id="fightstyle">
+			<div className="col-md-3 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1 bannerimage" id="fightstyle" >
 			<img src={image2} style={image1style}/>
 			</div>
 
