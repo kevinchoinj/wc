@@ -22,17 +22,27 @@ import bgimage5 from './images/city2.jpeg';
 import Menu from './menu/Menu';
 import Triangle from './components/Triangle';
 
+import bgvideo from './images/vegas.mp4';
+import bgposter from './images/vegasimage.jpg'
+
 class App extends Component {
   render() {
+    const fillimage={
+      position:"absolute",
+      width:"100%",
+      height:"100%",
+    }
     return (
       <div className="App">
       <Preload/>
       <Route exact path={"/"} children={({ match }) => (
 		      <div>
 		        <Background
-            bgimage={bgimage1}
+            bgimage={bgposter}
 		          bottomOffset={ Boolean(match) ? '0': '-100%'}
-		        />
+		        >
+            <video loop src={bgvideo} autoPlay="autoplay"  id="iobg" poster={bgposter} style={fillimage}></video>
+            </Background>
 		      </div>
 		    )}/>
 

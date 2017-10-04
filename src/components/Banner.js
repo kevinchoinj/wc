@@ -4,7 +4,7 @@ import DesktopBreakpoint from '../responsive/desktop_breakpoint.js';
 import TabletBreakpoint from '../responsive/tablet_breakpoint.js';
 import PhoneBreakpoint from '../responsive/phone_breakpoint.js';
 
-import posterimage from '../images/posterimage.jpg';
+import posterimage from '../images/banner2.jpg';
 import vidoutput from '../images/testvid.mp4';
 import arrow from '../images/downarrow.png';
 
