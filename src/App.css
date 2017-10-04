@@ -11,6 +11,11 @@ html, body{
   padding-left:0px !important;
   padding-right:0px !important;
 }
+.row{
+  margin-left:0px;
+  margin-right:0px;
+}
+
 @media handheld, screen and (max-width: 1025px){
   .bannerimage{
         background-attachment: scroll!important;

@@ -3,7 +3,7 @@ import React from 'react';
 import Banner from '../components/Banner';
 import Statistics from '../components/Statistics';
 
-export default class Sessions extends React.Component {
+export default class Gallery extends React.Component {
   constructor(props) {
   	super(props);
   	this.state = {
@@ -19,7 +19,6 @@ const sessioncontainer={
 
     return(
       <div style={sessioncontainer}>
-			<Banner/>
     	<Statistics/>
     </div>
     );

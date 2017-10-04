@@ -1,10 +1,9 @@
 import React from 'react';
 
-import Background from '../components/Background';
-import Blackbg from '../components/Blackbg';
-import Banner from '../components/Banner';
 import Statistics from '../components/Statistics';
-import bgimage1 from '../images/rain.jpg';
+import Fightstyle from '../components/Fightstyle';
+import Sessiontypes from '../components/Sessiontypes';
+import Specialevents from '../components/Specialevents';
 
 export default class Sessions extends React.Component {
   constructor(props) {
@@ -23,6 +22,9 @@ const sessioncontainer={
     return(
       <div style={sessioncontainer}>
     	<Statistics/>
+			<Fightstyle/>
+			<Sessiontypes/>
+			<Specialevents/>
     </div>
     );
   }

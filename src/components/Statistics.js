@@ -3,7 +3,7 @@ import React from 'react';
 import bgimage from '../images/vegas.jpeg';
 import image1 from '../images/1.jpg';
 
-export default class Banner extends React.Component {
+export default class Statistics extends React.Component {
   constructor(props) {
 	 super(props);
 	 this.state = {
