@@ -3,6 +3,10 @@ import React from "react";
 import Menubutton from './Menubutton.js';
 import Menupanel from './Menupanel.js';
 
+import DesktopBreakpoint from '../responsive/desktop_breakpoint.js';
+import TabletBreakpoint from '../responsive/tablet_breakpoint.js';
+import PhoneBreakpoint from '../responsive/phone_breakpoint.js';
+
 
 export default class Menu extends React.Component{
 	constructor(props) {
@@ -20,7 +24,7 @@ export default class Menu extends React.Component{
 		buttoncolor: "#000",
 
 		btnwidth: "100px",
-		linesfromleft:"25px",
+		linesfromleft:"35px",
 
 	 }
 	 	this.hoverbutton = this.hoverbutton.bind(this)
@@ -37,7 +41,7 @@ togglemenu(){
 			 line1fromtop: "34px",
 			 line2fromtop: "34px",
 			 desktopmenuright: "0px",
-		mobilemenuright: "0px",
+			 mobilemenuright: "0px",
 				btnwidth: "260px",
 				linesfromleft:"110px",
 		});
@@ -52,7 +56,7 @@ togglemenu(){
 			 desktopmenuright: "-450px",
 		mobilemenuright: "-100%",
 				btnwidth: "100px",
-				linesfromleft:"25px",
+				linesfromleft:"35px",
 		});
 	}
 }
@@ -80,14 +84,42 @@ const menubar={
 	fontFamily:"Lato, Helvetica",
 	fontSize:"30px",
 	letterSpacing:"0.59em",
+	zIndex:"10",
+	position:"fixed",
 }
+const menubarphone={
+	width:"100%",
+	height:"45px",
+	backgroundColor:"#000",
+	textAlign:"center",
+	color:"#fff",
+	paddingTop:"30px",
+	fontFamily:"Lato, Helvetica",
+	fontSize:"16px",
+	letterSpacing:"0.59em",
+	position:"fixed",
+}
+
 	  return(
 
 				<div>
 
+				<DesktopBreakpoint>
 				<div style={menubar}>
 				ASHLEY WILDCAT
 				</div>
+				</DesktopBreakpoint>
+				<TabletBreakpoint>
+				<div style={menubar}>
+				ASHLEY WILDCAT
+				</div>
+				</TabletBreakpoint>
+				<PhoneBreakpoint>
+				<div style={menubarphone}>
+				ASHLEY WILDCAT
+				</div>
+				</PhoneBreakpoint>
+
 					<Menubutton
 						toggler={this.togglemenu}
 

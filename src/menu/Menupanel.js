@@ -3,6 +3,8 @@ import {Link} from 'react-router-dom';
 
 import Menutext from './Menutext';
 
+import outimg from '../images/outw.png';
+
 import DesktopBreakpoint from '../responsive/desktop_breakpoint.js';
 import TabletBreakpoint from '../responsive/tablet_breakpoint.js';
 import PhoneBreakpoint from '../responsive/phone_breakpoint.js';
@@ -68,59 +70,59 @@ export default class Menupanel extends React.Component{
         width:"100%",
         paddingTop:"16px",
       }
+
+      const outimgstyle={
+        height:"18px",
+
+      }
 	  return(
 
 				<div>
 				<DesktopBreakpoint>
 				<div style={desktopmenu}>
-        <div style={select}>
-				<Link to='/'
-          style={desktoplink}
-          onClick={this.props.toggler}
-        >
-          <Menutext>
-            HOME
-          </Menutext>
-        </Link>
-        </div>
-        <div style={select}>
-				<Link
-          to='/'
-          style={desktoplink}
-          onClick={this.props.toggler}
-        >
-          <Menutext>
-            MEMBERSHIPS
-          </Menutext>
-        </Link>
-        </div>
-				<div style={select}><Link to='/' style={desktoplink} onClick={this.props.toggler}><Menutext>SCHEDULE</Menutext></Link></div>
-				<div style={select}><Link to='/' style={desktoplink} onClick={this.props.toggler}><Menutext>SESSIONS</Menutext></Link></div>
+        <div style={select}><Link to='/' style={desktoplink} onClick={this.props.toggler}><Menutext>HOME</Menutext></Link></div>
+
+				<div style={select}><Link to='/sessions' style={desktoplink} onClick={this.props.toggler}><Menutext>SESSIONS</Menutext></Link></div>
 				<div style={select}><Link to='/' style={desktoplink} onClick={this.props.toggler}><Menutext>KITTENS</Menutext></Link></div>
-        <div style={select}><Link to='/' style={desktoplink} onClick={this.props.toggler}><Menutext>ABOUT</Menutext></Link></div>
+
         <div style={select}><Link to='/' style={desktoplink} onClick={this.props.toggler}><Menutext>CONTACT</Menutext></Link></div>
         <div style={select}><Link to='/' style={desktoplink} onClick={this.props.toggler}><Menutext>GALLERY</Menutext></Link></div>
-        <div style={select}><Link to='/' style={desktoplink} onClick={this.props.toggler}><Menutext>CLIPS</Menutext></Link></div>
+
+        <div style={select}><a href="https://ashley.knockoutcats.com/"style={desktoplink} onClick={this.props.toggler}><Menutext>MEMBERSHIPS &nbsp; <img src={outimg} style={outimgstyle}/></Menutext></a></div>
+				<div style={select}><a href="http://sessiongirls.com/component/comprofiler/userprofile/Ashley%20Wildcat" style={desktoplink} onClick={this.props.toggler}><Menutext>SCHEDULE &nbsp; <img src={outimg} style={outimgstyle}/></Menutext></a></div>
+        <div style={select}><a href="http://clips4sale.com/84041" style={desktoplink} onClick={this.props.toggler}><Menutext>CLIPS &nbsp; <img src={outimg} style={outimgstyle}/></Menutext></a></div>
 				</div>
 				</DesktopBreakpoint>
 
 				<TabletBreakpoint>
 				<div style={desktopmenu}>
-        <Link to='/' style={desktoplink} onClick={this.props.toggler}><Menutext>HOME</Menutext></Link><br/>
-				<Link to='/projects' style={desktoplink} onClick={this.props.toggler}><Menutext>PROJECTS</Menutext></Link><br/>
-				<Link to='/gaming' style={desktoplink} onClick={this.props.toggler}><Menutext>GAMING</Menutext></Link><br/>
-				<Link to='/resume' style={desktoplink} onClick={this.props.toggler}><Menutext>RESUME</Menutext></Link><br/>
-				<Link to='/recent' style={desktoplink} onClick={this.props.toggler}><Menutext>RECENT</Menutext></Link><br/>
-				</div>
+        <div style={select}><Link to='/' style={desktoplink} onClick={this.props.toggler}><Menutext>HOME</Menutext></Link></div>
+
+        <div style={select}><Link to='/sessions' style={desktoplink} onClick={this.props.toggler}><Menutext>SESSIONS</Menutext></Link></div>
+        <div style={select}><Link to='/' style={desktoplink} onClick={this.props.toggler}><Menutext>KITTENS</Menutext></Link></div>
+
+        <div style={select}><Link to='/' style={desktoplink} onClick={this.props.toggler}><Menutext>CONTACT</Menutext></Link></div>
+        <div style={select}><Link to='/' style={desktoplink} onClick={this.props.toggler}><Menutext>GALLERY</Menutext></Link></div>
+
+        <div style={select}><a href="https://ashley.knockoutcats.com/"style={desktoplink} onClick={this.props.toggler}><Menutext>MEMBERSHIPS &nbsp; <img src={outimg} style={outimgstyle}/></Menutext></a></div>
+        <div style={select}><a href="http://sessiongirls.com/component/comprofiler/userprofile/Ashley%20Wildcat" style={desktoplink} onClick={this.props.toggler}><Menutext>SCHEDULE &nbsp; <img src={outimg} style={outimgstyle}/></Menutext></a></div>
+        <div style={select}><a href="http://clips4sale.com/84041" style={desktoplink} onClick={this.props.toggler}><Menutext>CLIPS &nbsp; <img src={outimg} style={outimgstyle}/></Menutext></a></div>
+        </div>
 				</TabletBreakpoint>
 
 				<PhoneBreakpoint>
-				<div style={mobilemenu}>
-        <Link to='/' style={desktoplink} onClick={this.props.toggler}><Menutext>HOME</Menutext></Link><br/>
-				<Link to='/projects' style={desktoplink} onClick={this.props.toggler}><Menutext>PROJECTS</Menutext></Link><br/>
-				<Link to='/gaming' style={desktoplink} onClick={this.props.toggler}><Menutext>GAMING</Menutext></Link><br/>
-				<Link to='/resume' style={desktoplink} onClick={this.props.toggler}><Menutext>RESUME</Menutext></Link><br/>
-				<Link to='/recent' style={desktoplink} onClick={this.props.toggler}><Menutext>RECENT</Menutext></Link><br/>
+				<div style={desktopmenu}>
+        <div style={select}><Link to='/' style={desktoplink} onClick={this.props.toggler}><Menutext>HOME</Menutext></Link></div>
+
+				<div style={select}><Link to='/sessions' style={desktoplink} onClick={this.props.toggler}><Menutext>SESSIONS</Menutext></Link></div>
+				<div style={select}><Link to='/' style={desktoplink} onClick={this.props.toggler}><Menutext>KITTENS</Menutext></Link></div>
+
+        <div style={select}><Link to='/' style={desktoplink} onClick={this.props.toggler}><Menutext>CONTACT</Menutext></Link></div>
+        <div style={select}><Link to='/' style={desktoplink} onClick={this.props.toggler}><Menutext>GALLERY</Menutext></Link></div>
+
+        <div style={select}><a href="https://ashley.knockoutcats.com/"style={desktoplink} onClick={this.props.toggler}><Menutext>MEMBERSHIPS &nbsp; <img src={outimg} style={outimgstyle}/></Menutext></a></div>
+				<div style={select}><a href="http://sessiongirls.com/component/comprofiler/userprofile/Ashley%20Wildcat" style={desktoplink} onClick={this.props.toggler}><Menutext>SCHEDULE &nbsp; <img src={outimg} style={outimgstyle}/></Menutext></a></div>
+        <div style={select}><a href="http://clips4sale.com/84041" style={desktoplink} onClick={this.props.toggler}><Menutext>CLIPS &nbsp; <img src={outimg} style={outimgstyle}/></Menutext></a></div>
 				</div>
 				</PhoneBreakpoint>
 				</div>
