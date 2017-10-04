@@ -39,7 +39,7 @@ export default class Statistics extends React.Component {
 			OTransition: ".4s ease-out",
 			transition:".4s ease-out",
 
-			right:this.props.fromright,
+			left:this.props.fromleft,
 			opacity: this.props.opac,
 		}
 		const divider = {
@@ -49,6 +49,13 @@ export default class Statistics extends React.Component {
 
 		const image1style={
 			maxWidth:"500px",
+			WebkitTransition: ".4s ease-out",
+			MozTransition: ".4s ease-out",
+			OTransition: ".4s ease-out",
+			transition:".4s ease-out",
+			
+			right:this.props.fromleft,
+			opacity: this.props.opac,
 		}
 		const title={
 			fontSize:"40px",
@@ -59,7 +66,7 @@ export default class Statistics extends React.Component {
 			<div style={statscontainer}>
 			<div style={divider}></div>
 			<div className="row" >
-	      <div style={stats} className="col-md-5 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1" id="stats">
+	      <div style={stats} className="col-md-5 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1" id="statistics">
 				<span style={title}><strong>Stats</strong></span>
 				<br/><br/><br/>
 				<strong>Location</strong> -	West Palm Beach, Florida<br/>

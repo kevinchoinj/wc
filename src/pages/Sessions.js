@@ -13,6 +13,10 @@ export default class Sessions extends React.Component {
   constructor(props) {
   	super(props);
   	this.state = {
+
+			statsfromleft: "-100px",
+			statsopac: "0",
+
 			fightstylefromright: "-100px",
 			fightstyleopac: "0",
 
@@ -43,10 +47,23 @@ export default class Sessions extends React.Component {
 			 y: supportPageOffset ? window.pageYOffset : isCSS1Compat ? document.documentElement.scrollTop : document.body.scrollTop
 		};
 
-
+		if (document.getElementById("statistics") != null){
+			if (scroll.y > document.getElementById("statistics").offsetTop - (window.innerHeight*.7)){
+				this.setState({
+					statsfromleft: "0px",
+					statsopac: "1",
+				});
+			}
+			else{
+				this.setState({
+					statsfromleft: "-100px",
+					statsopac: "0",
+				});
+			}
+		}
 
 		if (document.getElementById("fightstyle") != null){
-			if (scroll.y > document.getElementById("fightstyle").offsetTop - (window.innerHeight*.5)){
+			if (scroll.y > document.getElementById("fightstyle").offsetTop - (window.innerHeight*.7)){
 				this.setState({
 					fightstylefromright: "0px",
 					fightstyleopac: "1"
@@ -61,7 +78,7 @@ export default class Sessions extends React.Component {
 		}
 
 		if (document.getElementById("sessiontypes") != null){
-			if (scroll.y > document.getElementById("sessiontypes").offsetTop -(window.innerHeight*.5)){
+			if (scroll.y > document.getElementById("sessiontypes").offsetTop -(window.innerHeight*.7)){
 				this.setState({
 					sessionfromleft: "0px",
 					sessionopac: "1"
@@ -76,7 +93,7 @@ export default class Sessions extends React.Component {
 		}
 
 		if (document.getElementById("specialevents") != null){
-			if (scroll.y > document.getElementById("specialevents").offsetTop -(window.innerHeight*.5)){
+			if (scroll.y > document.getElementById("specialevents").offsetTop -(window.innerHeight*.7)){
 				this.setState({
 					specialfromright: "0px",
 					specialopac: "1",
@@ -100,7 +117,7 @@ const sessioncontainer={
     return(
       <div style={sessioncontainer}>
 			<Banner/>
-	    	<Statistics/>
+	    	<Statistics fromleft={this.state.statsfromleft} opac={this.state.statsopac}/>
 				<Divider/>
 				<Fightstyle fromright={this.state.fightstylefromright} opac = {this.state.fightstyleopac}/>
 				<Divider/>

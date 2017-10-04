@@ -100,6 +100,7 @@ export default class Menupanel extends React.Component{
       const socialicon={
         height:"25px",
         width:"25px",
+        margin:"10px",
       }
 	  return(
 

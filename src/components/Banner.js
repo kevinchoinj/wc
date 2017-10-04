@@ -1,7 +1,12 @@
 import React from 'react';
 
+import DesktopBreakpoint from '../responsive/desktop_breakpoint.js';
+import TabletBreakpoint from '../responsive/tablet_breakpoint.js';
+import PhoneBreakpoint from '../responsive/phone_breakpoint.js';
+
 import posterimage from '../images/posterimage.jpg';
 import vidoutput from '../images/testvid.mp4';
+import arrow from '../images/downarrow.png';
 
 export default class Banner extends React.Component {
   constructor(props) {
@@ -49,8 +54,15 @@ export default class Banner extends React.Component {
 		const fillimage={
 			position:"absolute",
 			width:"100%",
-
 		}
+
+		const arrowstyle={
+			width:"80px",
+			height:"80px",
+			position:"absolute",
+			right:"0px",
+		}
+
     return (
 			<div style={bannercont}>
 	      <div style={banner}>
@@ -58,6 +70,8 @@ export default class Banner extends React.Component {
 			</div>
 			<div style={underbanner} className="col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
 				Session Information
+				<DesktopBreakpoint><img src={arrow} style={arrowstyle}/></DesktopBreakpoint>
+				<TabletBreakpoint><img src={arrow} style={arrowstyle}/></TabletBreakpoint>
 			</div>
 			</div>
     );
