@@ -38,7 +38,7 @@ export default class Fighstyle extends React.Component {
 			OTransition: ".4s ease-out",
 			transition:".4s ease-out",
 
-			left:this.props.fromleft,
+			right:this.props.fromright,
 			opacity: this.props.opac,
 		}
 		const divider = {
@@ -47,7 +47,7 @@ export default class Fighstyle extends React.Component {
 		}
 
 		const image1style={
-			maxWidth:"750px",
+			maxWidth:"500px",
 
 			WebkitTransition: ".4s ease-out",
 			MozTransition: ".4s ease-out",
@@ -56,6 +56,7 @@ export default class Fighstyle extends React.Component {
 			marginLeft:this.props.fromright,
 			opacity: this.props.opac,
 			width:"100%",
+      float:"right",
 		}
 		const title={
 			fontSize:"40px",
@@ -69,7 +70,7 @@ export default class Fighstyle extends React.Component {
 			</DesktopBreakpoint>
 			<div className="row">
 
-			<div className="col-md-3 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1 bannerimage" id="specialevents">
+			<div className="col-md-4 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1 bannerimage" id="specialevents">
 				<img src={image4} style={image1style}/>
 			</div>
 			<div style={stats} className="col-md-5 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
@@ -79,9 +80,9 @@ export default class Fighstyle extends React.Component {
 			<PhoneBreakpoint>
 			<div style={divider}></div>
 			</PhoneBreakpoint>
-			<span style={title}><strong>Special Events</strong></span>
-			<br/><br/><br/>
-			Event info
+  			<span style={title}><strong>Special Events</strong></span>
+  			<br/><br/><br/>
+  			Event info
       </div>
 
 			</div>

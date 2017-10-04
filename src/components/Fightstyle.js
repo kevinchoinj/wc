@@ -73,7 +73,7 @@ export default class Fighstyle extends React.Component {
 			</DesktopBreakpoint>
 			<div className="row">
 
-			<div className="col-md-3 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1 bannerimage" id="fightstyle" >
+			<div className="col-md-4 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1 bannerimage" id="fightstyle" >
 			<img src={image2} style={image1style}/>
 			</div>
 
