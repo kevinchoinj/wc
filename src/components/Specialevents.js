@@ -1,9 +1,12 @@
 import React from 'react';
+import DesktopBreakpoint from '../responsive/desktop_breakpoint.js';
+import TabletBreakpoint from '../responsive/tablet_breakpoint.js';
+import PhoneBreakpoint from '../responsive/phone_breakpoint.js';
 
 import bgimage from '../images/vegas.jpeg';
-import image1 from '../images/4.jpg';
+import image4 from '../images/4.jpg';
 
-export default class Specialevents extends React.Component {
+export default class Fighstyle extends React.Component {
   constructor(props) {
 	 super(props);
 	 this.state = {
@@ -26,7 +29,9 @@ export default class Specialevents extends React.Component {
 		const stats={
 			fontFamily:"Lato, Helvetica",
 			color:"#fff",
-
+			fontSize:"18px",
+			lineHeight:"150%",
+			letterSpacing:"1px",
 		}
 		const divider = {
 			height:"100px",
@@ -36,20 +41,32 @@ export default class Specialevents extends React.Component {
 		const image1style={
 			maxWidth:"750px",
 		}
-
+		const title={
+			fontSize:"40px",
+			color: "#af9759",
+		}
     return (
 			<div style={statscontainer}>
 			<div style={divider}></div>
+			<DesktopBreakpoint>
+			<div style={divider}></div>
+			</DesktopBreakpoint>
 			<div className="row">
 
-			<img src={image1} style={image1style} className="col-md-3 col-md-offset-1 bannerimage"/>
 
-      <div style={stats} className="col-md-6 col-md-offset-1">
-			Special Events information
-			</div>
+			<img src={image4} style={image1style} className="col-md-3 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1 bannerimage"/>
 
-
-
+			<div style={stats} className="col-md-5 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
+			<TabletBreakpoint>
+			<div style={divider}></div>
+			</TabletBreakpoint>
+			<PhoneBreakpoint>
+			<div style={divider}></div>
+			</PhoneBreakpoint>
+			<span style={title}><strong>Special Events</strong></span>
+			<br/><br/><br/>
+			Event info
+      </div>
 
 			</div>
 			<div style={divider}></div>

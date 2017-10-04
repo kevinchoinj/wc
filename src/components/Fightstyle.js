@@ -1,5 +1,9 @@
 import React from 'react';
 
+import DesktopBreakpoint from '../responsive/desktop_breakpoint.js';
+import TabletBreakpoint from '../responsive/tablet_breakpoint.js';
+import PhoneBreakpoint from '../responsive/phone_breakpoint.js';
+
 import bgimage from '../images/vegas.jpeg';
 import image2 from '../images/2.jpg';
 
@@ -29,7 +33,6 @@ export default class Fighstyle extends React.Component {
 			fontSize:"18px",
 			lineHeight:"150%",
 			letterSpacing:"1px",
-			paddingLeft:"50px",
 		}
 		const divider = {
 			height:"100px",
@@ -46,12 +49,25 @@ export default class Fighstyle extends React.Component {
     return (
 			<div style={statscontainer}>
 			<div style={divider}></div>
+			<DesktopBreakpoint>
+			<div style={divider}></div>
+			</DesktopBreakpoint>
 			<div className="row">
 
 
-			<img src={image2} style={image1style} className="col-md-3 col-md-offset-2 bannerimage"/>
+			<img src={image2} style={image1style} className="col-md-3 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1 bannerimage"/>
 
-			<div style={stats} className="col-md-5 col-md-offset-1">
+
+
+			<div style={stats} className="col-md-5 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
+
+			<TabletBreakpoint>
+			<div style={divider}></div>
+			</TabletBreakpoint>
+			<PhoneBreakpoint>
+			<div style={divider}></div>
+			</PhoneBreakpoint>
+
 			<span style={title}><strong>Fighting Style</strong></span>
 			<br/><br/><br/>
 			My formal training is based on a hybrid of pro-wrestling, Brazilian jiu-jitsu, and Hapkido. This makes me a sexy, but VERY dominant and lethal fighting machine! A lot of people ask me how I became interested in wrestling. Well, about two years ago, a personal acquaintance who was a wrestling coach, suggested that I might like wrestling and that I should give it a try. Well, I did, and I IMMEDIATELY fell in LOVE with it!! YAHOO!! To me, there is NOTHING that turns me on more than getting my paws on an opponent and COMPLETELY dominating him or her. I have an EXTREMELY dominant personality, so wrestling is my absolute FAVORITE activity for satisfying my need to “own” and control others, especially YOU!

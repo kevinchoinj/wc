@@ -1,4 +1,7 @@
 import React from 'react';
+import DesktopBreakpoint from '../responsive/desktop_breakpoint.js';
+import TabletBreakpoint from '../responsive/tablet_breakpoint.js';
+import PhoneBreakpoint from '../responsive/phone_breakpoint.js';
 
 import bgimage from '../images/vegas.jpeg';
 import image1 from '../images/1.jpg';
@@ -29,7 +32,6 @@ export default class Statistics extends React.Component {
 			fontSize:"18px",
 			lineHeight:"150%",
 			letterSpacing:"1px",
-			paddingLeft:"50px",
 
 		}
 		const divider = {
@@ -48,6 +50,9 @@ export default class Statistics extends React.Component {
     return (
 			<div style={statscontainer}>
 			<div style={divider}></div>
+			<DesktopBreakpoint>
+			<div style={divider}></div>
+			</DesktopBreakpoint>
 			<div className="row">
 			<div style={stats} className="col-md-5 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
 
@@ -68,7 +73,16 @@ Kicking – Oh boy, be careful with this one! My Hapkido instructors constantly 
 Muscle/Body Worship – Have the honor and privilege of massaging the feet that kick you or the legs that crush you? I am a Goddess as well so do not forget this! Very hot! I LOVE this!
 <br/>
 E-Mail or Skype Sessions – If you cannot meet in person, we can always chat via Skype or e-mail. I have a very sexy mind and I am extremely good at exploring your wrestling fantasies with you using this virtual format. The mind is one of the sexiest parts of our bodies so these sessions can be very hot and fun! These sessions are very easy to set-up, so let’s chat!
+
+<TabletBreakpoint>
+<div style={divider}></div>
+</TabletBreakpoint>
+<PhoneBreakpoint>
+<div style={divider}></div>
+</PhoneBreakpoint>
 			</div>
+
+
 
 			<img src={image1} style={image1style} className="col-md-3 col-md-offset-1 col-sm-6 col-sm-offset-3 col-xs-10 col-xs-offset-1 bannerimage"/>
 

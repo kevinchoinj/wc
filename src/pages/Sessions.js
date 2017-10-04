@@ -5,6 +5,8 @@ import Fightstyle from '../components/Fightstyle';
 import Sessiontypes from '../components/Sessiontypes';
 import Specialevents from '../components/Specialevents';
 
+import Divider from '../components/Divider';
+
 export default class Sessions extends React.Component {
   constructor(props) {
   	super(props);
@@ -22,8 +24,11 @@ const sessioncontainer={
     return(
       <div style={sessioncontainer}>
     	<Statistics/>
+			<Divider/>
 			<Fightstyle/>
+			<Divider/>
 			<Sessiontypes/>
+			<Divider/>
 			<Specialevents/>
     </div>
     );

@@ -47,6 +47,8 @@ export default class Menubar extends React.Component {
 			MozTransition: ".4s ease-out",
 			OTransition: ".4s ease-out",
 			transition:".4s ease-out",
+
+			cursor:"default",
 		}
 		const menubarphone={
 			width:"100%",
@@ -56,14 +58,18 @@ export default class Menubar extends React.Component {
 			color:this.state.lettercolor,
 			paddingTop:"30px",
 			fontFamily:"Lato, Helvetica",
-			fontSize:"16px",
+			fontSize:"14px",
 			letterSpacing:"0.59em",
+			zIndex:"10",
 			position:"fixed",
+			left:"75px",
 
 			WebkitTransition: ".4s ease-out",
 			MozTransition: ".4s ease-out",
 			OTransition: ".4s ease-out",
 			transition:".4s ease-out",
+
+			cursor:"default",
 		}
 
 

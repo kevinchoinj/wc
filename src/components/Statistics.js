@@ -3,6 +3,10 @@ import React from 'react';
 import bgimage from '../images/vegas.jpeg';
 import image1 from '../images/3.jpg';
 
+import DesktopBreakpoint from '../responsive/desktop_breakpoint.js';
+import TabletBreakpoint from '../responsive/tablet_breakpoint.js';
+import PhoneBreakpoint from '../responsive/phone_breakpoint.js';
+
 export default class Statistics extends React.Component {
   constructor(props) {
 	 super(props);
@@ -30,7 +34,6 @@ export default class Statistics extends React.Component {
 			fontSize:"18px",
 			lineHeight:"150%",
 			letterSpacing:"1px",
-			paddingLeft:"50px",
 
 		}
 		const divider = {
@@ -78,13 +81,20 @@ export default class Statistics extends React.Component {
 	a session, please e-mail Ashley at
 	ashleywildcat@outlook.com for more information.
 
-	<br/>
+	<br/><br/>
 	<strong>Custom Video Rates</strong> - The price for producing a custom video is based on the desired length of the video, the number of wrestlers/actors needed, and the type of action/story. If you are interested in requesting a custom video, please e-mail Ashley at ashleywildcat@outlook.com for more information.
 
 				</div>
 				</div>
 
 			</div>
+
+<TabletBreakpoint>
+<div style={divider}></div>
+</TabletBreakpoint>
+<PhoneBreakpoint>
+<div style={divider}></div>
+</PhoneBreakpoint>
 
 			<img src={image1} style={image1style} className="col-md-3 col-md-offset-1 col-sm-6 col-sm-offset-3 col-xs-10 col-xs-offset-1 bannerimage"/>
 
