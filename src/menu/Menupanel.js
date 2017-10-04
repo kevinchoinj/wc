@@ -45,7 +45,7 @@ export default class Menupanel extends React.Component{
 				left: this.props.menuright,
 				paddingTop:"75px",
         top:"0px",
-				fontSize: "18px",
+				fontSize: "16px",
 				fontFamily: "Lato, Helvetica",
         textAlign:"center",
 
@@ -73,10 +73,10 @@ export default class Menupanel extends React.Component{
 				lineHeight: "300%",
 				fontWeight: "bold",
 
-				WebkitTransition: ".4s ease-in-out",
-				MozTransition: ".4s ease-in-out",
-				OTransition: ".4s ease-in-out",
-				transition:".4s ease-in-out",
+				WebkitTransition: ".4s ease-out",
+				MozTransition: ".4s ease-out",
+				OTransition: ".4s ease-out",
+				transition:".4s ease-out",
 
 				zIndex:"12",
 			}
@@ -90,6 +90,7 @@ export default class Menupanel extends React.Component{
       const select={
         width:"100%",
         paddingTop:"16px",
+        paddingBottom:"16px",
       }
 
       const outimgstyle={

@@ -9,8 +9,8 @@ import Blackbg from './components/Blackbg';
 import Background from './components/Background';
 
 import bgimage1 from './images/vegas.jpeg';
-import bgimage2 from './images/rain.jpg';
-import bgimage3 from './images/beach.jpeg';
+import bgimage3 from './images/rain.jpg';
+import bgimage2 from './images/beach.jpeg';
 import bgimage4 from './images/city.jpeg';
 import bgimage5 from './images/city2.jpeg';
 

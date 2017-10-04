@@ -26,7 +26,10 @@ export default class Fighstyle extends React.Component {
 		const stats={
 			fontFamily:"Lato, Helvetica",
 			color:"#fff",
-
+			fontSize:"18px",
+			lineHeight:"150%",
+			letterSpacing:"1px",
+			paddingLeft:"50px",
 		}
 		const divider = {
 			height:"100px",
@@ -36,18 +39,21 @@ export default class Fighstyle extends React.Component {
 		const image1style={
 			maxWidth:"750px",
 		}
-
+		const title={
+			fontSize:"40px",
+			color: "#af9759",
+		}
     return (
 			<div style={statscontainer}>
 			<div style={divider}></div>
 			<div className="row">
 
 
-			<img src={image2} style={image1style} className="col-md-3 col-md-offset-1 bannerimage"/>
+			<img src={image2} style={image1style} className="col-md-3 col-md-offset-2 bannerimage"/>
 
-			<div style={stats} className="col-md-6 col-md-offset-1">
-			About My Fighting Style
-			<br/><br/>
+			<div style={stats} className="col-md-5 col-md-offset-1">
+			<span style={title}><strong>Fighting Style</strong></span>
+			<br/><br/><br/>
 			My formal training is based on a hybrid of pro-wrestling, Brazilian jiu-jitsu, and Hapkido. This makes me a sexy, but VERY dominant and lethal fighting machine! A lot of people ask me how I became interested in wrestling. Well, about two years ago, a personal acquaintance who was a wrestling coach, suggested that I might like wrestling and that I should give it a try. Well, I did, and I IMMEDIATELY fell in LOVE with it!! YAHOO!! To me, there is NOTHING that turns me on more than getting my paws on an opponent and COMPLETELY dominating him or her. I have an EXTREMELY dominant personality, so wrestling is my absolute FAVORITE activity for satisfying my need to “own” and control others, especially YOU!
 			<br/><br/>
 			My head scissors holds have become legendary (see the Testimonials section for more on this from my previous “prey”). Scissor holds are my absolute FAVORITE - just talking about them makes me want to throw you to the mat and apply one of my Ashley Anaconda head scissors that will have you tapping out in a matter of seconds. Don’t think that a hot woman like me could do this to you? Maybe you aren’t convinced that I can squeeze and dominate you like an Anaconda does with its prey in the wild?? I am also known for my facesitting and smothering techniques. I don’t want to sound arrogant, but I have a PERFECT ass that I GUARANTEE you will fantasize about as you watch my videos and view images of me on this site. I will be using it to COMPLETELY, and I do mean COMPLETELY smother you When you are the victim of my facesitting hold, you will love the sensation., but also terrified when you realize that there is no escape Talk about Hot! Whew! I LOVE it.
