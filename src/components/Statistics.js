@@ -28,12 +28,19 @@ export default class Statistics extends React.Component {
 			transition:".4s ease-out",
 		}
 		const stats={
-			paddingTop:"50px",
 			fontFamily:"Lato, Helvetica",
 			color:"#fff",
 			fontSize:"18px",
 			lineHeight:"150%",
 			letterSpacing:"1px",
+
+			WebkitTransition: ".4s ease-out",
+			MozTransition: ".4s ease-out",
+			OTransition: ".4s ease-out",
+			transition:".4s ease-out",
+
+			right:this.props.fromright,
+			opacity: this.props.opac,
 		}
 		const divider = {
 			height:"100px",

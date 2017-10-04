@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Banner from '../components/Banner';
+
 import Statistics from '../components/Statistics';
 import Fightstyle from '../components/Fightstyle';
 import Sessiontypes from '../components/Sessiontypes';
@@ -97,6 +99,7 @@ const sessioncontainer={
 
     return(
       <div style={sessioncontainer}>
+			<Banner/>
 	    	<Statistics/>
 				<Divider/>
 				<Fightstyle fromright={this.state.fightstylefromright} opac = {this.state.fightstyleopac}/>
