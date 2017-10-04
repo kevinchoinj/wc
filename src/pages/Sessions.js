@@ -14,7 +14,21 @@ export default class Sessions extends React.Component {
   	}
   }
   componentDidMount() {
-        window.scrollTo(0, 0)
+      window.scrollTo(0, 0);
+
+			window.addEventListener("scroll", myFunction);
+
+
+			function myFunction() {
+				let supportPageOffset = window.pageXOffset !== undefined;
+		    let isCSS1Compat = ((document.compatMode || '') === 'CSS1Compat');
+		    let scroll = {
+		       x: supportPageOffset ? window.pageXOffset : isCSS1Compat ? document.documentElement.scrollLeft : document.body.scrollLeft,
+		       y: supportPageOffset ? window.pageYOffset : isCSS1Compat ? document.documentElement.scrollTop : document.body.scrollTop
+		    };
+				console.log(scroll.y);
+			}
+
   }
   render(){
 const sessioncontainer={
