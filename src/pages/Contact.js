@@ -9,11 +9,13 @@ export default class Sessions extends React.Component {
   	super(props);
   	this.state = {
       leftmarg: "",
+      opacity:"0",
   	}
     this.contactformleft = this.contactformleft.bind(this)
   }
   componentDidMount() {
         window.scrollTo(0, 0);
+      	setTimeout(function() { this.setState({opacity:"1"}); }.bind(this), 450);
         window.addEventListener("resize", this.contactformleft);
         this.contactformleft();
   }
@@ -37,24 +39,20 @@ const contactcontainer={
   position:"absolute",
   top:"30vh",
   color:"#000",
-
+  opacity:this.state.opacity,
   left:this.state.leftmarg,
   fontFamily:"Lato, Helvetica",
+
+  WebkitTransition: ".4s ease-out",
+  MozTransition: ".4s ease-out",
+  OTransition: ".4s ease-out",
+  transition:".4s ease-out",
+
 }
-const triangle={
-  position:"fixed",
-width:"150%",
-height:"150%",
-transform: "rotate(45deg)",
-backgroundColor:"rgba(175, 151, 89,1)",
-left:"-58%",
-bottom:"-58%",
-}
+
 
     return(
       <div>
-      <div style={triangle}>
-      </div>
 
       <div style={contactcontainer}>
         <form method="POST" action="/send">

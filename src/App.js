@@ -8,6 +8,8 @@ import Kittens from './pages/Kittens';
 import Gallerypage from './pages/Gallery';
 import Contact from './pages/Contact';
 
+import Preload from './components/Preload';
+
 import Blackbg from './components/Blackbg';
 import Background from './components/Background';
 
@@ -18,12 +20,13 @@ import bgimage4 from './images/city.jpeg';
 import bgimage5 from './images/city2.jpeg';
 
 import Menu from './menu/Menu';
+import Triangle from './components/Triangle';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-
+      <Preload/>
       <Route exact path={"/"} children={({ match }) => (
 		      <div>
 		        <Background
@@ -81,6 +84,17 @@ class App extends Component {
             )}/>
 
       <Menu/>
+
+      <Route exact path={"/contact"} children={({ match }) => (
+          <div>
+            <Triangle
+              bottomoffset={ Boolean(match) ? '-58%': '100%'}
+              leftoffset = { Boolean(match) ? '-58%': '100%'}
+            />
+          </div>
+        )}/>
+
+
 
       <Switch>
         <Route exact path="/" component={Home}/>
