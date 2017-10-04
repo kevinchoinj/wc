@@ -69,7 +69,7 @@ export default class Menupanel extends React.Component{
 				paddingLeft:"50px",
 				fontSize: "14px",
 				letterSpacing: "6px",
-				fontFamily: "Roboto",
+				fontFamily: "Lato, Helvetica",
 				lineHeight: "300%",
 				fontWeight: "bold",
 
@@ -102,6 +102,12 @@ export default class Menupanel extends React.Component{
         width:"25px",
         margin:"10px",
       }
+
+      const email={
+        fontFamily: "Lato, Helvetica",
+        color: "#af9759",
+      }
+
 	  return(
 
 				<div>
@@ -126,6 +132,11 @@ export default class Menupanel extends React.Component{
         <a href="https://www.facebook.com/ashley.wildcat.14" onMouseEnter={this.fbover} onMouseLeave={this.fbleave}>
         {this.state.mouseoverfb ? <img src={goldfbicon} style={socialicon} /> : <img src={fbicon} style={socialicon} />}
         </a>
+
+        <span style={email}>
+        ashleywildcat@outlook.com
+        </span>
+
 				</div>
 				</DesktopBreakpoint>
 

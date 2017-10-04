@@ -49,10 +49,27 @@ const contactcontainer={
   transition:".4s ease-out",
 
 }
+const title={
+  top:"18vh",
+    fontFamily:"Lato, Helvetica",
+    fontWeight:"bold",
+    color:"#000",
+  opacity:this.state.opacity,
+  left:this.state.leftmarg,
+  position:"absolute",
+  fontSize:"60px",
+  WebkitTransition: ".4s ease-out",
+  MozTransition: ".4s ease-out",
+  OTransition: ".4s ease-out",
+  transition:".4s ease-out",
+}
 
 
     return(
       <div>
+      <div style={title}>
+      Contact
+      </div>
 
       <div style={contactcontainer}>
         <form method="POST" action="/send">
