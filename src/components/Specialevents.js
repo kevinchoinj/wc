@@ -1,7 +1,7 @@
 import React from 'react';
 
 import bgimage from '../images/vegas.jpeg';
-import image1 from '../images/1.jpg';
+import image1 from '../images/4.jpg';
 
 export default class Specialevents extends React.Component {
   constructor(props) {
@@ -43,7 +43,7 @@ export default class Specialevents extends React.Component {
 			<div className="row">
 
 			<img src={image1} style={image1style} className="col-md-3 col-md-offset-1 bannerimage"/>
-			
+
       <div style={stats} className="col-md-6 col-md-offset-1">
 			Special Events information
 			</div>

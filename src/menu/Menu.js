@@ -2,6 +2,7 @@ import React from "react";
 
 import Menubutton from './Menubutton.js';
 import Menupanel from './Menupanel.js';
+import Menubar from './Menubar.js';
 
 import DesktopBreakpoint from '../responsive/desktop_breakpoint.js';
 import TabletBreakpoint from '../responsive/tablet_breakpoint.js';
@@ -74,51 +75,12 @@ togglemenu(){
  }
 
   render(){
-const menubar={
-	width:"100%",
-	height:"75px",
-	backgroundColor:"#000",
-	textAlign:"center",
-	color:"#fff",
-	paddingTop:"21px",
-	fontFamily:"Lato, Helvetica",
-	fontSize:"30px",
-	letterSpacing:"0.59em",
-	zIndex:"10",
-	position:"fixed",
-}
-const menubarphone={
-	width:"100%",
-	height:"75px",
-	backgroundColor:"#000",
-	textAlign:"center",
-	color:"#fff",
-	paddingTop:"30px",
-	fontFamily:"Lato, Helvetica",
-	fontSize:"16px",
-	letterSpacing:"0.59em",
-	position:"fixed",
-}
 
 	  return(
 
 				<div>
+				<Menubar/>
 
-				<DesktopBreakpoint>
-				<div style={menubar}>
-				ASHLEY WILDCAT
-				</div>
-				</DesktopBreakpoint>
-				<TabletBreakpoint>
-				<div style={menubar}>
-				ASHLEY WILDCAT
-				</div>
-				</TabletBreakpoint>
-				<PhoneBreakpoint>
-				<div style={menubarphone}>
-				ASHLEY WILDCAT
-				</div>
-				</PhoneBreakpoint>
 
 					<Menubutton
 						toggler={this.togglemenu}
