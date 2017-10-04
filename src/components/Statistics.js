@@ -26,6 +26,9 @@ export default class Statistics extends React.Component {
 		const stats={
 			fontFamily:"Lato, Helvetica",
 			color:"#fff",
+			fontSize:"16px",
+			lineHeight:"200%",
+			letterSpacing:"1px",
 
 		}
 		const divider = {
@@ -36,25 +39,27 @@ export default class Statistics extends React.Component {
 		const image1style={
 			maxWidth:"750px",
 		}
+		const title={
+			fontSize:"24px",
+		}
 
     return (
 			<div style={statscontainer}>
 			<div style={divider}></div>
 			<div className="row">
-      <div style={stats} className="col-md-6 col-md-offset-1">
-			Ashley Wildcat Statistics
+      <div style={stats} className="col-md-6 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
+			<span style={title}>About</span>
 			<br/><br/>
-			Location:	West Palm<br/>
-			Beach, Florida<br/>
-			Age:	31<br/>
-			Height:	5’ 9”<br/>
-			Weight:	140 lbs.<br/>
-			Physique:	Athletic<br/>
-			Thighs: 27"<br/>
-			Quads: 21.0”<br/>
-			Calves: 13.0“<br/>
-			Biceps: 11.0”<br/>
-			Sponsoring Ashley Wildcat to Visit Your City: Ashley
+			<strong>Location</strong> -	West Palm Beach, Florida<br/>
+			<strong>Age</strong> - 31<br/>
+			<strong>Height</strong> - 5' 9''<br/>
+			<strong>Weight</strong> - 140 lbs.<br/>
+			<strong>Physique</strong> - Athletic<br/>
+			<strong>Thighs</strong> - 27"<br/>
+			<strong>Quads</strong> - 21.0”<br/>
+			<strong>Calves</strong> - 13.0“<br/>
+			<strong>Biceps</strong> - 11.0”<br/>
+			<strong>Sponsoring Ashley Wildcat to Visit Your City</strong> - Ashley
 			LOVES to travel so she is more than happy to make a
 			special trip to see you, wherever you live, if you can help
 			her with her expenses. Typically, a sponsorship would
@@ -67,7 +72,7 @@ export default class Statistics extends React.Component {
 			Custom Video Rates: The price for producing a custom video is based on the desired length of the video, the number of wrestlers/actors needed, and the type of action/story. If you are interested in requesting a custom video, please e-mail Ashley at ashleywildcat@outlook.com for more information.
       </div>
 
-			<img src={image1} style={image1style} className="col-md-3 col-md-offset-1 bannerimage"/>
+			<img src={image1} style={image1style} className="col-md-3 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1 bannerimage"/>
 
 
 			</div>

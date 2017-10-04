@@ -9,9 +9,30 @@ import DesktopBreakpoint from '../responsive/desktop_breakpoint.js';
 import TabletBreakpoint from '../responsive/tablet_breakpoint.js';
 import PhoneBreakpoint from '../responsive/phone_breakpoint.js';
 
-
+import fbicon from '../images/facebook.png';
+import twicon from '../images/twitter.png';
+import goldfbicon from '../images/goldfacebook.png';
+import goldtwicon from '../images/goldtwitter.png';
 export default class Menupanel extends React.Component{
-
+  constructor(props) {
+	 super(props);
+	 this.state = {
+		mouseoverfb: false,
+    mouseovertw: false
+	 }
+	}
+  fbover = () => {
+    this.setState({ mouseoverfb: true });
+  }
+  fbleave = () => {
+    this.setState({ mouseoverfb: false });
+  }
+  twover = () => {
+    this.setState({ mouseovertw: true });
+  }
+  twleave = () => {
+    this.setState({ mouseovertw: false });
+  }
 
   render(){
 
@@ -75,6 +96,10 @@ export default class Menupanel extends React.Component{
         height:"18px",
 
       }
+      const socialicon={
+        height:"25px",
+        width:"25px",
+      }
 	  return(
 
 				<div>
@@ -91,6 +116,14 @@ export default class Menupanel extends React.Component{
         <div style={select}><a href="https://ashley.knockoutcats.com/"style={desktoplink} onClick={this.props.toggler}><Menutext>MEMBERSHIPS &nbsp; <img src={outimg} style={outimgstyle}/></Menutext></a></div>
 				<div style={select}><a href="http://sessiongirls.com/component/comprofiler/userprofile/Ashley%20Wildcat" style={desktoplink} onClick={this.props.toggler}><Menutext>SCHEDULE &nbsp; <img src={outimg} style={outimgstyle}/></Menutext></a></div>
         <div style={select}><a href="http://clips4sale.com/84041" style={desktoplink} onClick={this.props.toggler}><Menutext>CLIPS &nbsp; <img src={outimg} style={outimgstyle}/></Menutext></a></div>
+
+        <br/><br/>
+        <a href="https://twitter.com/ItsAshleyWC" onMouseEnter={this.twover} onMouseLeave={this.twleave}>
+         {this.state.mouseovertw ? <img src={goldtwicon} style={socialicon} /> : <img src={twicon} style={socialicon} />}
+         </a>
+        <a href="https://www.facebook.com/ashley.wildcat.14" onMouseEnter={this.fbover} onMouseLeave={this.fbleave}>
+        {this.state.mouseoverfb ? <img src={goldfbicon} style={socialicon} /> : <img src={fbicon} style={socialicon} />}
+        </a>
 				</div>
 				</DesktopBreakpoint>
 

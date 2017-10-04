@@ -1,7 +1,7 @@
 import React from 'react';
 
 import bgimage from '../images/vegas.jpeg';
-import image1 from '../images/1.jpg';
+import image2 from '../images/2.jpg';
 
 export default class Fighstyle extends React.Component {
   constructor(props) {
@@ -43,7 +43,7 @@ export default class Fighstyle extends React.Component {
 			<div className="row">
 
 
-			<img src={image1} style={image1style} className="col-md-3 col-md-offset-1 bannerimage"/>
+			<img src={image2} style={image1style} className="col-md-3 col-md-offset-1 bannerimage"/>
 
 			<div style={stats} className="col-md-6 col-md-offset-1">
 			About My Fighting Style
@@ -60,7 +60,6 @@ export default class Fighstyle extends React.Component {
 			<br/>
 			XOXOXO!!
       </div>
-
 
 			</div>
 			<div style={divider}></div>
