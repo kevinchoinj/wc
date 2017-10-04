@@ -28,6 +28,10 @@ export default class Sessions extends React.Component {
 			window.addEventListener("resize", this.myFunction);
 			this.myFunction();
   }
+	componentWillUnmount(){
+		window.removeEventListener("scroll", this.myFunction);
+		window.removeEventListener("resize", this.myFunction);
+	}
 
 	 myFunction() {
 		let supportPageOffset = window.pageXOffset !== undefined;
