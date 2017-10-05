@@ -179,7 +179,43 @@ const title={
 								>
 								<Col md={10} mdOffset={1} sm={10} smOffset={1} xs={10} xsOffset={1} style={stats} id="sessiontypes">
 
-									Special Events
+								- Meet and watch sexy, hot, and fun female wrestlers!
+								<br/>
+								- Wrestlers can wear a variety of outfits to reflect the preferences of the guests or theme of an event.
+								<br/>
+								- 60-120 Minute shows (Longer shows available upon request)
+								<br/>
+								- Perfect for bachelor parties, birthdays, special occasions, or other private parties of all sizes!
+								<br/>
+								- We will bring the show to your location or work with you to book a suitable venue!
+								<br/>
+								- Watch female wrestlers take each other on in competitive matches!
+								<br/>
+								- Wrestle a HOT and Sexy Female! – Guests can hit the mats one-on one or in a tag team format for exciting semi-competitive matches with our female wrestlers! Whether you win or lose, you will LOVE it!
+								<br/>
+								- “Knock Out Competitions” – Are you up to the challenge? Guests can see if they can “survive” the best holds of our female wrestlers! Fun and very Hot!
+								<br/>
+								- Get pictures taken with our sexy female wrestlers!
+								<br/>
+								- Rates for shows vary depending on the number of wrestlers requested, the length of the show, and the customer’s selection of program options (e.g., female wrestling matches, number of mixed wrestling sessions with our girls, etc.)
+								<br/>
+								- Important: please note that the girls who perform in our shows are SEXY AND FUN wrestlers, BUT they are NOT prostitutes! They do not provide sexual services of any kind! Thank you!
+								<br/>
+								- Sample plan for a 60-minute show (We will work with you to create a show that is PERFECT for you!)
+								<br/>
+								- Welcome, Show Overview, Wrestler Introductions
+								<br/>
+								- Female-Female Wrestling Matches
+								<br/>
+								- Mixed Wrestling Matches (Guests vs. Our Wrestlers - One on One and/or Tag Team!)
+								<br/>
+								- Knockout Challenge Competition
+								<br/>
+								- Pictures with Our Wrestlers
+								<br/>
+								<br/>
+
+								For more information and to book your event, please contact Ashley Wildcat at ashleywildcat@outlook.com
 								</Col>
 								</Panel>
 							</div>
