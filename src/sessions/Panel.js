@@ -29,9 +29,11 @@ const panelstyle={
 
 
 	  return(
-			<div style={panelstyle}>
+			<div>
 			<Closebutton/>
+			<div style={panelstyle}>
 			{this.props.children}
+			</div>
 			</div>
 	  );
   }

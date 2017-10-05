@@ -58,32 +58,32 @@ const title={
 
 				<div style={splitcontainer}>
 					<Row>
-						<Link to='/kittens/1'>
+						<Link to='/sessions/1'>
 							<Column bgimage={image1}>
 							Statistics
 							</Column>
 						</Link>
 
-						<Link to='/kittens/2'>
+						<Link to='/sessions/2'>
 							<Column bgimage={image2}>
 							Fighting Style
 							</Column>
 						</Link>
 
-						<Link to='/kittens/3'>
+						<Link to='/sessions/3'>
 						<Column bgimage={image3}>
 						Session Types
 						</Column>
 						</Link>
 
-						<Link to='/kittens/4'>
+						<Link to='/sessions/4'>
 						<Column bgimage={image4}>
 						Special Events
 						</Column>
 						</Link>
 
 
-						<Route path={"/kittens/1"} children={({ match }) => (
+						<Route path={"/sessions/1"} children={({ match }) => (
 		          <div>
 		            <Panel
 		              leftOffset={ Boolean(match) ? '0': '-100%'}
@@ -118,7 +118,7 @@ const title={
 		          </div>
 		        )}/>
 
-						<Route path={"/kittens/2"} children={({ match }) => (
+						<Route path={"/sessions/2"} children={({ match }) => (
 		          <div>
 		            <Panel
 		              leftOffset={ Boolean(match) ? '0': '-100%'}
@@ -129,7 +129,7 @@ const title={
 		          </div>
 		        )}/>
 
-						<Route path={"/kittens/3"} children={({ match }) => (
+						<Route path={"/sessions/3"} children={({ match }) => (
 		          <div>
 		            <Panel
 		              leftOffset={ Boolean(match) ? '0': '-100%'}
@@ -140,7 +140,7 @@ const title={
 		          </div>
 		        )}/>
 
-						<Route path={"/kittens/4"} children={({ match }) => (
+						<Route path={"/sessions/4"} children={({ match }) => (
 							<div>
 								<Panel
 									leftOffset={ Boolean(match) ? '0': '-100%'}
