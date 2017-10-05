@@ -1,7 +1,7 @@
 import React from "react";
 import {Col} from 'react-bootstrap';
 import Columnoverlay from './Columnoverlay';
-
+import {Link} from 'react-router-dom';
 import DesktopBreakpoint from '../responsive/desktop_breakpoint.js';
 import TabletBreakpoint from '../responsive/tablet_breakpoint.js';
 import PhoneBreakpoint from '../responsive/phone_breakpoint.js';
@@ -58,6 +58,7 @@ height:"200px",
 
 	  return(
 			<div>
+			
 			<DesktopBreakpoint>
 				<Col md={3} sm={3} xs={12} style={colstyle} onMouseEnter={this.hoverthumb} onMouseLeave={this.leavethumb}>
 				<Columnoverlay heightoftextbox = {this.state.heightoftextbox} hovercolor={this.state.hovercolor}>

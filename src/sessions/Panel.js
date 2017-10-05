@@ -1,5 +1,6 @@
 import React from "react";
 import {Link} from 'react-router-dom';
+import Closebutton from './Closebutton';
 
 export default class Split extends React.Component{
 	constructor(props) {
@@ -21,11 +22,15 @@ const panelstyle={
 	MozTransition: ".4s ease-out",
 	OTransition: ".4s ease-out",
 	transition:".4s ease-out",
+	color:"#fff",
+	paddingTop:"50px",
+	paddingLeft:"50px",
 }
 
 
 	  return(
 			<div style={panelstyle}>
+			<Closebutton/>
 			{this.props.children}
 			</div>
 	  );

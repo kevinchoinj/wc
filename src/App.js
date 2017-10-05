@@ -23,8 +23,8 @@ import Menu from './menu/Menu';
 import Triangle from './components/Triangle';
 
 import bgvideo from './images/vegas.mp4';
-import bgposter from './images/vegasimage.jpg';
-import Panel from './sessions/Panel';
+import bgposter from './images/vegasimage.jpg'
+
 class App extends Component {
   render() {
     const fillimage={
@@ -46,7 +46,16 @@ class App extends Component {
     return (
       <div className="App">
       <Preload/>
-
+      <Route exact path={"/"} children={({ match }) => (
+		      <div>
+		        <Background
+            bgimage={bgposter}
+		          bottomOffset={ Boolean(match) ? '0': '-100%'}
+		        >
+            <video loop src={bgvideo} autoPlay="autoplay"  id="iobg" poster={bgposter} style={fillimage}></video>
+            </Background>
+		      </div>
+		    )}/>
 
         <Route path={"/sessions"} children={({ match }) => (
   		      <div>
@@ -106,13 +115,7 @@ class App extends Component {
           </div>
         )}/>
 
-        <Route path={"/split/1"} children={({ match }) => (
-          <div>
-            <Panel
-              leftOffset={ Boolean(match) ? '0': '-100%'}
-            />
-          </div>
-        )}/>
+
 
       <Switch>
         <Route exact path="/" component={Home}/>
