@@ -3,6 +3,8 @@ import Banner from '../components/Banner';
 import {Col} from 'react-bootstrap';
 
 import Thumbwrap from '../kittens/Thumbwrapper';
+import Kittenstext from '../kittens/Kittenstext';
+
 
 export default class Kittens extends React.Component {
   constructor(props) {
@@ -22,6 +24,7 @@ export default class Kittens extends React.Component {
 			<div>
 		   <Banner/>
        <Thumbwrap/>
+       <Kittenstext/>
 
 		</div>
     );

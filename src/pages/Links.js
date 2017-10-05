@@ -58,7 +58,7 @@ export default class Links extends React.Component {
 		  opacity:this.state.opacity,
 		  left:this.state.leftmarg,
 		  position:"absolute",
-		  fontSize:"60px",
+		  fontSize:"48px",
 		  WebkitTransition: ".4s ease-out",
 		  MozTransition: ".4s ease-out",
 		  OTransition: ".4s ease-out",
