@@ -1,6 +1,8 @@
 import React from 'react';
 import Split from '../sessions/Split';
 
+
+
 export default class Kittens extends React.Component {
   constructor(props) {
   	super(props);
@@ -17,6 +19,7 @@ const container={
 }
 
     return(
+
       <div style={container}>
       asdf
     	<Split/>

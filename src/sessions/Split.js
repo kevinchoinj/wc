@@ -35,11 +35,19 @@ const splitcontainer={
 				<div style={splitcontainer}>
 					<Row>
 						<Link to='/kittens/1'>
-							<Column bgimage={image1}/>
+							<Column bgimage={image1}>
+							Statistics
+							</Column>
 						</Link>
-						<Column bgimage={image2}/>
-						<Column bgimage={image3}/>
-						<Column bgimage={image4}/>
+						<Column bgimage={image2}>
+						Fighting Style
+						</Column>
+						<Column bgimage={image3}>
+						Session Types
+						</Column>
+						<Column bgimage={image4}>
+						Special Events
+						</Column>
 						<Route path={"/kittens/1"} children={({ match }) => (
 		          <div>
 		            <Panel
