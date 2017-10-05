@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Split from '../sessions/Split';
 
 export default class Kittens extends React.Component {
   constructor(props) {
@@ -12,10 +12,14 @@ export default class Kittens extends React.Component {
   }
   render(){
 
+const container={
+  position:"absolute",
+}
 
     return(
-      <div>
-    	Kittens
+      <div style={container}>
+      asdf
+    	<Split/>
     </div>
     );
   }

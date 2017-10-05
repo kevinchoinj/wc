@@ -5,6 +5,7 @@ import PhoneBreakpoint from '../responsive/phone_breakpoint.js';
 
 import bgimage from '../images/vegas.jpeg';
 import image4 from '../images/4.jpg';
+import {Col, Row} from 'react-bootstrap';
 
 export default class Fighstyle extends React.Component {
   constructor(props) {
@@ -68,12 +69,12 @@ export default class Fighstyle extends React.Component {
 			<DesktopBreakpoint>
 			<div style={divider}></div>
 			</DesktopBreakpoint>
-			<div className="row">
+			<Row>
 
-			<div className="col-md-4 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1 bannerimage" id="specialevents">
+			<Col md={4} mdOffset={1} sm={10} smOffset={1} xs={10} xsOffset={1} className= "bannerimage" id="specialevents">
 				<img src={image4} style={image1style}/>
-			</div>
-			<div style={stats} className="col-md-5 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
+			</Col>
+			<Col style={stats} md={5} mdOffset={1} sm={10} smOffset={1} xs={10} xsOffset={1}>
 			<TabletBreakpoint>
 			<div style={divider}></div>
 			</TabletBreakpoint>
@@ -83,9 +84,9 @@ export default class Fighstyle extends React.Component {
   			<span style={title}><strong>Special Events</strong></span>
   			<br/><br/><br/>
   			Event info
-      </div>
+      </Col>
 
-			</div>
+			</Row>
 			<div style={divider}></div>
 			</div>
     );

@@ -19,8 +19,6 @@ export default class Preload extends React.Component{
 			<video loop src={vid1} style={vid}></video>
       </div>
 
-
-
 	  );
   }
 }

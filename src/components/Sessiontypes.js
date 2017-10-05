@@ -5,6 +5,7 @@ import PhoneBreakpoint from '../responsive/phone_breakpoint.js';
 
 import bgimage from '../images/vegas.jpeg';
 import image1 from '../images/1.jpg';
+import {Col, Row} from 'react-bootstrap';
 
 export default class Statistics extends React.Component {
   constructor(props) {
@@ -73,8 +74,8 @@ export default class Statistics extends React.Component {
 			<DesktopBreakpoint>
 			<div style={divider}></div>
 			</DesktopBreakpoint>
-			<div className="row">
-			<div style={stats} className="col-md-5 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1" id="sessiontypes">
+			<Row>
+			<Col md={5} mdOffset={1} sm={10} smOffset={1} xs={10} xsOffset={1} style={stats} id="sessiontypes">
 
 				<span style={title}><strong>Session Types</strong></span>
 				<br/><br/><br/>
@@ -100,13 +101,13 @@ export default class Statistics extends React.Component {
 				<PhoneBreakpoint>
 				<div style={divider}></div>
 				</PhoneBreakpoint>
-							</div>
+			</Col>
 
 
 			<img src={image1} style={image1style} className="col-md-4 col-md-offset-1 col-sm-6 col-sm-offset-3 col-xs-10 col-xs-offset-1 bannerimage"/>
 
 
-			</div>
+			</Row>
 
 			<div style={divider}></div>
 			</div>

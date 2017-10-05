@@ -23,8 +23,8 @@ import Menu from './menu/Menu';
 import Triangle from './components/Triangle';
 
 import bgvideo from './images/vegas.mp4';
-import bgposter from './images/vegasimage.jpg'
-
+import bgposter from './images/vegasimage.jpg';
+import Panel from './sessions/Panel';
 class App extends Component {
   render() {
     const fillimage={
@@ -46,18 +46,9 @@ class App extends Component {
     return (
       <div className="App">
       <Preload/>
-      <Route exact path={"/"} children={({ match }) => (
-		      <div>
-		        <Background
-            bgimage={bgposter}
-		          bottomOffset={ Boolean(match) ? '0': '-100%'}
-		        >
-            <video loop src={bgvideo} autoPlay="autoplay"  id="iobg" poster={bgposter} style={fillimage}></video>
-            </Background>
-		      </div>
-		    )}/>
 
-        <Route exact path={"/sessions"} children={({ match }) => (
+
+        <Route path={"/sessions"} children={({ match }) => (
   		      <div>
 
   		        <Background
@@ -69,7 +60,7 @@ class App extends Component {
   		      </div>
   		    )}/>
 
-          <Route exact path={"/kittens"} children={({ match }) => (
+          <Route path={"/kittens"} children={({ match }) => (
                         <div>
 
                           <Background
@@ -80,7 +71,7 @@ class App extends Component {
                             bottomOffset={ Boolean(match) ? '0': '-100%'}/>
                         </div>
           )}/>
-          <Route exact path={"/gallery"} children={({ match }) => (
+          <Route path={"/gallery"} children={({ match }) => (
           <div>
 
             <Background
@@ -92,7 +83,7 @@ class App extends Component {
           </div>
           )}/>
 
-          <Route exact path={"/contact"} children={({ match }) => (
+          <Route path={"/contact"} children={({ match }) => (
               <div>
 
                 <Background
@@ -106,7 +97,7 @@ class App extends Component {
 
       <Menu/>
 
-      <Route exact path={"/contact"} children={({ match }) => (
+      <Route path={"/contact"} children={({ match }) => (
           <div>
             <Triangle
               bottomoffset={ Boolean(match) ? '-58%': '100%'}
@@ -115,12 +106,18 @@ class App extends Component {
           </div>
         )}/>
 
-
+        <Route path={"/split/1"} children={({ match }) => (
+          <div>
+            <Panel
+              leftOffset={ Boolean(match) ? '0': '-100%'}
+            />
+          </div>
+        )}/>
 
       <Switch>
         <Route exact path="/" component={Home}/>
         <Route exact path="/sessions" component={Sessions}/>
-        <Route exact path="/kittens" component={Kittens}/>
+        <Route path="/kittens" component={Kittens}/>
         <Route exact path="/gallery" component={Gallerypage}/>
         <Route exact path="/contact" component={Contact}/>
       </Switch>
