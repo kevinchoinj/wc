@@ -8,6 +8,8 @@ import posterimage from '../images/banner2.jpg';
 import vidoutput from '../images/testvid.mp4';
 import arrow from '../images/downarrow.png';
 
+import {Col} from 'react-bootstrap';
+
 export default class Banner extends React.Component {
   constructor(props) {
 	 super(props);
@@ -68,11 +70,11 @@ export default class Banner extends React.Component {
 	      <div style={banner}>
 				<video loop src={vidoutput} autoPlay="autoplay"  id="iobg" poster={posterimage} style={fillimage}></video>
 			</div>
-			<div style={underbanner} className="col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
+			<Col style={underbanner} md={10} mdOffset={1} sm={10} smOffset={1} xs={10} xsOffset={1}>
 				Session Information
 				<DesktopBreakpoint><img src={arrow} style={arrowstyle}/></DesktopBreakpoint>
 				<TabletBreakpoint><img src={arrow} style={arrowstyle}/></TabletBreakpoint>
-			</div>
+			</Col>
 			</div>
     );
   }

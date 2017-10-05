@@ -103,7 +103,7 @@ export default class Statistics extends React.Component {
 							</div>
 
 
-			<img src={image1} style={image1style} className="col-md-5 col-md-offset-1 col-sm-6 col-sm-offset-3 col-xs-10 col-xs-offset-1 bannerimage"/>
+			<img src={image1} style={image1style} className="col-md-4 col-md-offset-1 col-sm-6 col-sm-offset-3 col-xs-10 col-xs-offset-1 bannerimage"/>
 
 
 			</div>
