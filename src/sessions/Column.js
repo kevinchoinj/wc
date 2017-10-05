@@ -25,7 +25,7 @@ hoverthumb(){
 }
 leavethumb(){
 	this.setState({
-		heightoftextbox:"20%",
+		heightoftextbox:"30%",
 		hovercolor:"#fff",
 	})
 }
@@ -58,7 +58,7 @@ height:"200px",
 
 	  return(
 			<div>
-			
+
 			<DesktopBreakpoint>
 				<Col md={3} sm={3} xs={12} style={colstyle} onMouseEnter={this.hoverthumb} onMouseLeave={this.leavethumb}>
 				<Columnoverlay heightoftextbox = {this.state.heightoftextbox} hovercolor={this.state.hovercolor}>

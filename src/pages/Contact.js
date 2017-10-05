@@ -37,7 +37,7 @@ export default class Sessions extends React.Component {
   render(){
 const contactcontainer={
   position:"absolute",
-  top:"30vh",
+  top:"40vh",
   color:"#000",
   opacity:this.state.opacity,
   left:this.state.leftmarg,
@@ -64,12 +64,31 @@ const title={
   transition:".4s ease-out",
 }
 
+const subtitle={
+  top:"26vh",
+    fontFamily:"Lato, Helvetica",
+    fontWeight:"bold",
+    color:"#000",
+  opacity:this.state.opacity,
+  left:this.state.leftmarg,
+  position:"absolute",
+  fontSize:"30px",
+  WebkitTransition: ".4s ease-out",
+  MozTransition: ".4s ease-out",
+  OTransition: ".4s ease-out",
+  transition:".4s ease-out",
+}
+
 
     return(
       <div>
       <div style={title}>
       Contact
       </div>
+      <div style={subtitle}>
+      ashleywildcat@outlook.com
+      </div>
+
 
       <div style={contactcontainer}>
         <form method="POST" action="/send">
