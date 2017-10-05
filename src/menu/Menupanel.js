@@ -119,6 +119,7 @@ export default class Menupanel extends React.Component{
 				<div style={select}><Link to='/kittens' style={desktoplink} onClick={this.props.toggler}><Menutext>KITTENS</Menutext></Link></div>
 
         <div style={select}><Link to='/gallery' style={desktoplink} onClick={this.props.toggler}><Menutext>GALLERY</Menutext></Link></div>
+        <div style={select}><Link to='/links' style={desktoplink} onClick={this.props.toggler}><Menutext>LINKS</Menutext></Link></div>
         <div style={select}><Link to='/contact' style={desktoplink} onClick={this.props.toggler}><Menutext>CONTACT</Menutext></Link></div>
 
         <div style={select}><a href="https://ashley.knockoutcats.com/"style={desktoplink} onClick={this.props.toggler}><Menutext>MEMBERSHIPS &nbsp; <img src={outimg} style={outimgstyle}/></Menutext></a></div>
@@ -148,6 +149,7 @@ export default class Menupanel extends React.Component{
         <div style={select}><Link to='/kittens' style={desktoplink} onClick={this.props.toggler}><Menutext>KITTENS</Menutext></Link></div>
 
         <div style={select}><Link to='/gallery' style={desktoplink} onClick={this.props.toggler}><Menutext>GALLERY</Menutext></Link></div>
+        <div style={select}><Link to='/links' style={desktoplink} onClick={this.props.toggler}><Menutext>LINKS</Menutext></Link></div>
         <div style={select}><Link to='/contact' style={desktoplink} onClick={this.props.toggler}><Menutext>CONTACT</Menutext></Link></div>
 
         <div style={select}><a href="https://ashley.knockoutcats.com/"style={desktoplink} onClick={this.props.toggler}><Menutext>MEMBERSHIPS &nbsp; <img src={outimg} style={outimgstyle}/></Menutext></a></div>
@@ -164,6 +166,7 @@ export default class Menupanel extends React.Component{
 				<div style={select}><Link to='/kittens' style={desktoplink} onClick={this.props.toggler}><Menutext>KITTENS</Menutext></Link></div>
 
         <div style={select}><Link to='/gallery' style={desktoplink} onClick={this.props.toggler}><Menutext>GALLERY</Menutext></Link></div>
+        <div style={select}><Link to='/links' style={desktoplink} onClick={this.props.toggler}><Menutext>LINKS</Menutext></Link></div>
 <div style={select}><Link to='/contact' style={desktoplink} onClick={this.props.toggler}><Menutext>CONTACT</Menutext></Link></div>
 
         <div style={select}><a href="https://ashley.knockoutcats.com/"style={desktoplink} onClick={this.props.toggler}><Menutext>MEMBERSHIPS &nbsp; <img src={outimg} style={outimgstyle}/></Menutext></a></div>

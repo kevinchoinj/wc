@@ -7,6 +7,7 @@ import Sessions from './pages/Sessions';
 import Kittens from './pages/Kittens';
 import Gallerypage from './pages/Gallery';
 import Contact from './pages/Contact';
+import Links from './pages/Links';
 
 import Preload from './components/Preload';
 
@@ -106,6 +107,16 @@ class App extends Component {
 
       <Menu/>
 
+      <Route path={"/links"} children={({ match }) => (
+          <div>
+            <Triangle
+              bottomoffset={ Boolean(match) ? '-58%': '100%'}
+              leftoffset = { Boolean(match) ? '-58%': '100%'}
+            />
+          </div>
+        )}/>
+
+
       <Route path={"/contact"} children={({ match }) => (
           <div>
             <Triangle
@@ -122,6 +133,7 @@ class App extends Component {
         <Route path="/sessions" component={Sessions}/>
         <Route path="/kittens" component={Kittens}/>
         <Route exact path="/gallery" component={Gallerypage}/>
+        <Route exact path="/links" component={Links}/>
         <Route exact path="/contact" component={Contact}/>
       </Switch>
       </div>
