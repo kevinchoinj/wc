@@ -28,6 +28,7 @@ const splitcontainer={
 	height:"calc(100% - 75px)",
 	width:"100%",
 	backgroundColor:"#fff",
+	overflowY:"auto",
 }
 
 const emp={

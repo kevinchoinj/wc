@@ -6,8 +6,34 @@ export default class Split extends React.Component{
 	constructor(props) {
 	 super(props);
 	 this.state = {
+		 panelpadding:""
 	 }
+
+	 this.myFunction = this.myFunction.bind(this)
 	}
+
+componentDidMount(){
+	window.addEventListener("resize", this.myFunction);
+	this.myFunction();
+}
+componentWillUnmount(){
+	window.removeEventListener("resize", this.myFunction);
+}
+
+myFunction(){
+	if (window.innerWidth > 992){
+		this.setState({
+			panelpadding:"50px"
+		})
+	}
+	else{
+		this.setState({
+			panelpadding:"0px"
+		})
+	}
+}
+
+
 
   render(){
 
@@ -24,17 +50,18 @@ const panelstyle={
 	transition:".4s ease-out",
 	color:"#fff",
 	paddingTop:"50px",
-	paddingLeft:"50px",
+	paddingLeft:this.state.panelpadding,
+	overflowY:"auto",
 }
 
 
 	  return(
-			<div>
-			<Closebutton/>
 			<div style={panelstyle}>
+			<Closebutton/>
 			{this.props.children}
 			</div>
-			</div>
+
+
 	  );
   }
 }
