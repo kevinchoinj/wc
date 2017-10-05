@@ -51,6 +51,7 @@ const panelstyle={
 	color:"#fff",
 	paddingTop:"50px",
 	paddingLeft:this.state.panelpadding,
+	paddingBottom:"50px",
 	overflowY:"auto",
 }
 

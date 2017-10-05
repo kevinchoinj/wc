@@ -30,7 +30,7 @@ leavebutton(){
 const closebtn={
 	position:"absolute",
 	left:"35px",
-	top:"50px",
+	top:"60px",
 	width:"50px",
 	height:"50px",
 	marginTop:"-20px"
