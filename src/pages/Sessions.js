@@ -22,7 +22,7 @@ const container={
 
       <div style={container}>
       asdf
-    	<Split/>
+    	<Split offset1={this.props.offset1}/>
     </div>
     );
   }

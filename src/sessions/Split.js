@@ -27,7 +27,6 @@ const splitcontainer={
 	top:"75px",
 	height:"calc(100% - 75px)",
 	width:"100%",
-	backgroundColor:"#fff",
 	overflowY:"auto",
 }
 
@@ -60,25 +59,25 @@ const title={
 				<div style={splitcontainer}>
 					<Row>
 						<Link to='/sessions/1'>
-							<Column bgimage={image1}>
+							<Column bgimage={image1} offset1={this.props.offset1} timing=".4s ease-out">
 							Statistics
 							</Column>
 						</Link>
 
 						<Link to='/sessions/2'>
-							<Column bgimage={image2}>
+							<Column bgimage={image2} offset1={this.props.offset1} timing=".6s ease-out">
 							Fighting Style
 							</Column>
 						</Link>
 
 						<Link to='/sessions/3'>
-						<Column bgimage={image3}>
+						<Column bgimage={image3} offset1={this.props.offset1} timing=".8s ease-out">
 						Session Types
 						</Column>
 						</Link>
 
 						<Link to='/sessions/4'>
-						<Column bgimage={image4}>
+						<Column bgimage={image4} offset1={this.props.offset1}timing="1.0s ease-out">
 						Special Events
 						</Column>
 						</Link>

@@ -38,10 +38,11 @@ const colstyle={
 	backgroundRepeat: "no-repeat",
 	backgroundPosition: "center top",
 	backgroundSize: "cover",
-	WebkitTransition: ".4s ease-out",
-	MozTransition: ".4s ease-out",
-	OTransition: ".4s ease-out",
-	transition:".4s ease-out",
+	WebkitTransition: this.props.timing,
+	MozTransition: this.props.timing,
+	OTransition: this.props.timing,
+	transition:this.props.timing,
+	bottom:this.props.offset1,
 }
 const colstylemobile={
 	//height:"calc(100vh - 75px)",
@@ -50,10 +51,11 @@ height:"200px",
 	backgroundRepeat: "no-repeat",
 	backgroundPosition: "center top",
 	backgroundSize: "cover",
-	WebkitTransition: ".4s ease-out",
-	MozTransition: ".4s ease-out",
-	OTransition: ".4s ease-out",
-	transition:".4s ease-out",
+	WebkitTransition: this.props.timing,
+	MozTransition:this.props.timing,
+	OTransition: this.props.timing,
+	transition:this.props.timing,
+		left:this.props.offset1,
 }
 
 	  return(

@@ -47,7 +47,7 @@ class App extends Component {
     return (
       <div className="App">
       <Preload/>
-      <Route exact path={"/"} children={({ match }) => (
+      <Route path={"/"} children={({ match }) => (
 		      <div>
 		        <Background
             bgimage={bgposter}
@@ -73,10 +73,6 @@ class App extends Component {
           <Route path={"/kittens"} children={({ match }) => (
                         <div>
 
-                          <Background
-                          bgimage={bgimage3}
-                            bottomOffset={ Boolean(match) ? '0': '-100%'}
-                          />
                           <Blackbg
                             bottomOffset={ Boolean(match) ? '0': '-100%'}/>
                         </div>
@@ -84,26 +80,11 @@ class App extends Component {
           <Route path={"/gallery"} children={({ match }) => (
           <div>
 
-            <Background
-            bgimage={bgimage4}
-              bottomOffset={ Boolean(match) ? '0': '-100%'}
-            />
             <Blackbg
               bottomOffset={ Boolean(match) ? '0': '-100%'}/>
           </div>
           )}/>
 
-          <Route path={"/contact"} children={({ match }) => (
-              <div>
-
-                <Background
-                bgimage={bgimage5}
-                  bottomOffset={ Boolean(match) ? '0': '-100%'}
-                />
-                <Blackbg
-                  bottomOffset={ Boolean(match) ? '0': '-100%'}/>
-              </div>
-            )}/>
 
       <Menu/>
 
@@ -126,11 +107,17 @@ class App extends Component {
           </div>
         )}/>
 
+        <Route path={"/sessions"} children={({ match }) => (
+            <div>
+              <Sessions
+                offset1={ Boolean(match) ? '0vh': '100vh'}
+              />
+            </div>
+          )}/>
 
 
       <Switch>
         <Route exact path="/" component={Home}/>
-        <Route path="/sessions" component={Sessions}/>
         <Route path="/kittens" component={Kittens}/>
         <Route exact path="/gallery" component={Gallerypage}/>
         <Route exact path="/links" component={Links}/>

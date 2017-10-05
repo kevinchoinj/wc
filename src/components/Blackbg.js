@@ -15,7 +15,7 @@ export default class Blackbg extends React.Component {
 			height:"100%",
 			//height:"calc(100vh - 270px)",
 			width:"100%",
-			backgroundColor: "rgba(0,0,0,.95)",
+			backgroundColor: "rgba(0,0,0,.85)",
 			position:"fixed",
 			top:"0px",
 			top:this.props.bottomOffset,
