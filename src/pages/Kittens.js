@@ -97,7 +97,7 @@ componentDidMount(){
 
           <Col md={4} mdOffset={0} sm={4} smOffset={0} xs={12} xsOffset={0}>
           <div style={title}>Miss Scorpion</div>
-          <div style={title}>November 10</div>
+          <div style={title}>November</div>
           <a href="http://www.missscorpion.com/"><Customimage bgimage={image3} bgpos="right top"/></a>
           </Col>
 

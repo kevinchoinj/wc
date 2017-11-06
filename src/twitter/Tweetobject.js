@@ -42,7 +42,8 @@ export default class Tweetobject extends React.Component{
 
           {/*tweet text*/}
           <Col md={10} mdOffset={1} sm={10} smOffset={1} xs={10} xsOffset={1}>
-          {this.props.twitt[this.props.number].value.text}
+          <div dangerouslySetInnerHTML={{__html: (this.props.twitt[this.props.number].value.text.replace(/((http|https|ftp):\/\/[\w?=&.\/-;#~%-]+(?![\w\s?&.\/;#~%"=-]*>))/g, '<a href="$1">$1</a> '))}}>
+          </div>
           </Col>
 
           {/*tweeted time, checks if retweeted, if retweeted, rt time, if tweeted, tweet time*/}
