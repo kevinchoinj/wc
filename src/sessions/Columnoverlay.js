@@ -1,5 +1,4 @@
 import React from "react";
-import {Col} from 'react-bootstrap';
 
 import DesktopBreakpoint from '../responsive/desktop_breakpoint.js';
 import TabletBreakpoint from '../responsive/tablet_breakpoint.js';

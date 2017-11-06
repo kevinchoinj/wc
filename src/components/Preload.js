@@ -1,7 +1,7 @@
 import React from "react";
 
 import vid1 from '../images/testvid.mp4';
-
+import vidwebm from '../images/testvidwebm.webm';
 
 export default class Preload extends React.Component{
 
@@ -11,12 +11,18 @@ export default class Preload extends React.Component{
 
   render(){
 		const vid={
-			display:"none",
+			opacity:"0",
+			height:"0px",
+			width:"0px",
+			position:"absolute",
 		}
 
 	  return(
       <div>
-			<video loop src={vid1} style={vid}></video>
+			<video style={vid}>
+			<source src={vidwebm} type="video/webm"/>
+			<source src={vid1} type="video/mp4"/>
+			</video>
       </div>
 
 	  );

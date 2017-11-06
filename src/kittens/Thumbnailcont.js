@@ -9,19 +9,31 @@ export default class Thumbcont extends React.Component{
 	 this.state = {
 		 overlayopacity: "0",
 
-		 opacity: "1",
+		
 		 fromleft: "0%",
 
 		 contwidth: "150px",
+
+		 opacity: "0",
+		 trans3d: "translate3d(0px, 100px, 0px)",
+		 trans: "translate(0px, 100px)",
+		 
 	 }
 		this.hoverthumb = this.hoverthumb.bind(this)
 		this.leavethumb = this.leavethumb.bind(this)
 
 		this._handleWindowResize = this._handleWindowResize.bind(this);
+
+		this.slidein=this.slidein.bind(this)
+		this.trueoffset = this.trueoffset.bind(this)
  }
 
 
  componentDidMount () {
+	window.addEventListener("scroll", this.slidein);
+	window.addEventListener("resize", this.slidein);
+	this.slidein();
+
    window.addEventListener('resize', this._handleWindowResize);
 	 this.setState({
 		 contwidth: ReactDOM.findDOMNode(this._containerTarget).offsetWidth
@@ -36,6 +48,38 @@ export default class Thumbcont extends React.Component{
 	 }
  }
 
+ trueoffset( elem )
+ {
+		 var offsetTop = 0;
+		 do {
+			 if ( !isNaN( elem.offsetTop ) )
+			 {
+					 offsetTop += elem.offsetTop;
+			 }
+		 } while( elem = elem.offsetParent );
+		 return offsetTop;
+ }
+
+ slidein(){
+	 try{
+		 if ((((this.trueoffset(this.refs.myRef)) - (window.innerHeight*.8)) < this.props.scrollamount) && (((this.trueoffset(this.refs.myRef)) + (window.innerHeight*.5))>this.props.scrollamount)){
+			 this.setState({
+				 opacity:"1",
+				 trans3d:"translate3d(0px, 0px, 0px)",
+				 trans:"translate(0px, 0px)",
+			 });
+		 }
+		else{
+			 this.setState({
+				 opacity: "0",
+				 trans3d: "translate3d(0px, 100px, 0px)",
+				 trans: "translate(0px, 100px)",
+			 });
+		 }
+	 }
+	 catch(err) {
+ }
+}
 
  hoverthumb(){
  		this.setState({
@@ -48,9 +92,6 @@ export default class Thumbcont extends React.Component{
 		 });
  }
 
-/* componentDidMount() {
-	setTimeout(function() { this.setState({opacity: 1, fromleft: "0px"}); }.bind(this), this.props.interval);
-}*/
 
  componentWillUnmount() {
  }
@@ -70,16 +111,22 @@ export default class Thumbcont extends React.Component{
 			opacity:this.state.opacity,
 			marginLeft:this.state.fromleft,
 
-			/*WebkitTransition: ".4s ease-in-out",
-			MozTransition: ".4s ease-in-out",
-			OTransition: ".4s ease-in-out",
-			transition:".4s ease-in-out",*/
+			opacity:this.state.opacity,
+      MozTransition: ".6s ease-in",
+      WebkitTransition: ".6s ease-in",
+      OTransition: ".6s ease-in",
+      transition: ".6s ease-in",
+      MozTransform: this.state.trans3d,
+      WebkitTransform: this.state.trans3d,
+      OTransform: this.state.trans,
+      MsTransform: this.state.trans,
+      transform: this.state.trans3d,
 
 		}
 
 	  return(
 			<div className="col-md-3 col-xs-6" ref="myRef">
-		    <div style={thumbcont}
+				<div style={thumbcont}
 				onMouseEnter = {this.hoverthumb}
 				onMouseLeave={this.leavethumb}
 				className="thumbcont"

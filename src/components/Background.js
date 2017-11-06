@@ -9,8 +9,9 @@ export default class Home extends React.Component {
   }
   render(){
 		const bgimage={
-			width:"100%",
-			height:"100%",
+			width:"100vw",
+			height:"100vh",
+			overflow:"hidden",
 			position:"fixed",
 
 			top:this.props.bottomOffset,

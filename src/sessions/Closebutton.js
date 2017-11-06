@@ -38,8 +38,8 @@ const closebtn={
 
 const closebtnmobile={
 	position:"absolute",
-	left:"15px",
-	top:"25px",
+	left:"35px",
+	top:"35px",
 	width:"50px",
 	height:"50px",
 	marginTop:"-20px"

@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 import DesktopBreakpoint from '../responsive/desktop_breakpoint.js';
 import TabletBreakpoint from '../responsive/tablet_breakpoint.js';
@@ -42,6 +43,7 @@ export default class Menubar extends React.Component {
 			letterSpacing:"0.59em",
 			zIndex:"10",
 			position:"fixed",
+			top:"0px",
 
 			WebkitTransition: ".4s ease-out",
 			MozTransition: ".4s ease-out",
@@ -49,6 +51,10 @@ export default class Menubar extends React.Component {
 			transition:".4s ease-out",
 
 			cursor:"default",
+
+			WebkitBoxShadow: "0px 10px 50px 10px rgba(0,0,0,0.5)",
+			MozBoxShadow: "0px 10px 50px 10px rgba(0,0,0,0.5)",
+			BoxShadow: "0px 10px 50px 10px rgba(0,0,0,0.5)",
 		}
 		const menubarphone={
 			width:"100vw",
@@ -62,8 +68,8 @@ export default class Menubar extends React.Component {
 			letterSpacing:"0.59em",
 			zIndex:"10",
 			position:"fixed",
-			left:"75px",
-
+			left:"50px",
+			top:"0px",
 			WebkitTransition: ".4s ease-out",
 			MozTransition: ".4s ease-out",
 			OTransition: ".4s ease-out",
@@ -72,22 +78,30 @@ export default class Menubar extends React.Component {
 			cursor:"default",
 		}
 
+    const linkstyle={
+      textDecoration:"none",
+      color:this.state.lettercolor,
+      WebkitTransition: ".4s ease-out",
+      MozTransition: ".4s ease-out",
+      OTransition: ".4s ease-out",
+      transition:".4s ease-out",
+    }
 
     return(
       <div>
 			<DesktopBreakpoint>
 			<div style={menubar} onMouseEnter={this.hoverbar} onMouseLeave={this.leavebar}>
-			ASHLEY WILDCAT
+			<Link to='/' style={linkstyle}>ASHLEY WILDCAT</Link>
 			</div>
 			</DesktopBreakpoint>
 			<TabletBreakpoint>
 			<div style={menubar} onMouseEnter={this.hoverbar} onMouseLeave={this.leavebar}>
-			ASHLEY WILDCAT
+			<Link to='/' style={linkstyle}>ASHLEY WILDCAT</Link>
 			</div>
 			</TabletBreakpoint>
 			<PhoneBreakpoint>
 			<div style={menubarphone} onMouseEnter={this.hoverbar} onMouseLeave={this.leavebar}>
-			ASHLEY WILDCAT
+			<Link to='/' style={linkstyle}>ASHLEY WILDCAT</Link>
 			</div>
 			</PhoneBreakpoint>
 			</div>

@@ -1,7 +1,5 @@
 import React from 'react';
 
-import Banner from '../components/Banner';
-import Statistics from '../components/Statistics';
 
 
 export default class Sessions extends React.Component {
@@ -13,8 +11,15 @@ export default class Sessions extends React.Component {
   	}
     this.contactformleft = this.contactformleft.bind(this)
   }
+
+  sendmail = () => {
+  fetch('/send')
+    .then(res => res.json());
+}
+
   componentDidMount() {
         window.scrollTo(0, 0);
+        this.props.checkpage(); 
       	setTimeout(function() { this.setState({opacity:"1"}); }.bind(this), 450);
         window.addEventListener("resize", this.contactformleft);
         this.contactformleft();
@@ -48,6 +53,7 @@ const contactcontainer={
   OTransition: ".4s ease-out",
   transition:".4s ease-out",
 
+paddingBottom:"200px",
 }
 const title={
   top:"18vh",
@@ -72,7 +78,7 @@ const subtitle={
   opacity:this.state.opacity,
   left:this.state.leftmarg,
   position:"absolute",
-  fontSize:"30px",
+  fontSize:"10px",
   WebkitTransition: ".4s ease-out",
   MozTransition: ".4s ease-out",
   OTransition: ".4s ease-out",
@@ -91,7 +97,7 @@ const subtitle={
 
 
       <div style={contactcontainer}>
-        <form method="POST" action="/send">
+        <form method="POST" action="http://localhost:5000/send">
           <label>Name</label><br/>
           <input type="text" name="name"/>
           <br/>

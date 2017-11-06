@@ -16,13 +16,13 @@ export default class Sessions extends React.Component {
 
 const container={
   position:"absolute",
+  pointerEvents: "this.props.pointerevs",
 }
 
     return(
 
       <div style={container}>
-      asdf
-    	<Split offset1={this.props.offset1}/>
+    	<Split offset1={this.props.offset1} overflowy={this.props.overflowy} pointerevs = {this.props.pointerevs}/>
     </div>
     );
   }

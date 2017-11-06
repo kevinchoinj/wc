@@ -1,6 +1,5 @@
 import React from 'react';
 import Lightbox from 'react-images';
-import PropTypes from 'prop-types';
 
 export default class Viewer extends React.Component{
 	constructor () {
@@ -9,6 +8,7 @@ export default class Viewer extends React.Component{
 			this.state = {
 				lightboxIsOpen: false,
 				currentImage: 0,
+
 			};
 
 			this.closeLightbox = this.closeLightbox.bind(this);
@@ -17,6 +17,7 @@ export default class Viewer extends React.Component{
 			this.gotoImage = this.gotoImage.bind(this);
 			this.handleClickImage = this.handleClickImage.bind(this);
 			this.openLightbox = this.openLightbox.bind(this);
+
 		}
 		openLightbox (index, event) {
 			event.preventDefault();
@@ -52,8 +53,17 @@ export default class Viewer extends React.Component{
 			this.gotoNext();
 		}
 
+		imagehover(){
+			this.setState({
+				hover:true
+			})
+		}
+
 
 		renderGallery () {
+
+	
+
 			const { images } = this.props;
 
 			if (!images) return;
@@ -66,7 +76,7 @@ export default class Viewer extends React.Component{
 						key={i}
 						onClick={(e) => this.openLightbox(i, e)}
 					>
-						<img src={obj.thumbnail} />
+						<img src={obj.thumbnail}/>
 					</a>
 				);
 			});
@@ -79,8 +89,7 @@ export default class Viewer extends React.Component{
 		}
 
 	render(){
-		const background={
-		}
+
 		return (
 			<div className="section">
 				{this.renderGallery()}

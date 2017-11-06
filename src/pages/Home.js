@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 export default class Home extends React.Component {
   constructor(props) {
   	super(props);
@@ -8,14 +7,15 @@ export default class Home extends React.Component {
   	}
   }
   componentDidMount() {
-        window.scrollTo(0, 0)
+        window.scrollTo(0, 0);
+        this.props.checkpage(); 
   }
   render(){
 
 
     return(
+      
       <div>
-    	Homepage
     </div>
     );
   }

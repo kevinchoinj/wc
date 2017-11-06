@@ -1,5 +1,4 @@
 import React from "react";
-import {Link} from 'react-router-dom';
 import Closebutton from './Closebutton';
 
 export default class Split extends React.Component{
@@ -51,8 +50,11 @@ const panelstyle={
 	color:"#fff",
 	paddingTop:"50px",
 	paddingLeft:this.state.panelpadding,
-	paddingBottom:"50px",
+	paddingBottom:"200px",
 	overflowY:"auto",
+
+	WebkitOverflowScrolling: "touch",
+	opacity:this.props.opacity,
 }
 
 

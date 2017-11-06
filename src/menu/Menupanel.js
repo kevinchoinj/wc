@@ -2,12 +2,8 @@ import React from "react";
 import {Link} from 'react-router-dom';
 
 import Menutext from './Menutext';
-
-import outimg from '../images/outw.png';
-
-import DesktopBreakpoint from '../responsive/desktop_breakpoint.js';
-import TabletBreakpoint from '../responsive/tablet_breakpoint.js';
-import PhoneBreakpoint from '../responsive/phone_breakpoint.js';
+import Outlink from './Outlink';
+import outimg from '../images/out.png';
 
 import fbicon from '../images/facebook.png';
 import twicon from '../images/twitter.png';
@@ -55,46 +51,32 @@ export default class Menupanel extends React.Component{
 				transition:".4s ease-in-out",
 
 				zIndex:"12",
-
-			}
-
-			const mobilemenu={
-				width: "100%",
-				height: "100%",
-				backgroundColor: "rgba(24,24,24,1)",
-				position:"fixed",
-				left: this.props.mobileright,
-				paddingTop:"18vh",
-        top: "0px",
-				paddingLeft:"50px",
-				fontSize: "14px",
-				letterSpacing: "6px",
-				fontFamily: "Lato, Helvetica",
-				lineHeight: "300%",
-				fontWeight: "bold",
-
-				WebkitTransition: ".4s ease-out",
-				MozTransition: ".4s ease-out",
-				OTransition: ".4s ease-out",
-				transition:".4s ease-out",
-
-				zIndex:"12",
+        WebkitBoxShadow: "0px 10px 50px 10px rgba(0,0,0,0.5)",
+        MozBoxShadow: "0px 10px 50px 10px rgba(0,0,0,0.5)",
+        BoxShadow: "0px 10px 50px 10px rgba(0,0,0,0.5)",
 			}
 
 			const desktoplink={
 				textDecoration: "none",
-				color:"#fff",
 
 			}
 
       const select={
         width:"100%",
-        paddingTop:"16px",
-        paddingBottom:"16px",
+        paddingTop:"12px",
+        paddingBottom:"12px",
+        position: "relative",
       }
-
+      const goldtext={
+        color: "#af9759",
+        paddingTop:"12px",
+        paddingBottom:"12px",
+        position: "relative",
+        cursor:"default",
+      }
       const outimgstyle={
-        height:"18px",
+        height:"10px",
+        marginBottom:"4px",
 
       }
       const socialicon={
@@ -103,28 +85,86 @@ export default class Menupanel extends React.Component{
         margin:"10px",
       }
 
+      const outlinkstyle={
+        width:"100%",
+        paddingTop:"12px",
+        paddingBottom:"12px",
+        position: "relative",
+        backgroundColor:"#af9759",
+      }
+
       const email={
         fontFamily: "Lato, Helvetica",
         color: "#af9759",
       }
 
+        const indic={
+          top:"12px",
+          position:"absolute",
+          width:"100%",
+          borderRight:"8px solid #af9759",
+          borderLeft:"8px solid #af9759",
+          borderTop:"8px solid transparent",
+          borderBottom: "8px solid transparent",
+        }
 	  return(
 
 				<div>
-				<DesktopBreakpoint>
 				<div style={desktopmenu}>
-        <div style={select}><Link to='/' style={desktoplink} onClick={this.props.toggler}><Menutext>HOME</Menutext></Link></div>
+        <Link to='/' style={desktoplink} onClick={this.props.toggler}>
+        {this.props.currentpage==="home" ? <div style={goldtext}>HOME<div style={indic}></div></div> 
+        :
+        <Menutext><div style={select}>HOME</div></Menutext>}
+        </Link>
 
-				<div style={select}><Link to='/sessions' style={desktoplink} onClick={this.props.toggler}><Menutext>SESSIONS</Menutext></Link></div>
-				<div style={select}><Link to='/kittens' style={desktoplink} onClick={this.props.toggler}><Menutext>KITTENS</Menutext></Link></div>
+        <Link to='/sessions' style={desktoplink} onClick={this.props.toggler}>
+        {this.props.currentpage==="sessions" ? <div style={goldtext}>SESSIONS<div style={indic}></div></div> 
+        :
+        <Menutext><div style={select}>SESSIONS</div></Menutext>}
+        </Link>
 
-        <div style={select}><Link to='/gallery' style={desktoplink} onClick={this.props.toggler}><Menutext>GALLERY</Menutext></Link></div>
-        <div style={select}><Link to='/links' style={desktoplink} onClick={this.props.toggler}><Menutext>LINKS</Menutext></Link></div>
-        <div style={select}><Link to='/contact' style={desktoplink} onClick={this.props.toggler}><Menutext>CONTACT</Menutext></Link></div>
+        <Link to='/kittens' style={desktoplink} onClick={this.props.toggler}>
+        {this.props.currentpage==="kittens" ? <div style={goldtext}>CUSTOMS<div style={indic}></div></div> 
+        :
+        <Menutext><div style={select}>CUSTOMS</div></Menutext>}
+        </Link>
 
-        <div style={select}><a href="https://ashley.knockoutcats.com/"style={desktoplink} onClick={this.props.toggler}><Menutext>MEMBERSHIPS &nbsp; <img src={outimg} style={outimgstyle}/></Menutext></a></div>
-				<div style={select}><a href="http://sessiongirls.com/component/comprofiler/userprofile/Ashley%20Wildcat" style={desktoplink} onClick={this.props.toggler}><Menutext>SCHEDULE &nbsp; <img src={outimg} style={outimgstyle}/></Menutext></a></div>
-        <div style={select}><a href="http://clips4sale.com/84041" style={desktoplink} onClick={this.props.toggler}><Menutext>CLIPS &nbsp; <img src={outimg} style={outimgstyle}/></Menutext></a></div>
+        <Link to='/gallery' style={desktoplink} onClick={this.props.toggler}>
+        {this.props.currentpage==="gallery" ? <div style={goldtext}>GALLERY<div style={indic}></div></div> 
+        :
+        <Menutext><div style={select}>GALLERY</div></Menutext>}
+        </Link>
+
+        <Link to='/links' style={desktoplink} onClick={this.props.toggler}>
+        {this.props.currentpage==="links" ? <div style={goldtext}>LINKS<div style={indic}></div></div> 
+        :
+        <Menutext><div style={select}>LINKS</div></Menutext>}
+        </Link>
+
+        <Link to='/contact' style={desktoplink} onClick={this.props.toggler}>
+        {this.props.currentpage==="contact" ? <div style={goldtext}>CONTACT<div style={indic}></div></div> 
+        :
+        <Menutext><div style={select}>CONTACT</div></Menutext>}
+        </Link>
+
+
+        <a href="https://ashley.knockoutcats.com/"style={desktoplink} onClick={this.props.toggler}>
+        <Outlink><div style={outlinkstyle}>
+        MEMBERSHIP &nbsp; <img src={outimg} style={outimgstyle}/>
+        </div></Outlink>
+        </a>
+
+        <a href="http://sessiongirls.com/component/comprofiler/userprofile/Ashley%20Wildcat"style={desktoplink} onClick={this.props.toggler}>
+        <Outlink><div style={outlinkstyle}>
+        SCHEDULE &nbsp; <img src={outimg} style={outimgstyle}/>
+        </div></Outlink>
+        </a>
+
+        <a href="http://clips4sale.com/84041"style={desktoplink} onClick={this.props.toggler}>
+        <Outlink><div style={outlinkstyle}>
+        CLIPS &nbsp; <img src={outimg} style={outimgstyle}/>
+        </div></Outlink>
+        </a>
 
         <br/><br/>
         <a href="https://twitter.com/ItsAshleyWC" onMouseEnter={this.twover} onMouseLeave={this.twleave}>
@@ -133,47 +173,16 @@ export default class Menupanel extends React.Component{
         <a href="https://www.facebook.com/ashley.wildcat.14" onMouseEnter={this.fbover} onMouseLeave={this.fbleave}>
         {this.state.mouseoverfb ? <img src={goldfbicon} style={socialicon} /> : <img src={fbicon} style={socialicon} />}
         </a>
-
+      <br/>
         <span style={email}>
         ashleywildcat@outlook.com
         </span>
 
 				</div>
-				</DesktopBreakpoint>
 
-				<TabletBreakpoint>
-				<div style={desktopmenu}>
-        <div style={select}><Link to='/' style={desktoplink} onClick={this.props.toggler}><Menutext>HOME</Menutext></Link></div>
 
-        <div style={select}><Link to='/sessions' style={desktoplink} onClick={this.props.toggler}><Menutext>SESSIONS</Menutext></Link></div>
-        <div style={select}><Link to='/kittens' style={desktoplink} onClick={this.props.toggler}><Menutext>KITTENS</Menutext></Link></div>
 
-        <div style={select}><Link to='/gallery' style={desktoplink} onClick={this.props.toggler}><Menutext>GALLERY</Menutext></Link></div>
-        <div style={select}><Link to='/links' style={desktoplink} onClick={this.props.toggler}><Menutext>LINKS</Menutext></Link></div>
-        <div style={select}><Link to='/contact' style={desktoplink} onClick={this.props.toggler}><Menutext>CONTACT</Menutext></Link></div>
 
-        <div style={select}><a href="https://ashley.knockoutcats.com/"style={desktoplink} onClick={this.props.toggler}><Menutext>MEMBERSHIPS &nbsp; <img src={outimg} style={outimgstyle}/></Menutext></a></div>
-        <div style={select}><a href="http://sessiongirls.com/component/comprofiler/userprofile/Ashley%20Wildcat" style={desktoplink} onClick={this.props.toggler}><Menutext>SCHEDULE &nbsp; <img src={outimg} style={outimgstyle}/></Menutext></a></div>
-        <div style={select}><a href="http://clips4sale.com/84041" style={desktoplink} onClick={this.props.toggler}><Menutext>CLIPS &nbsp; <img src={outimg} style={outimgstyle}/></Menutext></a></div>
-        </div>
-				</TabletBreakpoint>
-
-				<PhoneBreakpoint>
-				<div style={desktopmenu}>
-        <div style={select}><Link to='/' style={desktoplink} onClick={this.props.toggler}><Menutext>HOME</Menutext></Link></div>
-
-				<div style={select}><Link to='/sessions' style={desktoplink} onClick={this.props.toggler}><Menutext>SESSIONS</Menutext></Link></div>
-				<div style={select}><Link to='/kittens' style={desktoplink} onClick={this.props.toggler}><Menutext>KITTENS</Menutext></Link></div>
-
-        <div style={select}><Link to='/gallery' style={desktoplink} onClick={this.props.toggler}><Menutext>GALLERY</Menutext></Link></div>
-        <div style={select}><Link to='/links' style={desktoplink} onClick={this.props.toggler}><Menutext>LINKS</Menutext></Link></div>
-<div style={select}><Link to='/contact' style={desktoplink} onClick={this.props.toggler}><Menutext>CONTACT</Menutext></Link></div>
-
-        <div style={select}><a href="https://ashley.knockoutcats.com/"style={desktoplink} onClick={this.props.toggler}><Menutext>MEMBERSHIPS &nbsp; <img src={outimg} style={outimgstyle}/></Menutext></a></div>
-				<div style={select}><a href="http://sessiongirls.com/component/comprofiler/userprofile/Ashley%20Wildcat" style={desktoplink} onClick={this.props.toggler}><Menutext>SCHEDULE &nbsp; <img src={outimg} style={outimgstyle}/></Menutext></a></div>
-        <div style={select}><a href="http://clips4sale.com/84041" style={desktoplink} onClick={this.props.toggler}><Menutext>CLIPS &nbsp; <img src={outimg} style={outimgstyle}/></Menutext></a></div>
-				</div>
-				</PhoneBreakpoint>
 				</div>
 	  );
   }

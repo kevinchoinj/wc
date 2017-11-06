@@ -24,7 +24,8 @@ export default class Thumbwrap extends React.Component{
 
 					<Link to="/">
 					<Thumbcont
-				            bgimage={image1}
+										bgimage={image1}
+										scrollamount={this.props.scrollamount}
 				 >
 				 Ashley Wildcat
 				 </Thumbcont>
@@ -34,14 +35,16 @@ export default class Thumbwrap extends React.Component{
 
 					<a href="https://twitter.com/bellawrestler19">
 					<Thumbcont
-			            bgimage={image2}
+									bgimage={image2}
+									scrollamount={this.props.scrollamount}
 			     >
 					 Bella
 					 </Thumbcont>
 					 </a>
 					 <a href="https://twitter.com/ScarlettRain110">
  					<Thumbcont
- 			            bgimage={image3}
+									 bgimage={image3}
+									 scrollamount={this.props.scrollamount}
  			     >
  					 Scarlett Rain
  					 </Thumbcont>
@@ -49,7 +52,8 @@ export default class Thumbwrap extends React.Component{
 
 					 <a href="https://twitter.com/veronikawithak">
  					<Thumbcont
- 			            bgimage={image4}
+									 bgimage={image4}
+									 scrollamount={this.props.scrollamount}
  			     >
  					 Veronika Valentine
  					 </Thumbcont>
@@ -57,20 +61,23 @@ export default class Thumbwrap extends React.Component{
 
 					 <a href="https://twitter.com/mizzamandamarie">
  					<Thumbcont
- 			            bgimage={image5}
+									 bgimage={image5}
+									 scrollamount={this.props.scrollamount}
  			     >
  					 Mizz Amanda Marie
  					 </Thumbcont>
  					 </a>
 
  					<Thumbcont
- 			            bgimage={image6}
+									 bgimage={image6}
+									 scrollamount={this.props.scrollamount}
  			     >
  					Sin D
  					 </Thumbcont>
 					 <Thumbcont
 
 									 bgimage={image7}
+									 scrollamount={this.props.scrollamount}
 						>
 					 Jordan
 						</Thumbcont>
@@ -78,6 +85,7 @@ export default class Thumbwrap extends React.Component{
 					 <a href="https://twitter.com/BellaInksClips">
 						<Thumbcont
 										bgimage={image8}
+										scrollamount={this.props.scrollamount}
 						 >
 						Bella Ink
 						 </Thumbcont>

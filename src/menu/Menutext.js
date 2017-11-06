@@ -23,10 +23,10 @@ export default class Menutext extends React.Component{
 
 			const textdec={
 				color: this.state.textcolor,
-				WebkitTransition: ".4s ease-out",
-				MozTransition: ".4s ease-out",
-				OTransition: ".4s ease-out",
-				transition:".4s ease-out",
+				WebkitTransition: ".2s ease-out",
+				MozTransition: ".2s ease-out",
+				OTransition: ".2s ease-out",
+				transition:".2s ease-out",
 
 			}
 

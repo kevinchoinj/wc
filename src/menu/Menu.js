@@ -4,10 +4,6 @@ import Menubutton from './Menubutton.js';
 import Menupanel from './Menupanel.js';
 import Menubar from './Menubar.js';
 
-import DesktopBreakpoint from '../responsive/desktop_breakpoint.js';
-import TabletBreakpoint from '../responsive/tablet_breakpoint.js';
-import PhoneBreakpoint from '../responsive/phone_breakpoint.js';
-
 
 export default class Menu extends React.Component{
 	constructor(props) {
@@ -44,7 +40,7 @@ togglemenu(){
 			 desktopmenuright: "0px",
 			 mobilemenuright: "0px",
 				btnwidth: "260px",
-				linesfromleft:"110px",
+				linesfromleft:"116px",
 		});
 	}
 	else if(this.state.lineanim3 ==="0px"){
@@ -102,6 +98,7 @@ togglemenu(){
 							toggler = {this.togglemenu}
 							menuright={this.state.desktopmenuright}
 							mobileright={this.state.mobilemenuright}
+							currentpage={this.props.currentpage}
 						/>
 				</div>
 

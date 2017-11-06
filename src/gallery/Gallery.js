@@ -131,10 +131,26 @@ const DEFAULT_IMAGES = [
 ];
 
 export default class Gallerycomp extends React.Component{
+	constructor(props) {
+		super(props);
+		this.state = {
+			opacity: "0",
+		}
+	}
+	 /*fades in the banner*/
+	 componentDidMount() {
+		setTimeout(function() { this.setState({opacity:"1"}); }.bind(this), 600);
+	 }
+
 	render(){
 		const gallerycontainer={
 			position:"absolute",
 			top:"100px",
+			opacity:this.state.opacity,
+			WebkitTransition: ".4s ease-out",
+      MozTransition: ".4s ease-out",
+      OTransition: ".4s ease-out",
+      transition:".4s ease-out",
 		}
 		return (
 			<Col md={10} mdOffset={1} sm={10} smOffset={1} xs={10} xsOffset={1} style={gallerycontainer}>

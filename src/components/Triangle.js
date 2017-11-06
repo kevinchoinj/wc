@@ -12,7 +12,9 @@ export default class Preload extends React.Component{
 		width:"150%",
 		height:"150%",
 		transform: "rotate(45deg)",
-		backgroundColor:"rgba(175, 151, 89,1)",
+		backgroundColor:"rgba(175, 151, 89,.9)",
+
+
 		left:this.props.leftoffset,
 		bottom:this.props.bottomoffset,
 
