@@ -23,7 +23,6 @@ import bgvideo from './images/vegas.mp4';
 import bgposter from './images/vegasimage.jpg'
 import bgwebm from './images/vegaswebm.webm';
 
-import Twittercont from './twitter/Twittercont';
 
 export default class App extends React.Component {
   constructor(props){
@@ -33,14 +32,9 @@ export default class App extends React.Component {
 
       scrollamount:"0",
     }
-    this.pageishome = this.pageishome.bind(this)
-    this.pageissessions = this.pageissessions.bind(this)
-    this.pageiskittens = this.pageiskittens.bind(this)
-    this.pageisgallery = this.pageisgallery.bind(this)
-    this.pageislinks = this.pageislinks.bind(this)
-    this.pageiscontact = this.pageiscontact.bind(this)
 
     this.scroller = this.scroller.bind(this)
+    this.checkpage = this.checkpage.bind(this)
   }
 
 
@@ -61,38 +55,17 @@ export default class App extends React.Component {
 		});
     }
     
+    checkpage(pageName){
+      this.setState({
+        currentpage: pageName,
+      })
+    }
   pageishome(){
     
     this.setState({
       currentpage:"home"
     })
   }
-  pageissessions(){
-    this.setState({
-      currentpage:"sessions"
-    })
-  }
-  pageiskittens(){
-    this.setState({
-      currentpage:"kittens"
-    })
-  }
-  pageisgallery(){
-    this.setState({
-      currentpage:"gallery"
-    })
-  }
-  pageislinks(){
-    this.setState({
-      currentpage:"links"
-    })
-  }
-  pageiscontact(){
-    this.setState({
-      currentpage:"contact"
-    })
-  }
-
 
 
   render() {
@@ -128,11 +101,7 @@ export default class App extends React.Component {
             </video>
           </Background>
 		    
-     <Route exact path={"/"} children={({ match }) => (
-          <Twittercont
-          wrapoffset={ Boolean(match) ? '0px': '-300px'}
-          />
-        )}/>
+
 
 
       <Route path={"/kittens"} children={({ match }) => (
@@ -185,12 +154,37 @@ export default class App extends React.Component {
 
 
       <Switch>
-        <Route exact path="/" render={(props) => <Home {...props} checkpage={this.pageishome}/>} />
-        <Route exact path="/sessions" render={(props) => <Sessionspage {...props} checkpage={this.pageissessions}/>} />
-        <Route path="/kittens" render={(props) => <Kittens {...props} checkpage={this.pageiskittens} scrollamount={this.state.scrollamount}/>}/>
-        <Route exact path="/gallery" render={(props) => <Gallerypage {...props} checkpage={this.pageisgallery}/>}/>
-        <Route exact path="/links" render={(props) => <Links {...props} checkpage={this.pageislinks}/>}/>
-        <Route exact path="/contact" render={(props) => <Contact {...props} checkpage={this.pageiscontact}/>}/>
+        <Route exact path="/" render={(props) => 
+          <Home {...props} 
+            checkpage={this.checkpage}
+          />} 
+        />
+        <Route exact path="/sessions" render={(props) => 
+          <Sessionspage {...props} 
+            checkpage={this.checkpage}
+          />} 
+        />
+        <Route path="/kittens" render={(props) => 
+          <Kittens {...props} 
+            checkpage={this.checkpage} 
+            scrollamount={this.state.scrollamount}
+          />}
+        />
+        <Route exact path="/gallery" render={(props) => 
+          <Gallerypage {...props} 
+            checkpage={this.checkpage}
+          />}
+        />
+        <Route exact path="/links" render={(props) => 
+          <Links {...props} 
+            checkpage={this.checkpage}
+          />}
+        />
+        <Route exact path="/contact" render={(props) => 
+          <Contact {...props} 
+            checkpage={this.checkpage}
+          />}
+        />
       </Switch>
       </div>
     );

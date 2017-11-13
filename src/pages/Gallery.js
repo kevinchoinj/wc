@@ -10,7 +10,7 @@ export default class Gallerypage extends React.Component {
   }
   componentDidMount() {
         window.scrollTo(0, 0);
-        this.props.checkpage(); 
+        this.props.checkpage('gallery'); 
   }
   render(){
 

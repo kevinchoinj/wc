@@ -19,7 +19,8 @@ export default class Sessions extends React.Component {
 
   componentDidMount() {
         window.scrollTo(0, 0);
-        this.props.checkpage(); 
+        this.props.checkpage('contact'); 
+        
       	setTimeout(function() { this.setState({opacity:"1"}); }.bind(this), 450);
         window.addEventListener("resize", this.contactformleft);
         this.contactformleft();

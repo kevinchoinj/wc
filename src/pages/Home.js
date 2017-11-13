@@ -8,7 +8,7 @@ export default class Home extends React.Component {
   }
   componentDidMount() {
         window.scrollTo(0, 0);
-        this.props.checkpage(); 
+        this.props.checkpage('home'); 
   }
   render(){
 

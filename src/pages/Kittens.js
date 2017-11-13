@@ -22,7 +22,8 @@ constructor(props){
 }
 componentDidMount(){
   window.scrollTo(0, 0);
-  this.props.checkpage(); 
+  this.props.checkpage('kittens'); 
+
   setTimeout(function() { this.setState({opacity:"1"}); }.bind(this), 300);
 }
   render(){

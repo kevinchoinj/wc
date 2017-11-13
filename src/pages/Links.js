@@ -12,7 +12,8 @@ export default class Links extends React.Component {
   }
   componentDidMount() {
 				window.scrollTo(0, 0);
-				this.props.checkpage(); 
+				this.props.checkpage('links'); 
+
 				window.addEventListener("resize", this.linksfromleft);
 				this.linksfromleft();
 				setTimeout(function() { this.setState({opacity:"1"}); }.bind(this), 450);
