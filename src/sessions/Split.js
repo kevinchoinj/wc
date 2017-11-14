@@ -10,8 +10,6 @@ import {Link} from 'react-router-dom';
 import image1 from '../images/7.jpg';
 import image2 from '../images/2.jpg';
 import image3 from '../images/6.jpg';
-import image4 from '../images/5.jpg';
-
 
 export default class Split extends React.Component{
 	constructor(props) {

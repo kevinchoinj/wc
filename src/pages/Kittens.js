@@ -50,6 +50,10 @@ componentDidMount(){
     }
     const bodywrapper={
       marginTop:"50px",
+      paddingBottom: '100px',
+    }
+    const rowstyle={
+      marginBottom: '50px',
     }
 
     return(
@@ -62,24 +66,18 @@ componentDidMount(){
       <Row style={bodywrapper}>
 
 
-      <Col md={10} mdOffset={1} sm={10} smOffset={1} xs={10} xsOffset={1}>
-          <Col md={3} mdOffset={0} sm={6} smOffset={0} xs={12} xsOffset={0}>
-          <div style={title}>Riot</div>
-          <div style={title}>November 8</div>
-          <Customimage bgimage={riotimage} bgpos="left top"/>
-          </Col>
-
-          <Col md={3} mdOffset={0} sm={6} smOffset={0} xs={12} xsOffset={0}>
+      <Col md={10} mdOffset={1} sm={10} smOffset={1} xs={10} xsOffset={1} style={rowstyle}>
+          <Col md={4} mdOffset={0} sm={12} smOffset={0} xs={12} xsOffset={0}>
           <div style={title}>Woody</div>
           <div style={title}>Local</div>
           <Customimage bgimage={woodyimage} bgpos="center top"/>
           </Col>
-          <Col md={3} mdOffset={0} sm={6} smOffset={0} xs={12} xsOffset={0}>
+          <Col md={4} mdOffset={0} sm={12} smOffset={0} xs={12} xsOffset={0}>
           <div style={title}>Damien</div>
           <div style={title}>Local-ish</div>
           <Customimage bgimage={damienimage} bgpos="left top"/>
           </Col>
-          <Col md={3} mdOffset={0} sm={6} smOffset={0} xs={12} xsOffset={0}>
+          <Col md={4} mdOffset={0} sm={12} smOffset={0} xs={12} xsOffset={0}>
           <div style={title}>Chasyn Rance</div>
           <div style={title}>$200 Min.</div>
           <Customimage bgimage={chasynimage} bgpos="center top"/>
@@ -89,20 +87,15 @@ componentDidMount(){
 
 
       {/*three images*/}
-       <Col md={10} mdOffset={1} sm={10} smOffset={1} xs={10} xsOffset={1}>
-          <Col md={4} mdOffset={0} sm={4} smOffset={0} xs={12} xsOffset={0}>
-          <div style={title}>Constance</div>
-          <div style={title}>November 10</div>
-          <a href="https://twitter.com/modelconstance1"><Customimage bgimage={image2} bgpos="right top"/></a>
-          </Col>
+       <Col md={10} mdOffset={1} sm={10} smOffset={1} xs={10} xsOffset={1} style={rowstyle}>
 
-          <Col md={4} mdOffset={0} sm={4} smOffset={0} xs={12} xsOffset={0}>
+          <Col md={6} mdOffset={0} sm={12} smOffset={0} xs={12} xsOffset={0}>
           <div style={title}>Miss Scorpion</div>
-          <div style={title}>November</div>
+          <div style={title}>November 15</div>
           <a href="http://www.missscorpion.com/"><Customimage bgimage={image3} bgpos="right top"/></a>
           </Col>
 
-          <Col md={4} mdOffset={0} sm={4} smOffset={0} xs={12} xsOffset={0}>
+          <Col md={6} mdOffset={0} sm={12} smOffset={0} xs={12} xsOffset={0}>
           <div style={title}>Local Guy</div>
           <div style={title}>Local</div>
           <Customimage bgimage={image4} bgpos="right top"/>

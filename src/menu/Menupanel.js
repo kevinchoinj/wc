@@ -58,7 +58,6 @@ export default class Menupanel extends React.Component{
 
 			const desktoplink={
 				textDecoration: "none",
-
 			}
 
       const select={
@@ -148,30 +147,103 @@ export default class Menupanel extends React.Component{
         </Link>
 
 
-        <a href="https://ashley.knockoutcats.com/"style={desktoplink} onClick={this.props.toggler}>
-        <Outlink><div style={outlinkstyle}>
-        MEMBERSHIP &nbsp; <img src={outimg} style={outimgstyle}/>
-        </div></Outlink>
+        <a 
+          href='https://ashley.knockoutcats.com/'
+          target='_blank'
+          rel='noopener noreferrer'
+          style={desktoplink} 
+          onClick={this.props.toggler}
+        >
+          <Outlink>
+            <div style={outlinkstyle}>
+              MEMBERSHIP &nbsp; 
+              <img 
+                src={outimg} 
+                style={outimgstyle} 
+                alt=''
+              />
+            </div>
+          </Outlink>
         </a>
 
-        <a href="http://sessiongirls.com/component/comprofiler/userprofile/Ashley%20Wildcat"style={desktoplink} onClick={this.props.toggler}>
-        <Outlink><div style={outlinkstyle}>
-        SCHEDULE &nbsp; <img src={outimg} style={outimgstyle}/>
-        </div></Outlink>
+        <a 
+          href='http://sessiongirls.com/component/comprofiler/userprofile/Ashley%20Wildcat'
+          target='_blank'
+          rel='noopener noreferrer'
+          style={desktoplink} 
+          onClick={this.props.toggler}
+        >
+          <Outlink>
+            <div style={outlinkstyle}>
+              SCHEDULE &nbsp; 
+              <img 
+                src={outimg} 
+                style={outimgstyle} 
+                alt=''
+              />
+            </div>
+          </Outlink>
         </a>
 
-        <a href="http://clips4sale.com/84041"style={desktoplink} onClick={this.props.toggler}>
-        <Outlink><div style={outlinkstyle}>
-        CLIPS &nbsp; <img src={outimg} style={outimgstyle}/>
-        </div></Outlink>
+        <a 
+          href='http://clips4sale.com/84041' 
+          target='_blank'
+          rel='noopener noreferrer' 
+          style={desktoplink} 
+          onClick={this.props.toggler}
+        >
+          <Outlink>
+            <div style={outlinkstyle}>
+              CLIPS &nbsp; 
+              <img 
+                src={outimg} 
+                style={outimgstyle} 
+                alt=''
+              />
+            </div>
+          </Outlink>
         </a>
 
         <br/><br/>
-        <a href="https://twitter.com/ItsAshleyWC" onMouseEnter={this.twover} onMouseLeave={this.twleave}>
-         {this.state.mouseovertw ? <img src={goldtwicon} style={socialicon} /> : <img src={twicon} style={socialicon} />}
+        <a 
+          href='https://twitter.com/ItsAshleyWC'
+          target='_blank'
+          rel='noopener noreferrer'
+          onMouseEnter={this.twover} 
+          onMouseLeave={this.twleave}
+        >
+         {this.state.mouseovertw ? 
+          <img 
+            src={goldtwicon} 
+            style={socialicon} 
+            alt=''
+          /> 
+          : 
+          <img 
+            src={twicon} 
+            style={socialicon} 
+            alt=''
+          />
+        }
          </a>
-        <a href="https://www.facebook.com/ashley.wildcat.14" onMouseEnter={this.fbover} onMouseLeave={this.fbleave}>
-        {this.state.mouseoverfb ? <img src={goldfbicon} style={socialicon} /> : <img src={fbicon} style={socialicon} />}
+        <a 
+          href='https://www.facebook.com/ashley.wildcat.14' 
+          onMouseEnter={this.fbover} 
+          onMouseLeave={this.fbleave}
+        >
+        {this.state.mouseoverfb ? 
+          <img 
+            src={goldfbicon} 
+            style={socialicon} 
+            alt=''
+          /> 
+          : 
+          <img 
+            src={fbicon} 
+            style={socialicon} 
+            alt=''
+          />
+        }
         </a>
       <br/>
         <span style={email}>

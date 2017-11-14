@@ -29,14 +29,11 @@ export default class App extends React.Component {
     super(props);
     this.state={
       currentpage:"",
-
       scrollamount:"0",
     }
-
     this.scroller = this.scroller.bind(this)
     this.checkpage = this.checkpage.bind(this)
   }
-
 
 	componentDidMount(){
 		window.addEventListener("scroll", this.scroller);
@@ -67,7 +64,6 @@ export default class App extends React.Component {
     })
   }
 
-
   render() {
     const fillimage={
       position:"fixed",
@@ -88,22 +84,30 @@ export default class App extends React.Component {
 
     return (
       <div className="App">
-     
-
-
 		    <Preload/>
 		      <Background
           bgimage={bgposter}
 		      >
-            <video loop playsInline autoPlay="autoplay"  id="iobg" poster={bgposter} style={fillimage}>
-              <source src={bgwebm} type="video/webm"/>
-              <source src={bgvideo} type="video/mp4" id="top-image"/>
+            <video 
+              loop 
+              playsInline 
+              autoPlay="autoplay"  
+              id="iobg" 
+              poster={bgposter} 
+              style={fillimage}
+            >
+              <source 
+                src={bgwebm} 
+                type="video/webm"
+              />
+              <source 
+                src={bgvideo} 
+                type="video/mp4" 
+                id="top-image"
+              />
             </video>
           </Background>
 		    
-
-
-
       <Route path={"/kittens"} children={({ match }) => (
           <Blackbg
           offset={ Boolean(match) ? '0px': '-100vw'}
@@ -111,46 +115,45 @@ export default class App extends React.Component {
           />
         )}/>
 
+      <Route path={"/gallery"} children={({ match }) => (
+        <div>
+        <Blackbgleft
+          offset={ Boolean(match) ? '0': '-100%'}
+          opacity={ Boolean(match) ? '1': '0'}
+          />
+          
+        </div>
+      )}/>
 
-        <Route path={"/gallery"} children={({ match }) => (
-          <div>
-          <Blackbgleft
-            offset={ Boolean(match) ? '0': '-100%'}
-            opacity={ Boolean(match) ? '1': '0'}
-            />
-            
-          </div>
-        )}/>
+      <Menu currentpage={this.state.currentpage}/>
 
-        <Menu currentpage={this.state.currentpage}/>
+      <Route path={"/links"} children={({ match }) => (
+        <div>
+          <Triangle
+            bottomoffset={ Boolean(match) ? '-58%': '100%'}
+            leftoffset = { Boolean(match) ? '-58%': '100%'}
+          />
+        </div>
+      )}/>
 
-        <Route path={"/links"} children={({ match }) => (
-          <div>
-            <Triangle
-              bottomoffset={ Boolean(match) ? '-58%': '100%'}
-              leftoffset = { Boolean(match) ? '-58%': '100%'}
-            />
-          </div>
-        )}/>
+      <Route path={"/contact"} children={({ match }) => (
+        <div>
+          <Triangle
+            bottomoffset={ Boolean(match) ? '-58%': '100%'}
+            leftoffset = { Boolean(match) ? '-58%': '100%'}
+          />
+        </div>
+      )}/>
 
-        <Route path={"/contact"} children={({ match }) => (
-          <div>
-            <Triangle
-              bottomoffset={ Boolean(match) ? '-58%': '100%'}
-              leftoffset = { Boolean(match) ? '-58%': '100%'}
-            />
-          </div>
-        )}/>
-
-        <Route path={"/sessions"} children={({ match }) => (
-          <div>
-            <Sessions
-            offset1={ Boolean(match) ? '0vh': '100vh'}
-            disp={Boolean(match)? 'auto':'hidden'}
-            pointerevs = {Boolean(match)? 'auto':'none'}
-            />
-          </div>
-        )}/>
+      <Route path={"/sessions"} children={({ match }) => (
+        <div>
+          <Sessions
+          offset1={ Boolean(match) ? '0vh': '100vh'}
+          disp={Boolean(match)? 'auto':'hidden'}
+          pointerevs = {Boolean(match)? 'auto':'none'}
+          />
+        </div>
+      )}/>
 
 
       <Switch>
