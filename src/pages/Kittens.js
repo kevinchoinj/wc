@@ -40,67 +40,68 @@ componentDidMount(){
 		  OTransition: ".4s ease-out",
 		  transition:".4s ease-out",
     }
-    const title={
-      width:"100%",
-      textAlign:"center",
-      color:"#af9759",
-      fontSize:"24px",
-      letterSpacing:"5px",
-      whiteSpace: "nowrap",
-    }
-    const bodywrapper={
-      marginTop:"50px",
-      paddingBottom: '100px',
-    }
-    const rowstyle={
-      marginBottom: '50px',
-    }
+
+
 
     return(
 			<div style={wrapper}>
       <Row>
         <Col md={4} mdOffset={4} sm={10} smOffset={1} xs={10} xsOffset={1}>
-        <div style={title}>VISITORS</div>
+          <div className='kittens_header'>
+            VISITORS
+          </div>
         </Col>
       </Row>
-      <Row style={bodywrapper}>
+      <Row className='kittens_body__wrapper'>
 
 
-      <Col md={10} mdOffset={1} sm={10} smOffset={1} xs={10} xsOffset={1} style={rowstyle}>
-          <Col md={4} mdOffset={0} sm={12} smOffset={0} xs={12} xsOffset={0}>
-          <div style={title}>Woody</div>
-          <div style={title}>Local</div>
+      <Col 
+        md={10}
+        mdOffset={1}
+        sm={10}
+        smOffset={1}
+        xs={10}
+        xsOffset={1}
+        className='kittens_wrapper'
+      >
+        <Col 
+          className='kittens_container'
+        >
+          <div className='kittens_title'>Woody</div>
+          <div className='kittens_subtitle'>Local</div>
           <Customimage bgimage={woodyimage} bgpos="center top"/>
-          </Col>
-          <Col md={4} mdOffset={0} sm={12} smOffset={0} xs={12} xsOffset={0}>
-          <div style={title}>Damien</div>
-          <div style={title}>Local-ish</div>
+        </Col>
+        <Col
+          className='kittens_container'
+        >
+          <div className='kittens_title'>Damien</div>
+          <div className='kittens_subtitle'>Local-ish</div>
           <Customimage bgimage={damienimage} bgpos="left top"/>
-          </Col>
-          <Col md={4} mdOffset={0} sm={12} smOffset={0} xs={12} xsOffset={0}>
-          <div style={title}>Chasyn Rance</div>
-          <div style={title}>$200 Min.</div>
+        </Col>
+        <Col
+          className='kittens_container'
+        >
+          <div className='kittens_title'>Chasyn Rance</div>
+          <div className='kittens_subtitle'>$200 Min.</div>
           <Customimage bgimage={chasynimage} bgpos="center top"/>
-          </Col>
         </Col>
 
+        <Col 
+          className='kittens_container'
+        >
+        <div className='kittens_title'>Miss Scorpion</div>
+        <div className='kittens_subtitle'>November 15</div>
+        <a href="http://www.missscorpion.com/"><Customimage bgimage={image3} bgpos="right top"/></a>
+        </Col>
 
-
-      {/*three images*/}
-       <Col md={10} mdOffset={1} sm={10} smOffset={1} xs={10} xsOffset={1} style={rowstyle}>
-
-          <Col md={6} mdOffset={0} sm={12} smOffset={0} xs={12} xsOffset={0}>
-          <div style={title}>Miss Scorpion</div>
-          <div style={title}>November 15</div>
-          <a href="http://www.missscorpion.com/"><Customimage bgimage={image3} bgpos="right top"/></a>
-          </Col>
-
-          <Col md={6} mdOffset={0} sm={12} smOffset={0} xs={12} xsOffset={0}>
-          <div style={title}>Local Guy</div>
-          <div style={title}>Local</div>
-          <Customimage bgimage={image4} bgpos="right top"/>
-          </Col>
-    </Col>
+        <Col 
+          className='kittens_container'
+        >
+        <div className='kittens_title'>Local Guy</div>
+        <div className='kittens_subtitle'>Local</div>
+        <Customimage bgimage={image4} bgpos="right top"/>
+        </Col>
+      </Col>
 
 
         {/* two images*/}

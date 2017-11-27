@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-export default class Customimage extends React.Component {
+export default class Customimage2 extends React.Component {
   constructor(props) {
   	super(props);
   	this.state = {
