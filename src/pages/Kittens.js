@@ -13,6 +13,8 @@ import woodyimage from '../images/visitors/woody.jpeg';
 import damienimage from '../images/visitors/damien.jpeg';
 import chasynimage from '../images/visitors/chasyn.jpg';
 
+import hollywood from '../images/visitors/hollywood.jpg';
+
 export default class Kittens extends React.Component {
 constructor(props){
   super(props);
@@ -55,8 +57,14 @@ componentDidMount(){
       <Row className='kittens_body__wrapper'>
 
 
+      <Col md={4} mdOffset={1} sm={10} smOffset={1} xs={10} xsOffset={1}>
+      <div className='kittens_title'>Hollywood</div>
+          <div className='kittens_subtitle'>March</div>
+      <img src={hollywood} className='kittens_image_large'/>
+
+      </Col>
       <Col 
-        md={10}
+        md={6}
         mdOffset={1}
         sm={10}
         smOffset={1}

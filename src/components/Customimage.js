@@ -11,7 +11,6 @@ export default class Customimage extends React.Component {
     this.leave=this.leave.bind(this);
   }
   hover(){
-    console.log("asdf");
     this.setState({
       hovered:true,
       
