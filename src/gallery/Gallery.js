@@ -64,6 +64,10 @@ import image54 from '../images/gallery/54.jpg';
 import image55 from '../images/gallery/55.jpg';
 import image56 from '../images/gallery/56.jpg';
 
+import image57 from '../images/gallery/57.jpg';
+import image58 from '../images/gallery/58.jpg';
+import image59 from '../images/gallery/59.jpg';
+
 function makeUnsplashSrc (id) {
 	return id;
 }
@@ -72,6 +76,9 @@ function makeUnsplashThumbnail (id) {
 		return id;
 }
 const DEFAULT_IMAGES = [
+	{ id: image57},
+	{ id: image58},
+	{ id: image59},
 	{ id: image1},
 	{ id: image2},
 	{ id: image3},

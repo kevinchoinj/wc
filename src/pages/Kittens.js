@@ -3,9 +3,8 @@ import React from 'react';
 import {Row, Col} from 'react-bootstrap';
 
 import Customimage from '../components/Customimage';
+import Customimage2 from '../components/Customimage2';
 
-import image2 from '../images/visitors/constance.png';
-import image3 from '../images/visitors/scorpion.jpg';
 import image4 from '../images/visitors/localguy.jpg';
 
 import riotimage from '../images/visitors/riot.jpeg';
@@ -14,6 +13,9 @@ import damienimage from '../images/visitors/damien.jpeg';
 import chasynimage from '../images/visitors/chasyn.jpg';
 
 import hollywood from '../images/visitors/hollywood.jpg';
+
+import julianova from '../images/visitors/julianova.jpg';
+import vanessavilano from '../images/visitors/vanessavilano.jpg';
 
 export default class Kittens extends React.Component {
 constructor(props){
@@ -57,21 +59,43 @@ componentDidMount(){
       <Row className='kittens_body__wrapper'>
 
 
-      <Col md={4} mdOffset={1} sm={10} smOffset={1} xs={10} xsOffset={1}>
+      <Col 
+        md={4} 
+        mdOffset={1} 
+        sm={10} 
+        smOffset={1} 
+        xs={10} 
+        xsOffset={1}
+        className='kittens_container__left'
+      >
       <div className='kittens_title'>Hollywood</div>
           <div className='kittens_subtitle'>March</div>
       <img src={hollywood} className='kittens_image_large'/>
-
       </Col>
+
       <Col 
-        md={6}
-        mdOffset={1}
+        md={7}
+        mdOffset={0}
         sm={10}
         smOffset={1}
         xs={10}
         xsOffset={1}
         className='kittens_wrapper'
       >
+        <Col 
+          className='kittens_container__wide'
+        >
+          <div className='kittens_title'>Julia Nova</div>
+          <div className='kittens_subtitle'>February 2</div>
+          <Customimage2 bgimage={julianova} bgpos="left top"/>
+        </Col>
+        <Col 
+          className='kittens_container'
+        >
+          <div className='kittens_title'>Vanessa Vilano</div>
+          <div className='kittens_subtitle'>December 15</div>
+          <Customimage bgimage={vanessavilano} bgpos="center top"/>
+        </Col>
         <Col 
           className='kittens_container'
         >
@@ -92,14 +116,6 @@ componentDidMount(){
           <div className='kittens_title'>Chasyn Rance</div>
           <div className='kittens_subtitle'>$200 Min.</div>
           <Customimage bgimage={chasynimage} bgpos="center top"/>
-        </Col>
-
-        <Col 
-          className='kittens_container'
-        >
-        <div className='kittens_title'>Miss Scorpion</div>
-        <div className='kittens_subtitle'>November 15</div>
-        <a href="http://www.missscorpion.com/"><Customimage bgimage={image3} bgpos="right top"/></a>
         </Col>
 
         <Col 

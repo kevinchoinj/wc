@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-export default class Customimage2 extends React.Component {
+export default class Customimage extends React.Component {
   constructor(props) {
   	super(props);
   	this.state = {
@@ -11,7 +11,6 @@ export default class Customimage2 extends React.Component {
     this.leave=this.leave.bind(this);
   }
   hover(){
-    console.log("asdf");
     this.setState({
       hovered:true,
       
@@ -33,7 +32,7 @@ export default class Customimage2 extends React.Component {
       backgroundRepeat: "no-repeat",
       backgroundPosition: this.props.bgpos,
       backgroundSize: "cover",
-      height:"600px",
+      height:"300px",
       marginBottom:"50px",
       transform: "scale(1.1,1.1)",
       WebkitTransition: ".4s ease-out",
@@ -49,7 +48,7 @@ export default class Customimage2 extends React.Component {
         backgroundRepeat: "no-repeat",
         backgroundPosition: this.props.bgpos,
         backgroundSize: "cover",
-        height:"600px",
+        height:"300px",
         marginBottom:"50px",
         transform: "scale(1,1)",
         WebkitTransition: ".4s ease-out",
@@ -59,13 +58,8 @@ export default class Customimage2 extends React.Component {
       }
     }
 
-    const outer={
-      width:"100%",
-      height:"600px",
-      overflow:"hidden",
-    }
     return(
-      <div style={outer}>
+    <div className='custom_image__short'>
       <div style={imagestyle} onMouseEnter={this.hover} onMouseLeave={this.leave}>
     </div>
     </div>
