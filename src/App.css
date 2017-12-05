@@ -18,6 +18,22 @@ html, body{
   margin-right:0px;
 }
 
+.video{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  background-size: cover;
+}
+
 @media handheld, screen and (max-width: 1025px){
   .bannerimage{
         background-attachment: scroll!important;
@@ -115,5 +131,36 @@ html, body{
   .kittens_wrapper{
     padding-left: 0px;
     padding-right: 0px;
+  }
+}
+
+/* --- Sessions --- */
+
+.sessions_column{
+  height: calc(100vh - 75px);
+  overflow: hidden;
+}
+
+.sessions_column_inner{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+  transform: scale(1,1);
+  -webkit-transition: .4s ease-out;
+  -moz-transition: .4s ease-out;
+  -o-transition: .4s ease-out;
+  transition: .4s ease-out;
+}
+.sessions_column_inner:hover{
+  transform: scale(1.1,1.1);
+}
+
+@media screen and (max-width: 992px) {
+  .sessions_column{
+    height: calc(33vh - 18.75px);
+    overflow: hidden;
   }
 }

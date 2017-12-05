@@ -9,6 +9,7 @@ import fbicon from '../images/facebook.png';
 import twicon from '../images/twitter.png';
 import goldfbicon from '../images/goldfacebook.png';
 import goldtwicon from '../images/goldtwitter.png';
+
 export default class Menupanel extends React.Component{
   constructor(props) {
 	 super(props);
@@ -97,15 +98,15 @@ export default class Menupanel extends React.Component{
         color: "#af9759",
       }
 
-        const indic={
-          top:"12px",
-          position:"absolute",
-          width:"100%",
-          borderRight:"8px solid #af9759",
-          borderLeft:"8px solid #af9759",
-          borderTop:"8px solid transparent",
-          borderBottom: "8px solid transparent",
-        }
+      const indic={
+        top:"12px",
+        position:"absolute",
+        width:"100%",
+        borderRight:"8px solid #af9759",
+        borderLeft:"8px solid #af9759",
+        borderTop:"8px solid transparent",
+        borderBottom: "8px solid transparent",
+      }
 	  return(
 
 				<div>

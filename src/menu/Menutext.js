@@ -20,16 +20,13 @@ export default class Menutext extends React.Component{
 		});
 	}
   render(){
-
 			const textdec={
 				color: this.state.textcolor,
 				WebkitTransition: ".2s ease-out",
 				MozTransition: ".2s ease-out",
 				OTransition: ".2s ease-out",
 				transition:".2s ease-out",
-
 			}
-
 
 	  return(
 

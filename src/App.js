@@ -9,8 +9,6 @@ import Contact from './pages/Contact';
 import Links from './pages/Links';
 import Sessionspage from './pages/Sessionspage';
 
-import Preload from './components/Preload';
-
 import Sessions from './pages/Sessions';
 import Blackbg from './components/Blackbg';
 import Blackbgleft from './components/Blackbgleft';
@@ -66,25 +64,11 @@ export default class App extends React.Component {
 
   render() {
     const fillimage={
-      position:"fixed",
-      top: "50%",
-      left: "50%",
-      minWidth: "100%",
-      minHeight: "100%",
-      width: "auto",
-      height: "auto",
-      zIndex: "-100",
-      msTransform: "translateX(-50%) translateY(-50%)",
-      MozTransform: "translateX(-50%) translateY(-50%)",
-      WebkitTransform: "translateX(-50%) translateY(-50%)",
-      transform: "translateX(-50%) translateY(-50%)",
       background: "url("+bgposter+") no-repeat",
-      backgroundSize: "cover",
     }
 
     return (
       <div className="App">
-		    <Preload/>
 		      <Background
           bgimage={bgposter}
 		      >
@@ -95,6 +79,7 @@ export default class App extends React.Component {
               id="iobg" 
               poster={bgposter} 
               style={fillimage}
+              className='video'
             >
               <source 
                 src={bgwebm} 
