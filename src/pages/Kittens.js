@@ -15,7 +15,7 @@ import chasynimage from '../images/visitors/chasyn.jpg';
 import hollywood from '../images/visitors/hollywood.jpg';
 
 import julianova from '../images/visitors/julianova.jpg';
-import vanessavilano from '../images/visitors/vanessavilano.jpg';
+import lialabowe from '../images/visitors/lialabowe.jpg'
 
 export default class Kittens extends React.Component {
 constructor(props){
@@ -87,15 +87,18 @@ componentDidMount(){
         >
           <div className='kittens_title'>Julia Nova</div>
           <div className='kittens_subtitle'>February 2</div>
-          <Customimage2 bgimage={julianova} bgpos="left top"/>
+          <img src={julianova} className='kittens_image_large'/>
         </Col>
+
         <Col 
-          className='kittens_container'
+          className='kittens_container__wide'
         >
-          <div className='kittens_title'>Vanessa Vilano</div>
-          <div className='kittens_subtitle'>December 15</div>
-          <Customimage bgimage={vanessavilano} bgpos="center top"/>
+          <div className='kittens_title'>Lia Labowe</div>
+          <div className='kittens_subtitle'>March 24</div>
+          <img src={lialabowe} className='kittens_image_large'/>
         </Col>
+
+
         <Col 
           className='kittens_container'
         >

@@ -125,6 +125,7 @@ html, body{
 
 .kittens_container__left{
   margin-bottom: 25px;
+  border: 1px solid #af9759;
 }
 
 @media screen and (max-width: 992px) {
@@ -158,7 +159,7 @@ html, body{
   transform: scale(1.1,1.1);
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 768px) {
   .sessions_column{
     height: calc(33vh - 18.75px);
     overflow: hidden;
@@ -219,6 +220,11 @@ html, body{
   height: 25px;
   width: 25px;
   margin: 10px;
+  fill: #fff !important;
+}
+
+.menu_social_icon:hover{
+  stroke: #af9759;
 }
 
 .menu_email{
