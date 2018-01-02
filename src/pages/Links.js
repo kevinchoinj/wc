@@ -79,7 +79,7 @@ export default class Links extends React.Component {
 
 			<a 
 				style={linkstyle} 
-				href="http://www.ashleysclips.com" 
+				href="https://www.clips4sale.com/studio/84041/ashley-wildcat-productions" 
 				target='_blank' 
 				rel='noopener noreferrer'
 			>
