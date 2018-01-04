@@ -98,7 +98,7 @@ const subtitle={
 
 
       <div style={contactcontainer}>
-        <form method="POST" action="http://localhost:5000/send">
+        <form method="POST" action="/send">
           <label>Name</label><br/>
           <input type="text" name="name"/>
           <br/>
