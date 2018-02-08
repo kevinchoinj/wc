@@ -17,6 +17,8 @@ import hollywood from '../images/visitors/hollywood.jpg';
 import julianova from '../images/visitors/julianova.jpg';
 import lialabowe from '../images/visitors/lialabowe.jpg';
 
+import vanessavilano from '../images/visitors/vanessavilano.jpeg';
+
 import jan31 from '../images/visitors/jan31.jpg';
 export default class Kittens extends React.Component {
 constructor(props){
@@ -68,15 +70,6 @@ componentDidMount(){
         xs={10} 
         xsOffset={1}
       >
-
-<Col 
-          className='kittens_container__wide'
-        >
-          <div className='kittens_title'>Amazon Annie & Kahn, Bella</div>
-          <div className='kittens_subtitle'>January 31</div>
-         <img src={jan31} className='kittens_image_large'/>
-      </Col>
-      
        <Col 
           className='kittens_container__wide'
         >
@@ -84,7 +77,13 @@ componentDidMount(){
           <div className='kittens_subtitle'>March</div>
          <img src={hollywood} className='kittens_image_large'/>
       </Col>
-
+      <Col 
+          className='kittens_container__wide'
+        >
+          <div className='kittens_title'>Vanessa Vilano</div>
+          <div className='kittens_subtitle'>Local</div>
+         <img src={vanessavilano} className='kittens_image_large'/>
+      </Col>
 
 
       </Col>
@@ -98,13 +97,6 @@ componentDidMount(){
         xsOffset={1}
         className='kittens_wrapper'
       >
-        <Col 
-          className='kittens_container__wide'
-        >
-          <div className='kittens_title'>Julia Nova</div>
-          <div className='kittens_subtitle'>February 2</div>
-          <img src={julianova} className='kittens_image_large'/>
-        </Col>
 
         <Col 
           className='kittens_container__wide'
