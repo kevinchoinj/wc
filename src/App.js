@@ -63,10 +63,6 @@ export default class App extends React.Component {
   }
 
   render() {
-    const fillimage={
-      background: "url("+bgposter+") no-repeat",
-    }
-
     return (
       <div className="App">
 		      <Background
@@ -76,9 +72,7 @@ export default class App extends React.Component {
               loop 
               playsInline 
               autoPlay="autoplay"  
-              id="iobg" 
-              poster={bgposter} 
-              style={fillimage}
+              id="iobg"
               className='video'
             >
               <source 

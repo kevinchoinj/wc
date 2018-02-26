@@ -18,6 +18,7 @@ import julianova from '../images/visitors/julianova.jpg';
 import lialabowe from '../images/visitors/lialabowe.jpg';
 
 import vanessavilano from '../images/visitors/vanessavilano.jpeg';
+import vevelane from '../images/visitors/vevelane.jpeg';
 
 import jan31 from '../images/visitors/jan31.jpg';
 export default class Kittens extends React.Component {
@@ -70,13 +71,6 @@ componentDidMount(){
         xs={10} 
         xsOffset={1}
       >
-       <Col 
-          className='kittens_container__wide'
-        >
-          <div className='kittens_title'>Hollywood</div>
-          <div className='kittens_subtitle'>March</div>
-         <img src={hollywood} className='kittens_image_large'/>
-      </Col>
       <Col 
           className='kittens_container__wide'
         >
@@ -84,7 +78,20 @@ componentDidMount(){
           <div className='kittens_subtitle'>Local</div>
          <img src={vanessavilano} className='kittens_image_large'/>
       </Col>
-
+      <Col 
+          className='kittens_container__wide'
+        >
+          <div className='kittens_title'>Chasyn Rance</div>
+          <div className='kittens_subtitle'>$200 Min.</div>
+         <img src={chasynimage} className='kittens_image_large'/>
+      </Col>
+      <Col 
+          className='kittens_container__wide'
+        >
+          <div className='kittens_title'>Local Guy</div>
+          <div className='kittens_subtitle'>local</div>
+         <img src={image4} className='kittens_image_large'/>
+      </Col>
 
       </Col>
 
@@ -106,6 +113,13 @@ componentDidMount(){
           <img src={lialabowe} className='kittens_image_large'/>
         </Col>
 
+        <Col 
+          className='kittens_container__wide'
+        >
+          <div className='kittens_title'>Veve Lane</div>
+          <div className='kittens_subtitle'>May</div>
+          <img src={vevelane} className='kittens_image_large'/>
+        </Col>
 
         <Col 
           className='kittens_container'
@@ -121,23 +135,7 @@ componentDidMount(){
           <div className='kittens_subtitle'>Local-ish</div>
           <Customimage bgimage={damienimage} bgpos="left top"/>
         </Col>
-        <Col
-          className='kittens_container'
-        >
-          <div className='kittens_title'>Chasyn Rance</div>
-          <div className='kittens_subtitle'>$200 Min.</div>
-          <Customimage bgimage={chasynimage} bgpos="center top"/>
         </Col>
-
-        <Col 
-          className='kittens_container'
-        >
-        <div className='kittens_title'>Local Guy</div>
-        <div className='kittens_subtitle'>Local</div>
-        <Customimage bgimage={image4} bgpos="right top"/>
-        </Col>
-      </Col>
-
 
         {/* two images*/}
         {/*

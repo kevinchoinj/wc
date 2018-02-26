@@ -102,6 +102,7 @@ html, body{
   letter-spacing: 5px;
   white-space: nowrap;
   font-family: 'Lato', Helvetica;
+  margin-bottom: 5px;
 }
 
 .kittens_image_large{
