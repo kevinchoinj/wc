@@ -1,6 +1,9 @@
 import React from 'react';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+import * as pagesActions from '../actions/pages';
 
-export default class Sessions extends React.Component {
+class Contact extends React.Component {
   constructor(props) {
   	super(props);
   	this.state = {
@@ -16,11 +19,13 @@ export default class Sessions extends React.Component {
   }
 
   componentDidMount() {
-    window.scrollTo(0, 0);
-    this.props.checkpage('contact');
+    this.props.pagesActions.toggleTriangle(true);
+    this.props.pagesActions.setPage('contact');
+
     setTimeout(function() { this.setState({opacity:"1"}); }.bind(this), 450);
     window.addEventListener("resize", this.contactformleft);
     this.contactformleft();
+
   }
 
   contactformleft(){
@@ -111,3 +116,8 @@ export default class Sessions extends React.Component {
     );
   }
 }
+
+export default connect(
+  () => ({}),
+  (dispatch) => ({pagesActions: bindActionCreators(pagesActions, dispatch)}),
+)(Contact);

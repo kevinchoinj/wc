@@ -1,23 +1,22 @@
 import React from 'react';
-import Split from '../sessions/Split';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+import * as pagesActions from '../actions/pages';
 
-export default class Sessions extends React.Component {
+class Sessions extends React.Component {
   componentDidMount() {
-    window.scrollTo(0, 0)
+    this.props.pagesActions.toggleTriangle(false);
+    this.props.pagesActions.setPage('sessions');
   }
   render(){
-    const container={
-      position:"absolute",
-      pointerEvents: "this.props.pointerevs",
-    }
     return(
-      <div style={container}>
-        <Split
-          offset1={this.props.offset1}
-          overflowy={this.props.overflowy}
-          pointerevs = {this.props.pointerevs}
-        />
-      </div>
+    <div>
+    </div>
     );
   }
 }
+
+export default connect(
+  () => ({}),
+  (dispatch) => ({pagesActions: bindActionCreators(pagesActions, dispatch)}),
+)(Sessions);

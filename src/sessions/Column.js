@@ -1,14 +1,24 @@
 import React from "react";
 import {Col} from 'react-bootstrap';
+import classNames from 'classnames';
+import { connect } from 'react-redux';
 
-export default class Split extends React.Component{
+class Column extends React.Component{
   render(){
+		const columnName = classNames({
+      'sessions_column': true,
+			'sessions_column--displayed':
+				(this.props.currentPage==='sessions')
+				|| (this.props.currentPage==='sessions1')
+				|| (this.props.currentPage==='sessions2')
+				|| (this.props.currentPage==='sessions3'),
+		});
+
 	const colstyle={
 		WebkitTransition: this.props.timing,
 		MozTransition: this.props.timing,
 		OTransition: this.props.timing,
 		transition:this.props.timing,
-		bottom:this.props.offset1,
 	}
 	const inner={
 		backgroundImage: 'url('+this.props.bgimage+')',
@@ -19,9 +29,7 @@ export default class Split extends React.Component{
 				sm={4}
 				xs={12}
 				style={colstyle}
-				onMouseEnter={this.hoverthumb}
-				onMouseLeave={this.leavethumb}
-				className='sessions_column'
+				className={columnName}
 			>
 				<div
 					style={inner}
@@ -35,3 +43,16 @@ export default class Split extends React.Component{
 	  );
   }
 }
+
+function mapStateToProps(state, prop){
+  return{
+    currentPage: state.pages.currentPage,
+  }
+}
+
+function mapDispatchToProps(dispatch){
+  return {
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Column);

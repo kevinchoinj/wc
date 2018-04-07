@@ -1,4 +1,7 @@
 import React from 'react';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+import * as pagesActions from '../actions/pages';
 
 import {Row, Col} from 'react-bootstrap';
 import Custom from '../components/Custom';
@@ -10,7 +13,7 @@ import salina from '../images/visitors/salina.jpg';
 import vanessavilano from '../images/visitors/vanessavilano.jpeg';
 import vevelane from '../images/visitors/vevelane.jpeg';
 
-export default class Kittens extends React.Component {
+class Customs extends React.Component {
 constructor(props){
   super(props);
   this.state={
@@ -18,7 +21,8 @@ constructor(props){
   }
 }
 componentDidMount(){
-  this.props.checkpage('kittens');
+  this.props.pagesActions.toggleTriangle(false);
+  this.props.pagesActions.setPage('kittens');
   setTimeout(function() { this.setState({opacity:"1"}); }.bind(this), 300);
 }
   render(){
@@ -95,3 +99,8 @@ componentDidMount(){
     );
   }
 }
+
+export default connect(
+  () => ({}),
+  (dispatch) => ({pagesActions: bindActionCreators(pagesActions, dispatch)}),
+)(Customs);

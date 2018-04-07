@@ -1,36 +1,30 @@
 import React from "react";
+import {connect} from 'react-redux';
+import classNames from 'classnames';
 
-export default class Preload extends React.Component{
-
-	componentDidMount(){
-
-		}
-
+class Triangle extends React.Component{
   render(){
-		const triangle={
-		  position:"fixed",
-		width:"150%",
-		height:"150%",
-		transform: "rotate(45deg)",
-		backgroundColor:"rgba(175, 151, 89,.9)",
-
-
-		left:this.props.leftoffset,
-		bottom:this.props.bottomoffset,
-
-		WebkitTransition: ".4s ease-out",
-		MozTransition: ".4s ease-out",
-		OTransition: ".4s ease-out",
-		transition:".4s ease-out",
-		}
+		const triangleName = classNames({
+      'triangle': true,
+      'triangle--displayed': this.props.triangleDisplayed,
+    });
 
 	  return(
-      <div style={triangle}>
-
+      <div className={triangleName}>
       </div>
-
-
-
 	  );
   }
 }
+
+function mapStateToProps(state, prop){
+  return{
+    triangleDisplayed: state.pages.triangleDisplayed,
+  }
+}
+
+function mapDispatchToProps(dispatch){
+  return {
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Triangle);

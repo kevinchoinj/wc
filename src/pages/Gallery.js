@@ -1,10 +1,13 @@
 import React from 'react';
 import Gallerycomp from '../gallery/Gallery';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+import * as pagesActions from '../actions/pages';
 
-export default class Gallerypage extends React.Component {
+class Gallery extends React.Component {
   componentDidMount() {
-    window.scrollTo(0, 0);
-    this.props.checkpage('gallery');
+    this.props.pagesActions.toggleTriangle(false);
+    this.props.pagesActions.setPage('gallery');
   }
   render(){
     return(
@@ -14,3 +17,8 @@ export default class Gallerypage extends React.Component {
     );
   }
 }
+
+export default connect(
+  () => ({}),
+  (dispatch) => ({pagesActions: bindActionCreators(pagesActions, dispatch)}),
+)(Gallery);

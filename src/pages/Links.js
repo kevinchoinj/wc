@@ -1,6 +1,9 @@
 import React from 'react';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+import * as pagesActions from '../actions/pages';
 
-export default class Links extends React.Component {
+class Links extends React.Component {
   constructor(props) {
   	super(props);
   	this.state = {
@@ -10,8 +13,10 @@ export default class Links extends React.Component {
 		this.linksfromleft = this.linksfromleft.bind(this)
   }
   componentDidMount() {
-		window.scrollTo(0, 0);
-		this.props.checkpage('links');
+		this.props.pagesActions.toggleTriangle(true);
+		this.props.pagesActions.setPage('contact');
+
+
 		window.addEventListener("resize", this.linksfromleft);
 		this.linksfromleft();
 		setTimeout(function() { this.setState({opacity:"1"}); }.bind(this), 450);
@@ -156,3 +161,8 @@ export default class Links extends React.Component {
     );
   }
 }
+
+export default connect(
+  () => ({}),
+  (dispatch) => ({pagesActions: bindActionCreators(pagesActions, dispatch)}),
+)(Links);

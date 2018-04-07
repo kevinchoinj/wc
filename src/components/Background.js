@@ -1,12 +1,6 @@
 import React from 'react';
 
-
 export default class Home extends React.Component {
-  constructor(props) {
-  	super(props);
-  	this.state = {
-  	}
-  }
   render(){
 		const bgimage={
 			width:"100vw",
