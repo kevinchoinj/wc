@@ -1,35 +1,8 @@
 import React from "react";
 import {Col} from 'react-bootstrap';
-import Columnoverlay from './Columnoverlay';
 
 export default class Split extends React.Component{
-	constructor(props) {
-	 super(props);
-	 this.state = {
-		 heightoftextbox:"30%",
-		 hovercolor:"#fff",
-		 hovered:false,
-	 }
-	 this.hoverthumb = this.hoverthumb.bind(this)
-	 this.leavethumb = this.leavethumb.bind(this)
-	}
-	hoverthumb(){
-		this.setState({
-			heightoftextbox:"70%",
-			hovercolor:"#af9759",
-			hovered:true,
-		})
-	}
-	leavethumb(){
-		this.setState({
-			heightoftextbox:"30%",
-			hovercolor:"#fff",
-			hovered:false,
-		})
-	}
   render(){
-
-
 	const colstyle={
 		WebkitTransition: this.props.timing,
 		MozTransition: this.props.timing,
@@ -55,12 +28,9 @@ export default class Split extends React.Component{
 					className='sessions_column_inner'
 				>
 				</div>
-				<Columnoverlay
-					heightoftextbox={this.state.heightoftextbox}
-					hovercolor={this.state.hovercolor}
-				>
+				<div className="split_overlay">
 					{this.props.children}
-				</Columnoverlay>
+				</div>
 			</Col>
 	  );
   }

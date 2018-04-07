@@ -12,8 +12,12 @@ export default class Sessions extends React.Component {
     }
     return(
       <div style={container}>
-    	<Split offset1={this.props.offset1} overflowy={this.props.overflowy} pointerevs = {this.props.pointerevs}/>
-    </div>
+        <Split
+          offset1={this.props.offset1}
+          overflowy={this.props.overflowy}
+          pointerevs = {this.props.pointerevs}
+        />
+      </div>
     );
   }
 }
