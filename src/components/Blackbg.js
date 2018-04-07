@@ -1,4 +1,5 @@
 import React from 'react';
+import debounce from 'debounce';
 
 export default class Blackbg extends React.Component {
   constructor(props) {
@@ -7,11 +8,9 @@ export default class Blackbg extends React.Component {
 		 transitiontime:".6s ease-out"
 	 }
 	 this.bgresize=this.bgresize.bind(this)
-	 this.restoretrans = this.debounce(this.restoretrans.bind(this), 100);
-	 this.debounce = this.debounce.bind(this)
+	 this.restoretrans = debounce(this.restoretrans.bind(this), 100);
  }
   /*fades in the banner*/
-
 	componentDidMount(){
 		window.addEventListener("resize", this.bgresize);
 	}
@@ -23,19 +22,13 @@ export default class Blackbg extends React.Component {
 	});
 	}
 	/*when resizing the window, the transition time is 0s so the blackbg doesn't bounce around, then it is set back to 600ms with a debounce so there is delay*/
-
 	restoretrans(){
 		this.setState({
 			transitiontime:".6s ease-out"
 		})
 	}
-	debounce(a,b,c){var d,e;return function(){function h(){d=null,c||(e=a.apply(f,g))}var f=this,g=arguments;return clearTimeout(d),d=setTimeout(h,b),c&&!d&&(e=a.apply(f,g)),e}}
-	
 
   render() {
-
-	
-
 		const banner={
 			width:"100vw",
 			height:"calc(100vh - 75px)",
@@ -53,7 +46,6 @@ export default class Blackbg extends React.Component {
 
     return (
 			<div>
-
 	      <div style={banner}>
 	      </div>
 			</div>

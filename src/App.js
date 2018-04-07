@@ -3,7 +3,7 @@ import {Route, Switch} from 'react-router-dom';
 import './App.css';
 
 import Home from './pages/Home';
-import Kittens from './pages/Kittens';
+import Customs from './pages/Customs';
 import Gallerypage from './pages/Gallery';
 import Contact from './pages/Contact';
 import Links from './pages/Links';
@@ -49,14 +49,14 @@ export default class App extends React.Component {
 			scrollamount:scroll.y,
 		});
     }
-    
+
     checkpage(pageName){
       this.setState({
         currentpage: pageName,
       })
     }
   pageishome(){
-    
+
     this.setState({
       currentpage:"home"
     })
@@ -68,25 +68,25 @@ export default class App extends React.Component {
 		      <Background
           bgimage={bgposter}
 		      >
-            <video 
-              loop 
-              playsInline 
-              autoPlay="autoplay"  
+            <video
+              loop
+              playsInline
+              autoPlay="autoplay"
               id="iobg"
               className='video'
             >
-              <source 
-                src={bgwebm} 
+              <source
+                src={bgwebm}
                 type="video/webm"
               />
-              <source 
-                src={bgvideo} 
-                type="video/mp4" 
+              <source
+                src={bgvideo}
+                type="video/mp4"
                 id="top-image"
               />
             </video>
           </Background>
-		    
+
       <Route path={"/kittens"} children={({ match }) => (
           <Blackbg
           offset={ Boolean(match) ? '0px': '-100vw'}
@@ -100,7 +100,7 @@ export default class App extends React.Component {
           offset={ Boolean(match) ? '0': '-100%'}
           opacity={ Boolean(match) ? '1': '0'}
           />
-          
+
         </div>
       )}/>
 
@@ -136,34 +136,34 @@ export default class App extends React.Component {
 
 
       <Switch>
-        <Route exact path="/" render={(props) => 
-          <Home {...props} 
+        <Route exact path="/" render={(props) =>
+          <Home {...props}
             checkpage={this.checkpage}
-          />} 
+          />}
         />
-        <Route exact path="/sessions" render={(props) => 
-          <Sessionspage {...props} 
+        <Route exact path="/sessions" render={(props) =>
+          <Sessionspage {...props}
             checkpage={this.checkpage}
-          />} 
+          />}
         />
-        <Route path="/kittens" render={(props) => 
-          <Kittens {...props} 
-            checkpage={this.checkpage} 
+        <Route path="/kittens" render={(props) =>
+          <Customs {...props}
+            checkpage={this.checkpage}
             scrollamount={this.state.scrollamount}
           />}
         />
-        <Route exact path="/gallery" render={(props) => 
-          <Gallerypage {...props} 
+        <Route exact path="/gallery" render={(props) =>
+          <Gallerypage {...props}
             checkpage={this.checkpage}
           />}
         />
-        <Route exact path="/links" render={(props) => 
-          <Links {...props} 
+        <Route exact path="/links" render={(props) =>
+          <Links {...props}
             checkpage={this.checkpage}
           />}
         />
-        <Route exact path="/contact" render={(props) => 
-          <Contact {...props} 
+        <Route exact path="/contact" render={(props) =>
+          <Contact {...props}
             checkpage={this.checkpage}
           />}
         />

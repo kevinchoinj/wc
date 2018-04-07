@@ -4,20 +4,16 @@ import Lightbox from 'react-images';
 export default class Viewer extends React.Component{
 	constructor () {
 			super();
-
 			this.state = {
 				lightboxIsOpen: false,
 				currentImage: 0,
-
 			};
-
 			this.closeLightbox = this.closeLightbox.bind(this);
 			this.gotoNext = this.gotoNext.bind(this);
 			this.gotoPrevious = this.gotoPrevious.bind(this);
 			this.gotoImage = this.gotoImage.bind(this);
 			this.handleClickImage = this.handleClickImage.bind(this);
 			this.openLightbox = this.openLightbox.bind(this);
-
 		}
 		openLightbox (index, event) {
 			event.preventDefault();
@@ -61,13 +57,9 @@ export default class Viewer extends React.Component{
 
 
 		renderGallery () {
-
-	
-
 			const { images } = this.props;
 
 			if (!images) return;
-
 			const gallery = images.map((obj, i) => {
 				return (
 					<a
@@ -76,7 +68,7 @@ export default class Viewer extends React.Component{
 						key={i}
 						onClick={(e) => this.openLightbox(i, e)}
 					>
-						<img src={obj.thumbnail}/>
+						<img src={obj.thumbnail} alt="Ashley Wildcat"/>
 					</a>
 				);
 			});
