@@ -148,7 +148,7 @@ export default class Gallerycomp extends React.Component{
 	}
 	 /*fades in the banner*/
 	 componentDidMount() {
-		setTimeout(function() { this.setState({opacity:"1"}); }.bind(this), 600);
+		setTimeout(function() { this.setState({opacity:"1"}); }.bind(this), 400);
 	 }
 
 	render(){

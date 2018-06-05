@@ -33,11 +33,15 @@ class Column extends React.Component{
 			>
 				<div
 					style={inner}
-					className='sessions_column_inner'
+					className="sessions_column__inner"
 				>
 				</div>
-				<div className="split_overlay">
-					{this.props.children}
+				<div className="sessions_column__overlay">
+          <div className="sessions_column__overlay_inner">
+						<div className="sessions_column__text">
+						{this.props.children}
+						</div>
+          </div>
 				</div>
 			</Col>
 	  );

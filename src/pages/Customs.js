@@ -3,7 +3,7 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import * as pagesActions from '../actions/pages';
 
-import {Row, Col} from 'react-bootstrap';
+import {Row} from 'react-bootstrap';
 import Custom from '../components/Custom';
 import image4 from '../images/visitors/localguy.jpg';
 import woodyimage from '../images/visitors/woody.jpeg';
@@ -12,21 +12,22 @@ import chasynimage from '../images/visitors/chasyn.jpg';
 import salina from '../images/visitors/salina.jpg';
 import vanessavilano from '../images/visitors/vanessavilano.jpeg';
 import vevelane from '../images/visitors/vevelane.jpeg';
+import image1 from '../images/visitors/image1.jpeg';
+import image2 from '../images/visitors/image2.jpeg';
 
 class Customs extends React.Component {
-constructor(props){
-  super(props);
-  this.state={
-    opacity:"0",
+  constructor(props){
+    super(props);
+    this.state={
+      opacity:"0",
+    }
   }
-}
-componentDidMount(){
-  this.props.pagesActions.toggleTriangle(false);
-  this.props.pagesActions.setPage('kittens');
-  setTimeout(function() { this.setState({opacity:"1"}); }.bind(this), 300);
-}
+  componentDidMount(){
+    this.props.pagesActions.toggleTriangle(false);
+    this.props.pagesActions.setPage('kittens');
+    setTimeout(function() { this.setState({opacity:"1"}); }.bind(this), 300);
+  }
   render(){
-
     const wrapper={
       opacity:this.state.opacity,
       position:"absolute",
@@ -41,16 +42,15 @@ componentDidMount(){
 
     return(
 			<div style={wrapper}>
-      <Row>
-        <Col md={4} mdOffset={4} sm={10} smOffset={1} xs={10} xsOffset={1}>
-          <div className='kittens_header'>
-            VISITORS
-          </div>
-        </Col>
-      </Row>
-
       <Row className='kittens_body__wrapper'>
         <div className="custom_all">
+          <div className="temp_image_container">
+            <div className="temp_image_header">
+              Upcoming Visitors
+            </div>
+            <img src={image1} className="temp_image1" alt=""/>
+            <img src={image2} className="temp_image2" alt=""/>
+          </div>
           <Custom
             image={vevelane}
             title="Veve Lane"
@@ -100,7 +100,16 @@ componentDidMount(){
   }
 }
 
-export default connect(
-  () => ({}),
-  (dispatch) => ({pagesActions: bindActionCreators(pagesActions, dispatch)}),
-)(Customs);
+function mapStateToProps(state, prop){
+  return{
+    currentPage: state.pages.currentPage,
+  }
+}
+
+function mapDispatchToProps(dispatch){
+  return {
+    pagesActions: bindActionCreators(pagesActions, dispatch),
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Customs);

@@ -5,33 +5,9 @@ import {connect} from 'react-redux';
 import classNames from 'classnames';
 import * as pagesActions from '../actions/pages';
 
-import fbicon from '../images/facebook.png';
-import twicon from '../images/twitter.png';
-import goldfbicon from '../images/goldfacebook.png';
-import goldtwicon from '../images/goldtwitter.png';
-
 var FontAwesome = require('react-fontawesome');
 
-class Menupanel extends React.Component{
-  constructor(props) {
-    super(props);
-    this.state = {
-      mouseoverfb: false,
-      mouseovertw: false
-    }
-	}
-  fbover = () => {
-    this.setState({ mouseoverfb: true });
-  }
-  fbleave = () => {
-    this.setState({ mouseoverfb: false });
-  }
-  twover = () => {
-    this.setState({ mouseovertw: true });
-  }
-  twleave = () => {
-    this.setState({ mouseovertw: false });
-  }
+class MenuPanel extends React.Component{
   closeMenu = () => {
     this.props.pagesActions.toggleMenu(false);
   }
@@ -117,7 +93,7 @@ class Menupanel extends React.Component{
           onClick={this.props.toggler}
         >
           <div className='menu_outlink'>
-            MEMBERSHIP &nbsp;<FontAwesome name="external-link-alt"/>
+            MEMBERSHIP &nbsp;<FontAwesome name="external-link"/>
           </div>
         </a>
 
@@ -129,7 +105,7 @@ class Menupanel extends React.Component{
           onClick={this.props.toggler}
         >
           <div className='menu_outlink'>
-            SCHEDULE &nbsp;<FontAwesome name="external-link-alt"/>
+            SCHEDULE &nbsp;<FontAwesome name="external-link"/>
           </div>
         </a>
 
@@ -141,7 +117,7 @@ class Menupanel extends React.Component{
           onClick={this.props.toggler}
         >
           <div className='menu_outlink'>
-            CLIPS &nbsp;<FontAwesome name="external-link-alt"/>
+            CLIPS &nbsp;<FontAwesome name="external-link"/>
           </div>
         </a>
 
@@ -150,41 +126,13 @@ class Menupanel extends React.Component{
           href='https://twitter.com/ItsAshleyWC'
           target='_blank'
           rel='noopener noreferrer'
-          onMouseEnter={this.twover}
-          onMouseLeave={this.twleave}
         >
-         {this.state.mouseovertw ?
-          <img
-            src={goldtwicon}
-            className='menu_social_icon'
-            alt=''
-          />
-          :
-          <img
-            src={twicon}
-            className='menu_social_icon'
-            alt=''
-          />
-        }
+          <FontAwesome name="twitter" className="menu_social_icon"/>
          </a>
         <a
           href='https://www.facebook.com/ashley.wildcat.14'
-          onMouseEnter={this.fbover}
-          onMouseLeave={this.fbleave}
         >
-        {this.state.mouseoverfb ?
-          <img
-            src={goldfbicon}
-            className='menu_social_icon'
-            alt=''
-          />
-          :
-          <img
-            src={fbicon}
-            className='menu_social_icon'
-            alt=''
-          />
-        }
+          <FontAwesome name="facebook" className="menu_social_icon"/>
         </a>
         <br/>
         <span className='menu_email'>
@@ -197,17 +145,12 @@ class Menupanel extends React.Component{
   }
 }
 
-function mapStateToProps(state, prop){
-  return{
+export default connect(
+  (state, ownProps) => ({
     menuDisplayed: state.pages.menuDisplayed,
     currentPage: state.pages.currentPage,
-  }
-}
-
-function mapDispatchToProps(dispatch){
-  return {
+  }),
+  dispatch => ({
     pagesActions: bindActionCreators(pagesActions, dispatch),
-  }
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(Menupanel);
+  }),
+)(MenuPanel);

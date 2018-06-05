@@ -27,16 +27,11 @@ class MenuButton extends React.Component{
   }
 }
 
-function mapStateToProps(state, prop){
-  return{
+export default connect(
+  (state, ownProps) => ({
     menuDisplayed:state.pages.menuDisplayed,
-  }
-}
-
-function mapDispatchToProps(dispatch){
-  return {
+  }),
+  dispatch => ({
     pagesActions: bindActionCreators(pagesActions, dispatch),
-  }
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(MenuButton);
+  }),
+)(MenuButton);

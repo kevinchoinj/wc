@@ -14,7 +14,7 @@ class Links extends React.Component {
   }
   componentDidMount() {
 		this.props.pagesActions.toggleTriangle(true);
-		this.props.pagesActions.setPage('contact');
+		this.props.pagesActions.setPage('links');
 
 
 		window.addEventListener("resize", this.linksfromleft);

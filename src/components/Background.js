@@ -20,8 +20,8 @@ export default class Home extends React.Component {
 		}
     return(
       <div style={bgimage}>
-      {this.props.children}
-    </div>
+				{this.props.children}
+			</div>
     );
   }
 }

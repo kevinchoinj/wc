@@ -1,6 +1,7 @@
 import React from 'react';
 import {Route, Switch} from 'react-router-dom';
 import './App.css';
+import './styles/columnone.css';
 
 import Home from './pages/Home';
 import Customs from './pages/Customs';
@@ -28,6 +29,7 @@ import bgposter from './images/vegasimage.jpg'
 import bgwebm from './images/vegaswebm.webm';
 
 
+
 export default class App extends React.Component {
   render() {
     return (
@@ -38,6 +40,7 @@ export default class App extends React.Component {
           <video
             loop
             playsInline
+            muted
             autoPlay="autoplay"
             id="iobg"
             className='video'
@@ -73,7 +76,6 @@ export default class App extends React.Component {
           <Route exact path="/links" component={Links}/>
           <Route exact path="/contact" component={Contact}/>
         </Switch>
-
       </div>
     );
   }
