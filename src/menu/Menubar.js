@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom';
 export default class Menubar extends React.Component {
   render(){
     return(
-			<div className="menu_bar">
+			<div className="menu_bar" role="banner">
 				<Link to='/' className="menu_bar__link">
 					ASHLEY WILDCAT
 				</Link>

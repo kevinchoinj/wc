@@ -131,12 +131,14 @@ class MenuPanel extends React.Component{
          </a>
         <a
           href='https://www.facebook.com/ashley.wildcat.14'
+          target='_blank'
+          rel='noopener noreferrer'
         >
           <FontAwesome name="facebook" className="menu_social_icon"/>
         </a>
         <br/>
-        <a href="mailto:kevinchoinj@gmail.com" className="menu_link">
-          <div>
+        <a href="mailto:ashleywildcat@outlook.com" className="menu_link">
+          <div role="contentinfo">
             ashleywildcat@outlook.com
           </div>
         </a>

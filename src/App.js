@@ -13,9 +13,8 @@ import Sessions from './pages/Sessions';
 import SessionsOnePage from './pages/SessionsOne';
 import SessionsTwoPage from './pages/SessionsTwo';
 import SessionsThreePage from './pages/SessionsThree';
-import SessionsOne from './sessions/SessionsOne';
-import SessionsTwo from './sessions/SessionsTwo';
-import SessionsThree from './sessions/SessionsThree';
+
+import SessionsPanel from './components/SessionsPanel';
 
 import Split from './sessions/Split';
 import Blackbg from './components/Blackbg';
@@ -29,12 +28,16 @@ import bgvideo from './images/vegas.mp4';
 import bgposter from './images/vegasimage.jpg'
 import bgwebm from './images/vegaswebm.webm';
 
-
+import SiteIcon from './components/SiteIcon';
 
 export default class App extends React.Component {
   render() {
     return (
       <div className="App">
+        <SiteIcon/>
+        <div className="text_hidden">
+          <strong>Ashley Wildcat</strong>
+        </div>
         <Background
           bgimage={bgposter}
         >
@@ -61,9 +64,13 @@ export default class App extends React.Component {
         <Blackbg/>
         <BlackBgTransition/>
         <Split />
-        <SessionsOne />
-        <SessionsTwo />
-        <SessionsThree />
+        <Route exact path={"/sessions/:id"} children={({ match }) => (
+		      <div>
+		        <SessionsPanel
+              isActive={Boolean(match) ? true : false}
+		        />
+		      </div>
+		    )}/>
         <Menu/>
         <Triangle />
 

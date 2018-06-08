@@ -20,7 +20,7 @@ class Gallery extends React.Component {
   }
   render(){
     const galleryStyle={
-      marginTop: this.props.scrollAmount*(-0.2),
+      marginTop: this.props.scrollAmount*(-0.15),
     }
     const headerName = classNames({
       'gallery_header': true,
