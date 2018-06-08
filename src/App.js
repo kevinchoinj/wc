@@ -19,6 +19,7 @@ import SessionsThree from './sessions/SessionsThree';
 
 import Split from './sessions/Split';
 import Blackbg from './components/Blackbg';
+import BlackBgTransition from './components/BlackBgTransition';
 import Background from './components/Background';
 
 import Menu from './menu/Menu';
@@ -58,6 +59,7 @@ export default class App extends React.Component {
         </Background>
 
         <Blackbg/>
+        <BlackBgTransition/>
         <Split />
         <SessionsOne />
         <SessionsTwo />

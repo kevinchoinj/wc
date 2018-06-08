@@ -16,15 +16,10 @@ class Triangle extends React.Component{
   }
 }
 
-function mapStateToProps(state, prop){
-  return{
+export default connect(
+  (state, ownProps) => ({
     triangleDisplayed: state.pages.triangleDisplayed,
-  }
-}
-
-function mapDispatchToProps(dispatch){
-  return {
-  }
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(Triangle);
+  }),
+  dispatch => ({
+  }),
+)(Triangle);

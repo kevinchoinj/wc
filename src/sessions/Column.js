@@ -48,15 +48,10 @@ class Column extends React.Component{
   }
 }
 
-function mapStateToProps(state, prop){
-  return{
+export default connect(
+  (state, ownProps) => ({
     currentPage: state.pages.currentPage,
-  }
-}
-
-function mapDispatchToProps(dispatch){
-  return {
-  }
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(Column);
+  }),
+  dispatch => ({
+  }),
+)(Column);

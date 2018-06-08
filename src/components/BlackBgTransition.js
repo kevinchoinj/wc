@@ -2,12 +2,14 @@ import React from 'react';
 import classNames from 'classnames';
 import { connect } from 'react-redux';
 
-class Blackbg extends React.Component {
+class BlackBgTransition extends React.Component {
 
   render() {
 		const backgroundName = classNames({
       'black_background': true,
-			'black_background--displayed': this.props.currentPage==='kittens',
+			'black_background--displayed': this.props.currentPage==='gallery',
+      'black_background--scrolled': this.props.scrollAmount > window.innerHeight,
+      'black_background--scrolledmore': this.props.scrollAmount > window.innerHeight*2,
 		});
     return (
 			<div className={backgroundName}>
@@ -19,7 +21,8 @@ class Blackbg extends React.Component {
 export default connect(
   (state, ownProps) => ({
     currentPage: state.pages.currentPage,
+    scrollAmount: state.template.scrollAmountComponent,
   }),
   dispatch => ({
   }),
-)(Blackbg);
+)(BlackBgTransition);

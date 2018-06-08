@@ -11,9 +11,9 @@ import damienimage from '../images/visitors/damien.jpeg';
 import chasynimage from '../images/visitors/chasyn.jpg';
 import salina from '../images/visitors/salina.jpg';
 import vanessavilano from '../images/visitors/vanessavilano.jpeg';
-import vevelane from '../images/visitors/vevelane.jpeg';
-import image1 from '../images/visitors/image1.jpeg';
-import image2 from '../images/visitors/image2.jpeg';
+
+import madisonswan from '../images/visitors/madisonswan.jpg';
+import bellaink from '../images/visitors/bellaink.png';
 
 class Customs extends React.Component {
   constructor(props){
@@ -43,7 +43,9 @@ class Customs extends React.Component {
     return(
 			<div style={wrapper}>
       <Row className='kittens_body__wrapper'>
+
         <div className="custom_all">
+        {/*
           <div className="temp_image_container">
             <div className="temp_image_header">
               Upcoming Visitors
@@ -51,10 +53,17 @@ class Customs extends React.Component {
             <img src={image1} className="temp_image1" alt=""/>
             <img src={image2} className="temp_image2" alt=""/>
           </div>
+        */}
           <Custom
-            image={vevelane}
-            title="Veve Lane"
-            subtitle="May"
+            image={madisonswan}
+            title="Madison Swan"
+            subtitle="July 15"
+            position="center top"
+          />
+          <Custom
+            image={bellaink}
+            title="Bella Ink"
+            subtitle="August"
             position="center top"
           />
           <Custom
@@ -100,16 +109,11 @@ class Customs extends React.Component {
   }
 }
 
-function mapStateToProps(state, prop){
-  return{
+export default connect(
+  (state, ownProps) => ({
     currentPage: state.pages.currentPage,
-  }
-}
-
-function mapDispatchToProps(dispatch){
-  return {
+  }),
+  dispatch => ({
     pagesActions: bindActionCreators(pagesActions, dispatch),
-  }
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(Customs);
+  }),
+)(Customs);

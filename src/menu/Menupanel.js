@@ -135,9 +135,11 @@ class MenuPanel extends React.Component{
           <FontAwesome name="facebook" className="menu_social_icon"/>
         </a>
         <br/>
-        <span className='menu_email'>
-          ashleywildcat@outlook.com
-        </span>
+        <a href="mailto:kevinchoinj@gmail.com" className="menu_link">
+          <div>
+            ashleywildcat@outlook.com
+          </div>
+        </a>
 
 				</div>
 
