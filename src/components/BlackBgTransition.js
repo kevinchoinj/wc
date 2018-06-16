@@ -21,7 +21,7 @@ class BlackBgTransition extends React.Component {
 export default connect(
   (state, ownProps) => ({
     currentPage: state.pages.currentPage,
-    scrollAmount: state.template.scrollAmountComponent,
+    scrollAmount: state.scroll.scrollAmount,
   }),
   dispatch => ({
   }),

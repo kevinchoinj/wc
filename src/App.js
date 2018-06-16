@@ -29,6 +29,7 @@ import bgposter from './images/vegasimage.jpg'
 import bgwebm from './images/vegaswebm.webm';
 
 import SiteIcon from './components/SiteIcon';
+import HomeOverlay from './components/HomeOverlay';
 
 export default class App extends React.Component {
   render() {
@@ -85,6 +86,7 @@ export default class App extends React.Component {
           <Route exact path="/links" component={Links}/>
           <Route exact path="/contact" component={Contact}/>
         </Switch>
+        <HomeOverlay/>
       </div>
     );
   }

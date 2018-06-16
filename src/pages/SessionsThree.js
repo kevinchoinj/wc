@@ -9,10 +9,7 @@ class SessionsThree extends React.Component {
     this.props.pagesActions.setPage('sessions3');
   }
   render(){
-    return(
-      <div>
-      </div>
-    );
+    return null;
   }
 }
 

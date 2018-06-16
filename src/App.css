@@ -333,7 +333,7 @@ html, body{
 .panel_close {
   position: absolute;
 	left: 25px;
-	top: 60px;
+	top: 10px;
 	width: 50px;
 	height: 50px;
 	margin-top: -20px;
@@ -398,7 +398,7 @@ html, body{
 .split_panel {
   width: 100vw;
   height: calc(100vh - 75px);
-  top: 75px;
+  margin-top: 75px;
   position: fixed;
   background-color: rgba(0,0,0,.9);
   right:  -100%;
@@ -580,14 +580,12 @@ html, body{
   width: 100vw;
   overflow: auto;
   position: fixed;
-  padding-top: calc(125px + 125 * (100vw - 320px) / 1120);
   -webkit-transition: .3s ease-out;
   -moz-transition: .3s ease-out;
   -o-transition: .3s ease-out;
   transition: .3s ease-out;
 }
 .gallery_header {
-  top: 75px;
   left: 35vw;
   position: fixed;
   color: rgba(175, 151, 89, .8);
@@ -605,13 +603,14 @@ html, body{
 .gallery_header__notice {
   position: absolute;
   color: #af9759;
-  top: 200px;
+  top: 50px;
   font-size: calc(14px + 14 * (100vw - 320px) / 1120);
   transform: rotate(90deg);
   left: 15vw;
 }
 .gallery_container {
-  top: 100px;
+  top: 0px;
+  padding-top: calc(125px + 125 * (100vw - 320px) / 1120);
 }
 @media screen and (max-width: 992px) {
   #scroll_gallery {
@@ -626,4 +625,48 @@ html, body{
   .gallery_header__notice {
     display: none;
   }
+}
+
+.home_overlay {
+  opacity: 0;
+  width: 35vw;
+  height: calc(100% - 75px);
+  position: fixed;
+  right: -35vw;
+  top: 75px;
+  padding-right: 5vw;
+  padding-left: 5vw;
+  -webkit-transition: .3s ease-out;
+  -o-transition: .3s ease-out;
+  transition: .3s ease-out;
+  display: table;
+  background-color: rgba(0,0,0,.7);
+}
+.home_overlay--displayed {
+  opacity: 1;
+  right: 0;
+}
+.home_overlay__text {
+  display: table-cell;
+  vertical-align: middle;
+  color: #af9759;
+  font-family: Lato,sans-serif;
+  font-size: calc(28px + 32 * (100vw - 320px) / 1120);
+}
+.home_overlay__subtext {
+  font-size: 14px;
+}
+
+@media screen and (max-width: 768px) {
+  .home_overlay {
+    display: none;
+  }
+}
+
+
+
+
+.scrollbar-thumb.scrollbar-thumb-x,
+.scrollbar-track.scrollbar-track-x{
+  display: none !important;
 }

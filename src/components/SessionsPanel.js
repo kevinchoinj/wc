@@ -7,7 +7,7 @@ import Closebutton from '../sessions/Closebutton';
 import SessionsOneText from '../sessions/SessionsOneText';
 import SessionsTwoText from '../sessions/SessionsTwoText';
 import SessionsThreeText from '../sessions/SessionsThreeText';
-
+import Scrollbar from 'smooth-scrollbar';
 
 const InnerTextDisplay = ({
   currentPage
@@ -33,6 +33,12 @@ const InnerTextDisplay = ({
 };
 
 class SessionsPanel extends React.Component {
+  componentDidMount(){
+    Scrollbar.init(document.querySelector('#scroll_sessions'), {
+      alwaysShowTracks: true,
+      syncCallbacks: true,
+    });
+  }
   render(){
     const {
       currentPage
@@ -44,8 +50,8 @@ class SessionsPanel extends React.Component {
     });
 
     return(
-    <div className={panelName}>
-      <Row className="split_panel__inner">
+    <div className={panelName} id="scroll_sessions">
+      <Row className="split_panel__inner" >
         <Closebutton />
         <Col md={10} mdOffset={1} sm={10} smOffset={1} xs={10} xsOffset={1}>
           <InnerTextDisplay

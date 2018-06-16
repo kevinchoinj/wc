@@ -15,6 +15,8 @@ import vanessavilano from '../images/visitors/vanessavilano.jpeg';
 import madisonswan from '../images/visitors/madisonswan.jpg';
 import bellaink from '../images/visitors/bellaink.png';
 
+import Scrollbar from 'smooth-scrollbar';
+
 class Customs extends React.Component {
   constructor(props){
     super(props);
@@ -26,14 +28,20 @@ class Customs extends React.Component {
     this.props.pagesActions.toggleTriangle(false);
     this.props.pagesActions.setPage('kittens');
     setTimeout(function() { this.setState({opacity:"1"}); }.bind(this), 300);
+
+    Scrollbar.init(document.querySelector('#scroll_customs'), {
+      alwaysShowTracks: true,
+      syncCallbacks: true,
+    });
   }
   render(){
     const wrapper={
       opacity:this.state.opacity,
       position:"absolute",
-      marginTop:"100px",
+      top: "0px",
+      marginTop:"75px",
       width:"100vw",
-      height:"calc(100vh - 100px)",
+      height:"calc(100vh - 75px)",
       WebkitTransition: ".4s ease-out",
 		  MozTransition: ".4s ease-out",
 		  OTransition: ".4s ease-out",
@@ -41,7 +49,7 @@ class Customs extends React.Component {
     }
 
     return(
-			<div style={wrapper}>
+			<div style={wrapper} id="scroll_customs">
       <Row className='kittens_body__wrapper'>
 
         <div className="custom_all">

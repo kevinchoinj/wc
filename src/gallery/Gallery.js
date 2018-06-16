@@ -77,10 +77,9 @@ function makeUnsplashThumbnail (id) {
 		return id;
 }
 const DEFAULT_IMAGES = [
-	{ id: image57},
-	{ id: image58},
-	{ id: image59},
-	{ id: image60},
+	{ id: image26},
+	{ id: image27},
+	{ id: image28},
 	{ id: image1},
 	{ id: image2},
 	{ id: image3},
@@ -106,9 +105,6 @@ const DEFAULT_IMAGES = [
 	{ id: image23},
 	{ id: image24},
 	{ id: image25},
-	{ id: image26},
-	{ id: image27},
-	{ id: image28},
 	{ id: image29},
 	{ id: image30},
 	{ id: image31},
@@ -137,6 +133,10 @@ const DEFAULT_IMAGES = [
 	{ id: image54},
 	{ id: image55},
 	{ id: image56},
+	{ id: image57},
+	{ id: image58},
+	{ id: image59},
+	{ id: image60},
 ];
 
 export default class Gallerycomp extends React.Component{

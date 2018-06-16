@@ -1,9 +1,9 @@
 import pages from './pages';
-import template from './template';
+import scroll from './scroll';
 
 const reducers={
   pages,
-  template,
+  scroll,
 };
 
 export default reducers;

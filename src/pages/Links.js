@@ -51,7 +51,6 @@ class Links extends React.Component {
 			left:this.state.leftmarg,
       letterSpacing:"1px",
       lineHeight:"200%",
-			paddingBottom:"200px",
 		}
 		const linkstyle={
 			color:"#000",

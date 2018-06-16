@@ -54,7 +54,6 @@ class Contact extends React.Component {
       MozTransition: ".4s ease-out",
       OTransition: ".4s ease-out",
       transition:".4s ease-out",
-      paddingBottom:"200px",
     }
     const title={
       top:"18vh",
