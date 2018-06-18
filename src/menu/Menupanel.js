@@ -40,86 +40,50 @@ class MenuPanel extends React.Component{
       'menu_select': true,
       'menu_select--selected': this.props.currentPage==='contact',
     });
+
+    const menuValues = [
+      {text: 'HOME', link: '/', indicator: homeName},
+      {text: 'SESSIONS', link: 'sessions', indicator: sessionsName},
+      {text: 'CUSTOMS', link: '/kittens', indicator: customsName},
+      {text: 'GALLERY', link: '/gallery', indicator: galleryName},
+      {text: 'LINKS', link: '/links', indicator: linksName},
+      {text: 'CONTACT', link: '/contact', indicator: contactName},
+    ]
+    const linkValues = [
+      {text: 'MEMBERSHIP', link: 'https://ashley.knockoutcats.com/'},
+      {text: 'SCHEDULE', link: 'http://sessiongirls.com/component/comprofiler/userprofile/Ashley%20Wildcat'},
+      {text: 'CLIPS', link: 'http://clips4sale.com/84041'},
+
+    ]
 	  return(
-        <div className={panelName}>
-        <Link to='/' className='menu_link' onClick={()=>this.closeMenu()}>
-          <div className={homeName}>
-            HOME
-            <div className='menu_indicator'></div>
-          </div>
-        </Link>
+      <div className={panelName}>
 
-        <Link to='/sessions' className='menu_link' onClick={()=>this.closeMenu()}>
-          <div className={sessionsName}>
-            SESSIONS
-            <div className='menu_indicator'></div>
+        {menuValues.map((value, index)=>(
+          <div key={index}>
+            <Link to={value.link} className='menu_link' onClick={()=>this.closeMenu()}>
+              <div className={value.indicator}>
+                {value.text}
+                <div className='menu_indicator'></div>
+              </div>
+            </Link>
           </div>
-        </Link>
+        ))}
 
-        <Link to='/kittens' className='menu_link' onClick={()=>this.closeMenu()}>
-          <div className={customsName}>
-            CUSTOMS
-            <div className='menu_indicator'></div>
+        {linkValues.map((value, index)=>(
+          <div key={index}>
+            <a
+              href={value.link}
+              target='_blank'
+              rel='noopener noreferrer'
+              className='menu_link'
+              onClick={this.props.toggler}
+            >
+              <div className='menu_outlink'>
+                {value.text} &nbsp;<FontAwesome name="external-link"/>
+              </div>
+            </a>
           </div>
-        </Link>
-
-        <Link to='/gallery' className='menu_link' onClick={()=>this.closeMenu()}>
-          <div className={galleryName}>
-            GALLERY
-            <div className='menu_indicator'></div>
-          </div>
-        </Link>
-
-        <Link to='/links' className='menu_link' onClick={()=>this.closeMenu()}>
-          <div className={linksName}>
-            LINKS
-            <div className='menu_indicator'></div>
-          </div>
-        </Link>
-
-        <Link to='/contact' className='menu_link' onClick={()=>this.closeMenu()}>
-          <div className={contactName}>
-            CONTACT
-            <div className='menu_indicator'></div>
-          </div>
-        </Link>
-
-
-        <a
-          href='https://ashley.knockoutcats.com/'
-          target='_blank'
-          rel='noopener noreferrer'
-          className='menu_link'
-          onClick={this.props.toggler}
-        >
-          <div className='menu_outlink'>
-            MEMBERSHIP &nbsp;<FontAwesome name="external-link"/>
-          </div>
-        </a>
-
-        <a
-          href='http://sessiongirls.com/component/comprofiler/userprofile/Ashley%20Wildcat'
-          target='_blank'
-          rel='noopener noreferrer'
-          className='menu_link'
-          onClick={this.props.toggler}
-        >
-          <div className='menu_outlink'>
-            SCHEDULE &nbsp;<FontAwesome name="external-link"/>
-          </div>
-        </a>
-
-        <a
-          href='http://clips4sale.com/84041'
-          target='_blank'
-          rel='noopener noreferrer'
-          className='menu_link'
-          onClick={this.props.toggler}
-        >
-          <div className='menu_outlink'>
-            CLIPS &nbsp;<FontAwesome name="external-link"/>
-          </div>
-        </a>
+        ))}
 
         <br/><br/>
         <a
@@ -143,7 +107,7 @@ class MenuPanel extends React.Component{
           </div>
         </a>
 
-				</div>
+			</div>
 
 	  );
   }

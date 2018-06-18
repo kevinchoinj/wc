@@ -21,7 +21,7 @@ class HomeOverlay extends React.Component {
           My rate is $400 hour then $300 for any additional hour (unless you are an original client before
           I raised my rates-then you are locked in) I give a $50 discount if you allow me to film our
           match and sell it on my video sites. My PayPal email is ashleywildcat@outlook.com It’s always
-           good to get my attention by sending money since I have very expensive taste 😂
+           good to get my attention by sending money since I have very expensive taste <span role="img" aria-label="crying laughing emoji">😂</span>
            Let’s have some fun and hope to see you on the mats
           </div>
         </div>
