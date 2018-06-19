@@ -23,36 +23,36 @@ class Split extends React.Component{
 
 	  return(
 			<div className={containerName}>
-					<Link to="/sessions/1">
-						<Column
-							bgimage={image1}
-							offset1={this.props.offset1}
-							timing=".4s ease-out"
-						>
-						Statistics
-						</Column>
-					</Link>
+				<Link to="/sessions/1">
+					<Column
+						bgimage={image1}
+						offset1={this.props.offset1}
+						timing=".4s ease-out"
+					>
+					Statistics
+					</Column>
+				</Link>
 
-					<Link to="/sessions/2">
-						<Column
-							bgimage={image2}
-							offset1={this.props.offset1}
-							timing=".6s ease-out"
-						>
-						Fighting Style
-						</Column>
-					</Link>
+				<Link to="/sessions/2">
+					<Column
+						bgimage={image2}
+						offset1={this.props.offset1}
+						timing=".6s ease-out"
+					>
+					Fighting Style
+					</Column>
+				</Link>
 
-					<Link to="/sessions/3">
-						<Column
-							bgimage={image3}
-							offset1={this.props.offset1}
-							timing=".8s ease-out"
-						>
-						Session Types
-						</Column>
-					</Link>
-				</div>
+				<Link to="/sessions/3">
+					<Column
+						bgimage={image3}
+						offset1={this.props.offset1}
+						timing=".8s ease-out"
+					>
+					Session Types
+					</Column>
+				</Link>
+			</div>
 	  );
   }
 }

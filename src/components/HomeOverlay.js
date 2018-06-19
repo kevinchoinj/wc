@@ -3,11 +3,14 @@ import classNames from 'classnames';
 import { connect } from 'react-redux';
 
 class HomeOverlay extends React.Component {
-
   render() {
+    const {
+			currentPage,
+    } = this.props;
+
 		const overlayName = classNames({
       'home_overlay': true,
-			'home_overlay--displayed': this.props.currentPage==='home',
+			'home_overlay--displayed': currentPage==='home',
 		});
     return (
 			<div className={overlayName}>

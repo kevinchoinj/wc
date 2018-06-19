@@ -9,16 +9,9 @@ import classNames from 'classnames';
 import Scrollbar from 'smooth-scrollbar';
 
 class Gallery extends React.Component {
-  constructor(props) {
-		super(props);
-		this.state = {
-			opacity: "0",
-		}
-	}
   componentDidMount() {
     this.props.pagesActions.toggleTriangle(false);
     this.props.pagesActions.setPage('gallery');
-    setTimeout(function() { this.setState({opacity:"1"}); }.bind(this), 400);
 
     const scrollbar = Scrollbar.init(document.querySelector('#scroll_gallery'), {
       alwaysShowTracks: true,
@@ -29,26 +22,30 @@ class Gallery extends React.Component {
     });
   }
   render(){
+    const {
+      scrollAmount,
+			currentPage,
+		} = this.props;
+
     const galleryStyle={
-      marginTop: this.props.scrollAmount*(.5),
+      marginTop: scrollAmount*(.5),
     }
-    const headerName = classNames({
-      'gallery_header': true,
-      'gallery_header--scrolled': this.props.scrollAmount > window.innerHeight,
+    const wrapperName = classNames({
+      'gallery_wrapper': true,
+      'gallery_wrapper--display': currentPage === 'gallery',
     });
-    const galleryContainerStyle={
-			opacity: this.state.opacity,
-		}
     return(
-      <div id="scroll_gallery" style={galleryContainerStyle}>
-        <CheckScrollComponent/>
-        <div className="gallery_header__notice">
-          Scroll &rarr;
+      <div className={wrapperName}>
+        <div id="scroll_gallery" className="gallery_container">
+          <CheckScrollComponent/>
+          <div className="gallery_header__notice">
+            Scroll &rarr;
+          </div>
+          <div className="gallery_header" style={galleryStyle}>
+            Gallery
+          </div>
+          <Gallerycomp/>
         </div>
-        <div className={headerName} style={galleryStyle}>
-          Gallery
-        </div>
-        <Gallerycomp/>
       </div>
     );
   }
@@ -57,6 +54,7 @@ class Gallery extends React.Component {
 export default connect(
   (state, ownProps) => ({
     scrollAmount: state.scroll.scrollAmount,
+    currentPage: state.pages.currentPage,
   }),
   (dispatch) => ({
     pagesActions: bindActionCreators(pagesActions, dispatch),

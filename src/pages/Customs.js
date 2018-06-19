@@ -15,14 +15,9 @@ import madisonswan from '../images/visitors/madisonswan.jpg';
 import bellaink from '../images/visitors/bellaink.png';
 
 import Scrollbar from 'smooth-scrollbar';
+import classNames from 'classnames';
 
 class Customs extends React.Component {
-  constructor(props){
-    super(props);
-    this.state={
-      opacity:"0",
-    }
-  }
   componentDidMount(){
     this.props.pagesActions.toggleTriangle(false);
     this.props.pagesActions.setPage('kittens');
@@ -34,18 +29,11 @@ class Customs extends React.Component {
     });
   }
   render(){
-    const wrapper={
-      opacity:this.state.opacity,
-      position:"absolute",
-      top: "0px",
-      marginTop:"75px",
-      width:"100vw",
-      height:"calc(100vh - 75px)",
-      WebkitTransition: ".4s ease-out",
-		  MozTransition: ".4s ease-out",
-		  OTransition: ".4s ease-out",
-		  transition:".4s ease-out",
-    }
+
+    const wrapperName = classNames({
+      'kittens_wrapper': true,
+			'kittens_wrapper--display': this.props.currentPage==='kittens',
+    });
 
     const imageValues = [
       {title: 'Madison Swan', subtitle: 'July 15', image: madisonswan},
@@ -59,8 +47,8 @@ class Customs extends React.Component {
     ]
 
     return(
-			<div style={wrapper} id="scroll_customs">
-        <div className='kittens_body__wrapper'>
+			<div className={wrapperName}>
+        <div className="kittens_container" id="scroll_customs">
           <div className="custom_all">
             {imageValues.map((value, index)=>(
               <span key={index}>

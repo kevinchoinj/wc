@@ -2,6 +2,9 @@ import React from 'react';
 import {Route, Switch} from 'react-router-dom';
 import './App.css';
 import './styles/columnone.css';
+import './styles/customs.css';
+import './styles/links.css';
+import './styles/gallery.css';
 
 import Home from './pages/Home';
 import Customs from './pages/Customs';
@@ -18,7 +21,6 @@ import SessionsPanel from './components/SessionsPanel';
 
 import Split from './sessions/Split';
 import Blackbg from './components/Blackbg';
-import BlackBgTransition from './components/BlackBgTransition';
 import Background from './components/Background';
 
 import Menu from './menu/Menu';
@@ -63,7 +65,6 @@ export default class App extends React.Component {
         </Background>
 
         <Blackbg/>
-        <BlackBgTransition/>
         <Split />
         <Route exact path={"/sessions/:id"} children={({ match }) => (
 		      <div>

@@ -1,0 +1,35 @@
+.kittens_wrapper {
+  opacity: 0;
+  position: absolute;
+  top: 0px;
+  margin-top: 75px;
+  width: 100vw;
+  height: calc(100vh - 75px);
+  -webkit-transition: .4s ease-out;
+  -moz-transition: .4s ease-out;
+  -o-transition: .4s ease-out;
+  transition: .4s ease-out;
+}
+.kittens_wrapper--display {
+  animation: KittensFadeIn .4s linear;
+  animation-fill-mode: both;
+  opacity: 1;
+  animation-delay: .4s
+}
+
+.kittens_container {
+  height: calc(100vh - 75px);
+}
+.custom_all {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+@keyframes KittensFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

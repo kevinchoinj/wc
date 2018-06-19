@@ -9,10 +9,7 @@ class Home extends React.Component {
     this.props.pagesActions.setPage('home');
   }
   render(){
-    return(
-    <div>
-    </div>
-    );
+    return null;
   }
 }
 

@@ -18,10 +18,7 @@ class CheckScrollComponent extends React.Component {
   }
 
   render(){
-    return(
-      <div>
-      </div>
-    )
+    return null;
   }
 }
 

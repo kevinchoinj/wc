@@ -74,7 +74,7 @@ function makeUnsplashSrc (id) {
 }
 
 function makeUnsplashThumbnail (id) {
-		return id;
+	return id;
 }
 const DEFAULT_IMAGES = [
 	{ id: image26},
@@ -142,19 +142,12 @@ const DEFAULT_IMAGES = [
 export default class Gallerycomp extends React.Component{
 
 	render(){
-		const gallerycontainer={
-			WebkitTransition: ".4s ease-out",
-      MozTransition: ".4s ease-out",
-      OTransition: ".4s ease-out",
-      transition:".4s ease-out",
-		}
 		return (
 			<Col
 				md={10} mdOffset={1}
 				sm={10} smOffset={1}
 				xs={10} xsOffset={1}
-				style={gallerycontainer}
-				className="gallery_container"
+				className="gallery_images"
 			>
 				<Viewer images={DEFAULT_IMAGES.map(({ caption, id }) => ({
 					src: makeUnsplashSrc(id),
